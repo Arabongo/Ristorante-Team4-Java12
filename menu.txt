@@ -1,3 +1,13 @@
 RISTORANTE NON TENGO FANTASIA - TEAM4 - JAVA12
 
 CARNE
+
+Antipasti:
+
+-Affettato                                                                                  €7.50
+
+-Vitello Tonnato                                                                            €8.50
+
+-Olive Ascolane                                                                             €6.50
+
+-Cornetti Salati                                                                            €5.50
