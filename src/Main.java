@@ -9,5 +9,7 @@ public class Main {
         secondiPiatti.printSecondiPiatti();
         Bevande bevande = new Bevande();
         bevande.stampaBevande();
+        Dolci dolci = new Dolci();
+        dolci.stampaDolci();
     }
 }
