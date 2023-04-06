@@ -1,3 +1,4 @@
+package src;
 public class Main {
 
     public static void main(String[] args) {
@@ -7,5 +8,7 @@ public class Main {
 
         SecondiPiatti secondiPiatti = new SecondiPiatti();
         secondiPiatti.printSecondiPiatti();
+        Bevande bevande = new Bevande();
+        bevande.stampaBevande();
     }
 }
