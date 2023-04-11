@@ -16,7 +16,7 @@ public class Main {
          */
 
 
-
+        Menu menu = new Menu();
         Antipasti antipasti1 = new Antipasti("Affettato", 7.50);
         Antipasti antipasti2 = new Antipasti("Vitello Tonnato", 8.50);
         Antipasti antipasti3 = new Antipasti("Olive Ascolane", 6.50);
@@ -26,6 +26,22 @@ public class Main {
         antipasti2.print();
         antipasti3.print();
         antipasti4.print();
+
+
+        Dolci dolci1= new Dolci ("Panna Cotta", 8.5 , "Panna,Gelatina,Zucchero,Vaniglia");
+        Dolci dolci2= new Dolci("Tiramisù al cucchiaio", 9.0, "Mascarpone,Zucchero,Caffè,Savoiardi,Uova");
+        Dolci dolci3= new Dolci("Frutta di stagione", 6.0, "Kiwi,Anguria,Fragole,Arance");
+        Dolci dolci4= new Dolci("Babà alla crema", 10.0, "Uova,Latte,Farina,Zucchero,Lievito,Burro,Rum");
+        Dolci dolci5= new Dolci("Delizia al Limone", 12.5, "Uova,Farina,Zucchero,Vaniglia,Panna,Limone,Latte");
+        menu.addDolci(dolci1);
+        menu.addDolci(dolci2);
+        menu.addDolci(dolci3);
+        menu.addDolci(dolci4);
+        menu.addDolci(dolci5);
+        menu.printMenu();
+
+
+
 
     }
 }

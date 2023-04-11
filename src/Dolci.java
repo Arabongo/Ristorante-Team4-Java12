@@ -1,32 +1,39 @@
 import java.util.HashMap;
 
 public class Dolci {
-        public HashMap<String, Double> menuDolci= new HashMap<>();
+        private String name;
+        private Double price;
+        private String ingredients;
 
-        public Dolci(){
-
+        public Dolci(String name, Double price, String ingredients){
+            this.ingredients=ingredients;
+            this.name=name;
+            this.price=price;
         }
 
-        public HashMap<String, Double> getMenuDolci() {
-            return menuDolci;
-        }
-
-        public void setMenuDolci(HashMap<String, Double> menuDolci) {
-            this.menuDolci = menuDolci;
-        }
-
-        public void stampaDolci(){
-            menuDolci.put("Panna cotta" , 8.55);
-            menuDolci.put("Tiramisù al cucchiaio", 9.33);
-            menuDolci.put("Frutta di stagione", 10.55);
-            menuDolci.put("Babbà", 10d);
-            menuDolci.put("Delizia al limone", 12d);
-            System.out.println("\n" + "Dolci : " +'\n');
-            for (String mapKey : menuDolci.keySet()){
-                String stampaMenuDolci = mapKey + '-' + menuDolci.get(mapKey) + '€'+'\n';
-                System.out.println(stampaMenuDolci);
-            }
-        }
-
+    public Double getPrice() {
+        return price;
     }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(String ingredients) {
+        this.ingredients = ingredients;
+    }
+
+}
 
