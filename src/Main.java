@@ -1,5 +1,6 @@
 
 
+import java.awt.*;
 import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
@@ -22,6 +23,14 @@ public class Main {
         primiPiattiList.add(new PrimiPiatti("Risotto alla milanese", 7.99));
         primiPiattiList.add(new PrimiPiatti("Pasta alla gricia", 8.99));
 
+        // Dolci
+        dolciList.add(new Dolci("Tiramisù al cucchiaio", 9.5));
+        dolciList.add(new Dolci("Babà", 10.5));
+        dolciList.add(new Dolci("Delizia al limone", 12.0));
+        dolciList.add(new Dolci("Cannolo alla ricotta", 8));
+        dolciList.add(new Dolci("Tartufo al cioccolato", 9));
+        dolciList.add(new Dolci("CheeseCake", 10));
+
 
         // Print out the menu
         System.out.println("Antipasti:");
@@ -42,9 +51,9 @@ public class Main {
         }
         System.out.println();
 
-        System.out.println("Dolci:");
+        System.out.println(Colors.RED_BRIGHT + "Dolci:");
         for (Dolci dolci : dolciList) {
-            System.out.println("- " + dolci.getName() + " $" + dolci.getPrice());
+            System.out.println(Colors.GREEN_BRIGHT+ "- " +dolci.getName() +  " $" + dolci.getPrice());
         }
         System.out.println();
 

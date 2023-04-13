@@ -1,13 +1,18 @@
 import java.util.ArrayList;
 
 public class Menu {
-    private ArrayList<Antipasti> antipasti= new ArrayList<>();
-    private ArrayList<PrimiPiatti> primiPiatti= new ArrayList<>();
-    private ArrayList<SecondiPiatti> secondiPiatti= new ArrayList<>();
-    private ArrayList<Bevande> bevande= new ArrayList<>();
-    private final ArrayList <Dolci> dolci= new ArrayList<>();
+    private ArrayList<Antipasti> antipasti;
+    private ArrayList<PrimiPiatti> primiPiatti;
+    private ArrayList<SecondiPiatti> secondiPiatti;
+    private ArrayList<Bevande> bevande;
+    private final ArrayList <Dolci> dolci;
 
     public Menu(){
+        antipasti=new ArrayList<>();
+        primiPiatti= new ArrayList<>();
+        secondiPiatti= new ArrayList<>();
+        bevande= new ArrayList<>();
+        dolci= new ArrayList<>();
     }
     public  void addDolci(Dolci dolce){
         dolci.add(dolce);
