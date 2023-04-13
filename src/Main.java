@@ -9,6 +9,12 @@ public class Main {
         ArrayList<Dolci> dolciList = new ArrayList<>();
         ArrayList<Bevande> bevandeList = new ArrayList<>();
 
+        // Antipasti
+        antipastiList.add(new Antipasti("Affettato", 7.50));
+        antipastiList.add(new Antipasti("Vitello Tonnato", 8.50));
+        antipastiList.add(new Antipasti("Olive Ascolane", 6.50));
+        antipastiList.add(new Antipasti("Cornetti Salati", 5.50));
+
         // Primi Piatti
         primiPiattiList.add(new PrimiPiatti("Bucatini alla Carbonara", 8.99));
         primiPiattiList.add(new PrimiPiatti("Lasagne alla Bolognese", 9.99));
