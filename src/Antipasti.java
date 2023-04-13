@@ -1,34 +1,20 @@
-import java.util.*;
-
 public class Antipasti {
-    private String nome;
-    private Double prezzo;
+    private String name;
+    private double price;
 
-    Antipasti(String nome, Double prezzo) {
-        this.nome = nome;
-        this.prezzo = prezzo;
+    Antipasti(String name, Double price) {
+        this.name = name;
+        this.price = price;
+    }
+    public String getName() {
+        return name;
     }
 
-    public String getNome() {
-        return nome;
+    public void setName(String name) {this.name = name;}
+
+    public Double getPrice() {
+        return price;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Double getPrezzo() {
-        return prezzo;
-    }
-
-    public void setPrezzo(Double prezzo) {
-        this.prezzo = prezzo;
-    }
-
-    public void print(){
-        String ANSI_YELLOW_BACKGROUND = "\u001B[43m";
-        System.out.println(ANSI_YELLOW_BACKGROUND + nome + prezzo +ANSI_YELLOW_BACKGROUND);
-    }
-
-
+    public void setPrice(Double price) {this.price = price;}
 }

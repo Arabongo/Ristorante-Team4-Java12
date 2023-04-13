@@ -1,8 +1,8 @@
-public class Dolci {
+public class PrimiPiatti {
     private String name;
     private double price;
 
-    public Dolci(String name, double price) {
+    public PrimiPiatti(String name, double price) {
         this.name = name;
         this.price = price;
     }
@@ -20,4 +20,3 @@ public class Dolci {
 
     public void setPrice(Double price) {this.price = price;}
 }
-

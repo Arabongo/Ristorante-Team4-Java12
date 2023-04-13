@@ -1,9 +1,8 @@
 import java.util.ArrayList;
 
-
 public class Menu {
     private ArrayList<Antipasti> antipasti= new ArrayList<>();
-    private ArrayList<Primi_Piatti> primiPiatti= new ArrayList<>();
+    private ArrayList<PrimiPiatti> primiPiatti= new ArrayList<>();
     private ArrayList<SecondiPiatti> secondiPiatti= new ArrayList<>();
     private ArrayList<Bevande> bevande= new ArrayList<>();
     private final ArrayList <Dolci> dolci= new ArrayList<>();
@@ -11,7 +10,7 @@ public class Menu {
     public Menu(){
     }
     public  void addDolci(Dolci dolce){
-       dolci.add(dolce);
+        dolci.add(dolce);
     }
     public  void addAntipasti(Antipasti antipasto){
         antipasti.add(antipasto);
@@ -19,7 +18,7 @@ public class Menu {
     public  void addBevande(Bevande bevanda){
         bevande.add(bevanda);
     }
-    public  void addPrimiPiatti(Primi_Piatti primoPiatto){
+    public  void addPrimiPiatti(PrimiPiatti primoPiatto){
         primiPiatti.add(primoPiatto);
     }
     public void printDolci(){
@@ -29,22 +28,22 @@ public class Menu {
     }
     public void printAntipasti(){
         for (Antipasti antipasto : antipasti) {
-            System.out.println(antipasto.getNome() + ' ' + antipasto.getPrezzo());
+            System.out.println(antipasto.getName() + ' ' + antipasto.getPrice());
         }
     }
     public void printPrimiPiatti(){
-        for (Primi_Piatti primo : primiPiatti) {
-            System.out.println(primo.getPrimiPiatti()+ ' ' + primo.getPrezzo());
+        for (PrimiPiatti primo : primiPiatti) {
+            System.out.println(primo.getName()+ ' ' + primo.getPrice());
         }
     }
     public void printSecondipiatti(){
         for (SecondiPiatti secondo:secondiPiatti) {
-            System.out.println(secondo.getsecondoPiatto()+ ' ' + secondo.getPrezzo());
+            System.out.println(secondo.getName()+ ' ' + secondo.getPrice());
         }
     }
     public void printBevande(){
         for (Bevande bevanda:bevande) {
-            System.out.println(bevanda.getNomeBevanda()+ ' ' + bevanda.getPrezzoBevanda());
+            System.out.println(bevanda.getName()+ ' ' + bevanda.getPrice());
         }
     }
     public void printMenu(){
