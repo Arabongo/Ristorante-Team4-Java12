@@ -31,6 +31,25 @@ public class Main {
         secondiPiattiList.add(new SecondiPiatti("Tagliata di manzo con rucola e grana ",13.99));
         secondiPiattiList.add(new SecondiPiatti("Scaloppine (all’aceto / ai funghi porcini/ al vino bianco) ",9.99));
 
+        // Bevande
+        bevandeList.add(new Bevande("Gradisca 0.33l", 3.50));
+        bevandeList.add(new Bevande("Gradisca 0.5l", 5.50));
+        bevandeList.add(new Bevande("Gradisca 1l", 10));
+        bevandeList.add(new Bevande("Midona 0.5l", 5));
+        bevandeList.add(new Bevande("Volpina 0.33l", 4));
+        bevandeList.add(new Bevande("Volpina 0.5l", 6));
+        bevandeList.add(new Bevande("Acqua nat/gas 1l", 1));
+        bevandeList.add(new Bevande("Acqua nat/gas 0.5l", 0.5));
+        bevandeList.add(new Bevande("Coca Cola 0.5l", 2.50));
+        bevandeList.add(new Bevande("Chinotto 0.33l", 12));
+        bevandeList.add(new Bevande("Te Pesca 1/2l", 2.5));
+        bevandeList.add(new Bevande("Te Limone 1/2l", 2.5));
+        bevandeList.add(new Bevande("Succhi di frutta 0.33l", 3.5));
+        bevandeList.add(new Bevande("Rosè frizzante", 10.0));
+        bevandeList.add(new Bevande("Chardonnat", 13.0));
+        bevandeList.add(new Bevande("Merlot", 10.0));
+        bevandeList.add(new Bevande("Pinot Noir", 15.0));
+
         // Dolci
         dolciList.add(new Dolci("Tiramisù al cucchiaio", 9.5));
         dolciList.add(new Dolci("Babà", 10.5));
