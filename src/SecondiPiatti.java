@@ -9,13 +9,12 @@ public class SecondiPiatti {
         public String getName() {
             return name;
         }
+        public double getPrice() {
+        return price;
+        }
 
         public void setNome(String name) {
             this.name = name;
-        }
-
-        public double getPrice() {
-            return price;
         }
 
         public void setPrice(Double price) {this.price = price;}

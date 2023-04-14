@@ -23,6 +23,14 @@ public class Main {
         primiPiattiList.add(new PrimiPiatti("Risotto alla milanese", 7.99));
         primiPiattiList.add(new PrimiPiatti("Pasta alla gricia", 8.99));
 
+        // Secondi Piatti
+        secondiPiattiList.add(new SecondiPiatti("Filetto di maiale al forno con salvia e mele",11.99 ));
+        secondiPiattiList.add(new SecondiPiatti("Grigliata di carne",13.99 ));
+        secondiPiattiList.add(new SecondiPiatti("Cotoletta alla milanese ", 7.99));
+        secondiPiattiList.add(new SecondiPiatti("Costine d’agnello alla griglia ",10.99));
+        secondiPiattiList.add(new SecondiPiatti("Tagliata di manzo con rucola e grana ",13.99));
+        secondiPiattiList.add(new SecondiPiatti("Scaloppine (all’aceto / ai funghi porcini/ al vino bianco) ",9.99));
+
         // Dolci
         dolciList.add(new Dolci("Tiramisù al cucchiaio", 9.5));
         dolciList.add(new Dolci("Babà", 10.5));
