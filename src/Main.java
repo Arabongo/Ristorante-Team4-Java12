@@ -41,21 +41,21 @@ public class Main {
 
 
         // Print out the menu
-        System.out.println("Antipasti:");
+        System.out.println(Colors.YELLOW + "Antipasti:");
         for (Antipasti antipasti : antipastiList) {
-            System.out.println("- " + antipasti.getName() + " $" + antipasti.getPrice());
+            System.out.println(Colors.BLUE_BRIGHT + "- " + antipasti.getName() + " $" + antipasti.getPrice());
         }
         System.out.println();
 
-        System.out.println("Primi Piatti");
+        System.out.println(Colors.GREEN + "Primi Piatti");
         for (PrimiPiatti primiPiatti : primiPiattiList) {
-            System.out.println("- " +primiPiatti.getName() + " $" + primiPiatti.getPrice());
+            System.out.println(Colors.YELLOW_BRIGHT + "- " +primiPiatti.getName() + " $" + primiPiatti.getPrice());
         }
         System.out.println();
 
-        System.out.println("Secondi Piatti:");
+        System.out.println(Colors.PURPLE_BRIGHT + "Secondi Piatti:");
         for (SecondiPiatti secondiPiatti : secondiPiattiList) {
-            System.out.println("- " + secondiPiatti.getName() + " $" + secondiPiatti.getPrice());
+            System.out.println(Colors.CYAN + "- " + secondiPiatti.getName() + " $" + secondiPiatti.getPrice());
         }
         System.out.println();
 
@@ -65,9 +65,9 @@ public class Main {
         }
         System.out.println();
 
-        System.out.println("Bevande:");
+        System.out.println(Colors.BLUE_BRIGHT + "Bevande:");
         for (Bevande bevande1 : bevandeList) {
-            System.out.println("- " + bevande1.getName() + " $" + bevande1.getPrice());
+            System.out.println(Colors.RED + "- " + bevande1.getName() + " $" + bevande1.getPrice());
         }
     }
 }
