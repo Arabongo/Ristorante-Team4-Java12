@@ -1,23 +1,10 @@
-public class Antipasti {
-    private String name;
-    private double price;
-
-    Antipasti (String name, Double price) {
-        this.name = name;
-
-        this.price = price;
-
+public class Antipasti extends Piatti {
+    public Antipasti(String name, double price, IngredientiAntipasti ingredient) {
+        super(name, price, ingredient.getIngredient());
     }
-    public void setPrice(Double price) {this.price = price;}
 
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public Double getPrice() {
-        return price;
+    @Override
+    public void print() {
+        System.out.println(Colors.BLUE_BRIGHT + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredient() + ")");
     }
 }
-
