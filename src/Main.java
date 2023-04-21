@@ -56,12 +56,12 @@ public class Main {
         bevandeList.add(new Bevande("Pinot Noir", 15.0));
 
         // Dolci
-        dolciList.add(new Dolci("Tiramisù al cucchiaio", 9.5));
-        dolciList.add(new Dolci("Babà", 10.5));
-        dolciList.add(new Dolci("Delizia al limone", 12.0));
-        dolciList.add(new Dolci("Cannolo alla ricotta", 8));
-        dolciList.add(new Dolci("Tartufo al cioccolato", 9));
-        dolciList.add(new Dolci("CheeseCake", 10));
+        dolciList.add(new Dolci("Tiramisù al cucchiaio", 9.5,IngredientiDolci.TIRAMISU));
+        dolciList.add(new Dolci("Babà", 10.5,IngredientiDolci.BABA));
+        dolciList.add(new Dolci("Delizia al limone", 12.0,IngredientiDolci.DELIZIA_AL_LIMONE));
+        dolciList.add(new Dolci("Cannolo alla ricotta", 8, IngredientiDolci.CANNOLO));
+        dolciList.add(new Dolci("Tartufo al cioccolato", 9,IngredientiDolci.TARTUFO));
+        dolciList.add(new Dolci("CheeseCake", 10,IngredientiDolci.CHEESE_CAKE));
 
 
         // Print out the menu
@@ -79,7 +79,7 @@ public class Main {
 
         System.out.println(Colors.RED_BRIGHT + "Dolci:");
         for (Dolci dolci : dolciList) {
-            System.out.println(Colors.GREEN_BRIGHT+ "- " +dolci.getName() +  " $" + dolci.getPrice());
+            System.out.println(Colors.GREEN_BRIGHT.getValue()+ "- " +dolci.getName() +  " $" + dolci.getPrice());
         }
         System.out.println();
 

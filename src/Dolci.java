@@ -1,23 +1,11 @@
-public class Dolci {
-    private String name;
-    private double price;
+public class Dolci extends Piatti {
 
-    public Dolci(String name, double price) {
-        this.name = name;
-        this.price = price;
+    public Dolci(String name, double price, IngredientiDolci ingredients) {
+        super(name, price, ingredients.getIngredients());
     }
-    public String getName() {
-        return name;
+    @Override
+    public void print(){
+        System.out.println(Colors.GREEN_BRIGHT.getValue()+ "- " + getName() +  " $" + getPrice());
     }
-
-    public void setNome(String name) {
-        this.name = name;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {this.price = price;}
 }
 
