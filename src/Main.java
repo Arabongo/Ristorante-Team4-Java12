@@ -14,13 +14,12 @@ public class Main {
         antipastiList.add(new Antipasti("Vitello Tonnato", 8.50, IngredientiAntipasti.VITELLO_TONNATO));
         antipastiList.add(new Antipasti("Olive Ascolane", 6.50, IngredientiAntipasti.OLIVE_ASCOLANE));
         antipastiList.add(new Antipasti("Cornetti Salati", 5.50, IngredientiAntipasti.CORNETTI_SALATI));
-
         // Primi Piatti
-        primiPiattiList.add(new PrimiPiatti("Bucatini alla Carbonara", 8.99));
-        primiPiattiList.add(new PrimiPiatti("Lasagne alla Bolognese", 9.99));
-        primiPiattiList.add(new PrimiPiatti("Spaghetti all'Amatriciana (piatto del giorno)", 8.99));
-        primiPiattiList.add(new PrimiPiatti("Risotto alla milanese", 7.99));
-        primiPiattiList.add(new PrimiPiatti("Pasta alla gricia", 8.99));
+        primiPiattiList.add(new PrimiPiatti("Bucatini alla Carbonara", 8.99, IngredientiPrimiPiatti.BUCATINI_ALLA_CARBONARA));
+        primiPiattiList.add(new PrimiPiatti("Lasagne alla Bolognese", 9.99, IngredientiPrimiPiatti.LASAGNE_ALLA_BOLOGNESE));
+        primiPiattiList.add(new PrimiPiatti("Spaghetti all Amatriciana (piatto del giorno)", 8.99, IngredientiPrimiPiatti.SPAGHETTI_ALL_AMATRICIANA));
+        primiPiattiList.add(new PrimiPiatti("Risotto alla milanese", 7.99, IngredientiPrimiPiatti.RISOTTO_ALLA_MILANESE));
+        primiPiattiList.add(new PrimiPiatti("Pasta alla gricia", 8.99, IngredientiPrimiPiatti.PASTA_ALLA_GRICIA));
 
         // Secondi Piatti
         secondiPiattiList.add(new SecondiPiatti("Filetto di maiale al forno con salvia e mele",11.99 ));
@@ -67,7 +66,7 @@ public class Main {
 
         System.out.println(Colors.GREEN + "Primi Piatti");
         for (PrimiPiatti primiPiatti : primiPiattiList) {
-            System.out.println(Colors.YELLOW_BRIGHT + "- " +primiPiatti.getName() + " $" + primiPiatti.getPrice());
+            primiPiatti.print();
         }
         System.out.println();
 
