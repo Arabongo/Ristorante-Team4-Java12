@@ -5,7 +5,7 @@ public class Dolci extends Piatti {
     }
     @Override
     public void print(){
-        System.out.println(Colors.GREEN_BRIGHT.getValue()+ "- " + getName() +  " $" + getPrice());
+        System.out.println(Colors.GREEN_BRIGHT.getValue()+ "- " + getName() +  " $" + getPrice() + " -(Ingredienti: " + getIngredient() + ")");
     }
 }
 

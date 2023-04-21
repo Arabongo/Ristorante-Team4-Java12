@@ -3,8 +3,6 @@
 import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Dolci> dolciList = new ArrayList<>();
-
         // Antipasti
         Antipasti antipasti1 = new Antipasti("Affettato", 7.50, IngredientiAntipasti.AFFETTATO);
         Antipasti antipasti2 = new Antipasti("Vitello Tonnato", 8.50, IngredientiAntipasti.VITELLO_TONNATO);
@@ -49,7 +47,21 @@ public class Main {
         secondiPiatti5.print();
         secondiPiatti6.print();
         System.out.println();
-
+        // Dolci
+        Dolci dolce1= new Dolci("Tiramisù al cucchiaio", 9.5,IngredientiDolci.TIRAMISU);
+        Dolci dolce2= new Dolci("Babà", 10.5,IngredientiDolci.BABA);
+        Dolci dolce3=new Dolci("Delizia al limone", 12.0,IngredientiDolci.DELIZIA_AL_LIMONE);
+        Dolci dolce4=new Dolci("Cannolo alla ricotta", 8, IngredientiDolci.CANNOLO);
+        Dolci dolce5=new Dolci("Tartufo al cioccolato", 9,IngredientiDolci.TARTUFO);
+        Dolci dolce6=new Dolci("CheeseCake", 10,IngredientiDolci.CHEESE_CAKE);
+        System.out.println(Colors.RED_BRIGHT.getValue() + "Dolci:");
+        dolce1.print();
+        dolce2.print();
+        dolce3.print();
+        dolce4.print();
+        dolce5.print();
+        dolce6.print();
+        System.out.println();
         // Bevande
         Bevande bevande1 = new Bevande("Gradisca 0.33l", 3.5, true, 4.5);
         Bevande bevande2 = new Bevande("Gradisca 0.5l", 3.5,true, 4.5);
@@ -93,20 +105,6 @@ public class Main {
         bevande17.printBevande();
         System.out.println();
 
-        // Dolci
-        dolciList.add(new Dolci("Tiramisù al cucchiaio", 9.5,IngredientiDolci.TIRAMISU));
-        dolciList.add(new Dolci("Babà", 10.5,IngredientiDolci.BABA));
-        dolciList.add(new Dolci("Delizia al limone", 12.0,IngredientiDolci.DELIZIA_AL_LIMONE));
-        dolciList.add(new Dolci("Cannolo alla ricotta", 8, IngredientiDolci.CANNOLO));
-        dolciList.add(new Dolci("Tartufo al cioccolato", 9,IngredientiDolci.TARTUFO));
-        dolciList.add(new Dolci("CheeseCake", 10,IngredientiDolci.CHEESE_CAKE));
 
-
-        // Print out the menu
-        System.out.println(Colors.RED_BRIGHT + "Dolci:");
-        for (Dolci dolci : dolciList) {
-            System.out.println(Colors.GREEN_BRIGHT.getValue()+ "- " +dolci.getName() +  " $" + dolci.getPrice());
-        }
-        System.out.println();
     }
 }
