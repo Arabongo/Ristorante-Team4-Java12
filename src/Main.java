@@ -3,17 +3,24 @@
 import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Antipasti> antipastiList = new ArrayList<>();
         ArrayList<PrimiPiatti> primiPiattiList = new ArrayList<>();
         ArrayList<SecondiPiatti> secondiPiattiList = new ArrayList<>();
         ArrayList<Dolci> dolciList = new ArrayList<>();
         ArrayList<Bevande> bevandeList = new ArrayList<>();
 
         // Antipasti
-        antipastiList.add(new Antipasti("Affettato", 7.50, IngredientiAntipasti.AFFETTATO));
-        antipastiList.add(new Antipasti("Vitello Tonnato", 8.50, IngredientiAntipasti.VITELLO_TONNATO));
-        antipastiList.add(new Antipasti("Olive Ascolane", 6.50, IngredientiAntipasti.OLIVE_ASCOLANE));
-        antipastiList.add(new Antipasti("Cornetti Salati", 5.50, IngredientiAntipasti.CORNETTI_SALATI));
+        Antipasti antipasti1 = new Antipasti("Affettato", 7.50, IngredientiAntipasti.AFFETTATO);
+        Antipasti antipasti2 = new Antipasti("Vitello Tonnato", 8.50, IngredientiAntipasti.VITELLO_TONNATO);
+        Antipasti antipasti3 = new Antipasti("Olive Ascolane", 6.50, IngredientiAntipasti.OLIVE_ASCOLANE);
+        Antipasti antipasti4 = new Antipasti("Cornetti Salati", 5.50, IngredientiAntipasti.CORNETTI_SALATI);
+
+        System.out.println(Colors.YELLOW + "Antipasti:");
+        antipasti1.print();
+        antipasti2.print();
+        antipasti3.print();
+        antipasti4.print();
+        System.out.println();
+
         // Primi Piatti
         primiPiattiList.add(new PrimiPiatti("Bucatini alla Carbonara", 8.99, IngredientiPrimiPiatti.BUCATINI_ALLA_CARBONARA));
         primiPiattiList.add(new PrimiPiatti("Lasagne alla Bolognese", 9.99, IngredientiPrimiPiatti.LASAGNE_ALLA_BOLOGNESE));
@@ -58,12 +65,6 @@ public class Main {
 
 
         // Print out the menu
-        System.out.println(Colors.YELLOW + "Antipasti:");
-        for (Antipasti antipasti : antipastiList) {
-            antipasti.print();
-        }
-        System.out.println();
-
         System.out.println(Colors.GREEN + "Primi Piatti");
         for (PrimiPiatti primiPiatti : primiPiattiList) {
             primiPiatti.print();
