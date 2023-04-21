@@ -4,7 +4,6 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         ArrayList<Dolci> dolciList = new ArrayList<>();
-        ArrayList<Bevande> bevandeList = new ArrayList<>();
 
         // Antipasti
         Antipasti antipasti1 = new Antipasti("Affettato", 7.50, IngredientiAntipasti.AFFETTATO);
@@ -52,23 +51,47 @@ public class Main {
         System.out.println();
 
         // Bevande
-        bevandeList.add(new Bevande("Gradisca 0.33l", 3.50));
-        bevandeList.add(new Bevande("Gradisca 0.5l", 5.50));
-        bevandeList.add(new Bevande("Gradisca 1l", 10));
-        bevandeList.add(new Bevande("Midona 0.5l", 5));
-        bevandeList.add(new Bevande("Volpina 0.33l", 4));
-        bevandeList.add(new Bevande("Volpina 0.5l", 6));
-        bevandeList.add(new Bevande("Acqua nat/gas 1l", 1));
-        bevandeList.add(new Bevande("Acqua nat/gas 0.5l", 0.5));
-        bevandeList.add(new Bevande("Coca Cola 0.5l", 2.50));
-        bevandeList.add(new Bevande("Chinotto 0.33l", 12));
-        bevandeList.add(new Bevande("Te Pesca 1/2l", 2.5));
-        bevandeList.add(new Bevande("Te Limone 1/2l", 2.5));
-        bevandeList.add(new Bevande("Succhi di frutta 0.33l", 3.5));
-        bevandeList.add(new Bevande("Rosè frizzante", 10.0));
-        bevandeList.add(new Bevande("Chardonnat", 13.0));
-        bevandeList.add(new Bevande("Merlot", 10.0));
-        bevandeList.add(new Bevande("Pinot Noir", 15.0));
+        Bevande bevande1 = new Bevande("Gradisca 0.33l", 3.5, true, 4.5);
+        Bevande bevande2 = new Bevande("Gradisca 0.5l", 3.5,true, 4.5);
+        Bevande bevande3 = new Bevande("Gradisca 1l", 10.0, true, 4.5);
+        Bevande bevande4 = new Bevande("Midona", 5.0, true, 5.5);
+        Bevande bevande5 = new Bevande("Volpina", 4.0, true, 5.0);
+        Bevande bevande6 = new Bevande("Volpina", 6.0, true, 5.0);
+        Bevande bevande7 = new Bevande("Acqua Nat 1/2l", 1.0, false, 0.0);
+        Bevande bevande8 = new Bevande("Acqua Gas 1/2l", 1.0, false, 0.0);
+        Bevande bevande9 = new Bevande("Coca Cola 1/2l", 2.5,false, 0.0);
+        Bevande bevande10 = new Bevande("Chinotto 0.33l", 3.0, false, 0.0);
+        Bevande bevande11 = new Bevande("Te Pesca 1/2l", 2.5, false, 0.0);
+        Bevande bevande12 = new Bevande("Te Limone 1/2l", 2.5, false, 0.0);
+        Bevande bevande13 = new Bevande("Succhi di frutta 0.33l", 3.5, false, 0.0);
+        Bevande bevande14 = new Bevande("Rosè frizzante", 10.0, true, 12.0);
+        Bevande bevande15 = new Bevande("Chardonnat", 13.0, true, 11.5);
+        Bevande bevande16 = new Bevande("Merlot", 10.0, true, 13.5);
+        Bevande bevande17 = new Bevande("Pinot Noir", 15.0, true, 11.0);
+
+
+        System.out.println(Colors.BLUE_BRIGHT.getValue()+"Bevande : ");
+        System.out.println(Colors.BLUE_BRIGHT.getValue()+"BIRRE : ");
+        bevande1.printBevande();
+        bevande2.printBevande();
+        bevande3.printBevande();
+        bevande4.printBevande();
+        bevande5.printBevande();
+        bevande6.printBevande();
+        System.out.println(Colors.BLUE_BRIGHT.getValue()+"\n"+"SOFT DRINK : ");
+        bevande7.printBevande();
+        bevande8.printBevande();
+        bevande9.printBevande();
+        bevande10.printBevande();
+        bevande11.printBevande();
+        bevande12.printBevande();
+        bevande13.printBevande();
+        System.out.println(Colors.BLUE_BRIGHT.getValue()+"\n"+"VINI : ");
+        bevande14.printBevande();
+        bevande15.printBevande();
+        bevande16.printBevande();
+        bevande17.printBevande();
+        System.out.println();
 
         // Dolci
         dolciList.add(new Dolci("Tiramisù al cucchiaio", 9.5,IngredientiDolci.TIRAMISU));
@@ -85,10 +108,5 @@ public class Main {
             System.out.println(Colors.GREEN_BRIGHT.getValue()+ "- " +dolci.getName() +  " $" + dolci.getPrice());
         }
         System.out.println();
-
-        System.out.println(Colors.BLUE_BRIGHT + "Bevande:");
-        for (Bevande bevande1 : bevandeList) {
-            System.out.println(Colors.RED + "- " + bevande1.getName() + " $" + bevande1.getPrice());
-        }
     }
 }
