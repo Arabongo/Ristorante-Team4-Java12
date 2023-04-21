@@ -22,12 +22,12 @@ public class Main {
         primiPiattiList.add(new PrimiPiatti("Pasta alla gricia", 8.99, IngredientiPrimiPiatti.PASTA_ALLA_GRICIA));
 
         // Secondi Piatti
-        secondiPiattiList.add(new SecondiPiatti("Filetto di maiale al forno con salvia e mele",11.99 ));
-        secondiPiattiList.add(new SecondiPiatti("Grigliata di carne",13.99 ));
-        secondiPiattiList.add(new SecondiPiatti("Cotoletta alla milanese ", 7.99));
-        secondiPiattiList.add(new SecondiPiatti("Costine d’agnello alla griglia ",10.99));
-        secondiPiattiList.add(new SecondiPiatti("Tagliata di manzo con rucola e grana ",13.99));
-        secondiPiattiList.add(new SecondiPiatti("Scaloppine (all’aceto / ai funghi porcini/ al vino bianco) ",9.99));
+        secondiPiattiList.add(new SecondiPiatti("Filetto di maiale al forno con salvia e mele",11.99, IngredientiSecondiPiatti.FILETTO_DI_MAIALE));
+        secondiPiattiList.add(new SecondiPiatti("Grigliata di carne",13.99, IngredientiSecondiPiatti.GRIGLIATA_DI_CARNE));
+        secondiPiattiList.add(new SecondiPiatti("Cotoletta alla milanese ", 7.99, IngredientiSecondiPiatti.COTOLETTA_ALLA_MILANESE));
+        secondiPiattiList.add(new SecondiPiatti("Costine d’agnello alla griglia ",10.99, IngredientiSecondiPiatti.COSTINE_AGNELLO));
+        secondiPiattiList.add(new SecondiPiatti("Tagliata di manzo con rucola e grana ",13.99, IngredientiSecondiPiatti.TAGLIATA_DI_MANZO));
+        secondiPiattiList.add(new SecondiPiatti("Scaloppine (all’aceto / ai funghi porcini/ al vino bianco) ",9.99, IngredientiSecondiPiatti.SCALOPPINE));
 
         // Bevande
         bevandeList.add(new Bevande("Gradisca 0.33l", 3.50));
@@ -72,7 +72,7 @@ public class Main {
 
         System.out.println(Colors.PURPLE_BRIGHT + "Secondi Piatti:");
         for (SecondiPiatti secondiPiatti : secondiPiattiList) {
-            System.out.println(Colors.CYAN + "- " + secondiPiatti.getName() + " $" + secondiPiatti.getPrice());
+            secondiPiatti.print();
         }
         System.out.println();
 
