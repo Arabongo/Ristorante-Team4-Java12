@@ -5,6 +5,6 @@ public class Antipasti extends Piatti {
 
     @Override
     public void print() {
-        System.out.println(Colors.BLUE_BRIGHT + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredient() + ")");
+        System.out.println(Colors.BLUE_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredient() + ")");
     }
 }

@@ -3,7 +3,6 @@
 import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
-        ArrayList<PrimiPiatti> primiPiattiList = new ArrayList<>();
         ArrayList<SecondiPiatti> secondiPiattiList = new ArrayList<>();
         ArrayList<Dolci> dolciList = new ArrayList<>();
         ArrayList<Bevande> bevandeList = new ArrayList<>();
@@ -14,7 +13,7 @@ public class Main {
         Antipasti antipasti3 = new Antipasti("Olive Ascolane", 6.50, IngredientiAntipasti.OLIVE_ASCOLANE);
         Antipasti antipasti4 = new Antipasti("Cornetti Salati", 5.50, IngredientiAntipasti.CORNETTI_SALATI);
 
-        System.out.println(Colors.YELLOW + "Antipasti:");
+        System.out.println(Colors.YELLOW.getValue() + "Antipasti:");
         antipasti1.print();
         antipasti2.print();
         antipasti3.print();
@@ -22,11 +21,19 @@ public class Main {
         System.out.println();
 
         // Primi Piatti
-        primiPiattiList.add(new PrimiPiatti("Bucatini alla Carbonara", 8.99, IngredientiPrimiPiatti.BUCATINI_ALLA_CARBONARA));
-        primiPiattiList.add(new PrimiPiatti("Lasagne alla Bolognese", 9.99, IngredientiPrimiPiatti.LASAGNE_ALLA_BOLOGNESE));
-        primiPiattiList.add(new PrimiPiatti("Spaghetti all Amatriciana (piatto del giorno)", 8.99, IngredientiPrimiPiatti.SPAGHETTI_ALL_AMATRICIANA));
-        primiPiattiList.add(new PrimiPiatti("Risotto alla milanese", 7.99, IngredientiPrimiPiatti.RISOTTO_ALLA_MILANESE));
-        primiPiattiList.add(new PrimiPiatti("Pasta alla gricia", 8.99, IngredientiPrimiPiatti.PASTA_ALLA_GRICIA));
+        PrimiPiatti primiPiatti1 = new PrimiPiatti("Bucatini alla Carbonara", 8.99, IngredientiPrimiPiatti.BUCATINI_ALLA_CARBONARA);
+        PrimiPiatti primiPiatti2 = new PrimiPiatti("Lasagne alla Bolognese", 9.99, IngredientiPrimiPiatti.LASAGNE_ALLA_BOLOGNESE);
+        PrimiPiatti primiPiatti3 = new PrimiPiatti("Spaghetti all Amatriciana (piatto del giorno)", 8.99, IngredientiPrimiPiatti.SPAGHETTI_ALL_AMATRICIANA);
+        PrimiPiatti primiPiatti4 = new PrimiPiatti("Risotto alla milanese", 7.99, IngredientiPrimiPiatti.RISOTTO_ALLA_MILANESE);
+        PrimiPiatti primiPiatti5 = new PrimiPiatti("Pasta alla gricia", 8.99, IngredientiPrimiPiatti.PASTA_ALLA_GRICIA);
+
+        System.out.println(Colors.GREEN.getValue() + "Primi Piatti");
+        primiPiatti1.print();
+        primiPiatti2.print();
+        primiPiatti3.print();
+        primiPiatti4.print();
+        primiPiatti5.print();
+        System.out.println();
 
         // Secondi Piatti
         secondiPiattiList.add(new SecondiPiatti("Filetto di maiale al forno con salvia e mele",11.99, IngredientiSecondiPiatti.FILETTO_DI_MAIALE));
@@ -65,12 +72,6 @@ public class Main {
 
 
         // Print out the menu
-        System.out.println(Colors.GREEN + "Primi Piatti");
-        for (PrimiPiatti primiPiatti : primiPiattiList) {
-            primiPiatti.print();
-        }
-        System.out.println();
-
         System.out.println(Colors.PURPLE_BRIGHT + "Secondi Piatti:");
         for (SecondiPiatti secondiPiatti : secondiPiattiList) {
             secondiPiatti.print();
