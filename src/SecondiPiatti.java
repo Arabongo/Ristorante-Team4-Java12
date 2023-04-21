@@ -5,6 +5,6 @@ public class SecondiPiatti extends Piatti {
 
     @Override
     public void print() {
-        System.out.println(Colors.CYAN + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredient() + ")");
+        System.out.println(Colors.CYAN.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredient() + ")");
     }
 }

@@ -3,7 +3,6 @@
 import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
-        ArrayList<SecondiPiatti> secondiPiattiList = new ArrayList<>();
         ArrayList<Dolci> dolciList = new ArrayList<>();
         ArrayList<Bevande> bevandeList = new ArrayList<>();
 
@@ -36,12 +35,21 @@ public class Main {
         System.out.println();
 
         // Secondi Piatti
-        secondiPiattiList.add(new SecondiPiatti("Filetto di maiale al forno con salvia e mele",11.99, IngredientiSecondiPiatti.FILETTO_DI_MAIALE));
-        secondiPiattiList.add(new SecondiPiatti("Grigliata di carne",13.99, IngredientiSecondiPiatti.GRIGLIATA_DI_CARNE));
-        secondiPiattiList.add(new SecondiPiatti("Cotoletta alla milanese ", 7.99, IngredientiSecondiPiatti.COTOLETTA_ALLA_MILANESE));
-        secondiPiattiList.add(new SecondiPiatti("Costine d’agnello alla griglia ",10.99, IngredientiSecondiPiatti.COSTINE_AGNELLO));
-        secondiPiattiList.add(new SecondiPiatti("Tagliata di manzo con rucola e grana ",13.99, IngredientiSecondiPiatti.TAGLIATA_DI_MANZO));
-        secondiPiattiList.add(new SecondiPiatti("Scaloppine (all’aceto / ai funghi porcini/ al vino bianco) ",9.99, IngredientiSecondiPiatti.SCALOPPINE));
+        SecondiPiatti secondiPiatti1 = new SecondiPiatti("Filetto di maiale al forno con salvia e mele",11.99, IngredientiSecondiPiatti.FILETTO_DI_MAIALE);
+        SecondiPiatti secondiPiatti2 = new SecondiPiatti("Grigliata di carne",13.99, IngredientiSecondiPiatti.GRIGLIATA_DI_CARNE);
+        SecondiPiatti secondiPiatti3 = new SecondiPiatti("Cotoletta alla milanese ", 7.99, IngredientiSecondiPiatti.COTOLETTA_ALLA_MILANESE);
+        SecondiPiatti secondiPiatti4 = new SecondiPiatti("Costine d’agnello alla griglia ",10.99, IngredientiSecondiPiatti.COSTINE_AGNELLO);
+        SecondiPiatti secondiPiatti5 = new SecondiPiatti("Tagliata di manzo con rucola e grana ",13.99, IngredientiSecondiPiatti.TAGLIATA_DI_MANZO);
+        SecondiPiatti secondiPiatti6 = new SecondiPiatti("Scaloppine (all’aceto / ai funghi porcini/ al vino bianco) ",9.99, IngredientiSecondiPiatti.SCALOPPINE);
+
+        System.out.println(Colors.PURPLE_BRIGHT.getValue() + "Secondi Piatti:");
+        secondiPiatti1.print();
+        secondiPiatti2.print();
+        secondiPiatti3.print();
+        secondiPiatti4.print();
+        secondiPiatti5.print();
+        secondiPiatti6.print();
+        System.out.println();
 
         // Bevande
         bevandeList.add(new Bevande("Gradisca 0.33l", 3.50));
@@ -72,12 +80,6 @@ public class Main {
 
 
         // Print out the menu
-        System.out.println(Colors.PURPLE_BRIGHT + "Secondi Piatti:");
-        for (SecondiPiatti secondiPiatti : secondiPiattiList) {
-            secondiPiatti.print();
-        }
-        System.out.println();
-
         System.out.println(Colors.RED_BRIGHT + "Dolci:");
         for (Dolci dolci : dolciList) {
             System.out.println(Colors.GREEN_BRIGHT.getValue()+ "- " +dolci.getName() +  " $" + dolci.getPrice());
