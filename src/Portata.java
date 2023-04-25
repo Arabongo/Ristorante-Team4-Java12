@@ -1,16 +1,20 @@
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
 public class Portata {
     private String name;
     private double price;
-    private String ingredient;
+    private Set <String> ingredients;
 
-    public Portata(String name, double price, String ingredient) {
+    public Portata(String name, double price, Set <String> ingredients) {
         this.name = name;
         this.price = price;
-        this.ingredient = ingredient;
-    }
-
+        this.ingredients = new HashSet<>();
+        }
     public void print () {
-        System.out.println(name + price + ingredient);
+        System.out.println(name + price + ingredients);
     }
 
     //Fare un override per le proprie classi per il metodo print
@@ -30,13 +34,19 @@ public class Portata {
     public void setPrice(double price) {
         this.price = price;
     }
-
-    public String getIngredient() {
-        return ingredient;
+    public void addIngredients(String ingredient) {
+        ingredients.add(ingredient);
+    }
+    public void removeIngredients(String ingredient) {
+        ingredients.remove(ingredient);
     }
 
-    public void setIngredient(String ingredient) {
-        this.ingredient = ingredient;
+    public Set<String> getIngredients() {
+        return ingredients;
     }
 
+    public void setIngredients(Set<String> ingredients) {
+        this.ingredients = ingredients;
+    }
 }
+

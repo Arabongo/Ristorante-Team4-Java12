@@ -1,6 +1,8 @@
 
 
 import java.util.ArrayList;
+import java.util.Set;
+
 public class Main {
     public static void main(String[] args) {
         // Antipasti
@@ -17,11 +19,11 @@ public class Main {
         System.out.println();
 
         // Primi Piatti
-        PrimiPiatti primiPiatti1 = new PrimiPiatti("Bucatini alla Carbonara", 8.99, IngredientiPrimiPiatti.BUCATINI_ALLA_CARBONARA);
-        PrimiPiatti primiPiatti2 = new PrimiPiatti("Lasagne alla Bolognese", 9.99, IngredientiPrimiPiatti.LASAGNE_ALLA_BOLOGNESE);
-        PrimiPiatti primiPiatti3 = new PrimiPiatti("Spaghetti all Amatriciana (piatto del giorno)", 8.99, IngredientiPrimiPiatti.SPAGHETTI_ALL_AMATRICIANA);
-        PrimiPiatti primiPiatti4 = new PrimiPiatti("Risotto alla milanese", 7.99, IngredientiPrimiPiatti.RISOTTO_ALLA_MILANESE);
-        PrimiPiatti primiPiatti5 = new PrimiPiatti("Pasta alla gricia", 8.99, IngredientiPrimiPiatti.PASTA_ALLA_GRICIA);
+        PrimiPiatti primiPiatti1 = new PrimiPiatti("Bucatini alla Carbonara", 8.99, Set.of(Ingredients.UOVA.getIngredient(),Ingredients.GUANCIALE.getIngredient(),Ingredients.PASTA.getIngredient()));
+        PrimiPiatti primiPiatti2 = new PrimiPiatti("Lasagne alla Bolognese", 9.99, Set.of(Ingredients.PASTA.getIngredient(),Ingredients.CARNE_DI_VITELLO.getIngredient(),Ingredients.POMODORI.getIngredient()));
+        PrimiPiatti primiPiatti3 = new PrimiPiatti("Spaghetti all Amatriciana (piatto del giorno)", 8.99, Set.of(Ingredients.PASTA.getIngredient(),Ingredients.GUANCIALE.getIngredient(),Ingredients.FORMAGGIO.getIngredient()));
+        PrimiPiatti primiPiatti4 = new PrimiPiatti("Risotto alla milanese", 7.99, Set.of(Ingredients.RISO.getIngredient(),Ingredients.AROMI.getIngredient(),Ingredients.PEPE.getIngredient()));
+        PrimiPiatti primiPiatti5 = new PrimiPiatti("Pasta alla gricia", 8.99, Set.of(Ingredients.PASTA.getIngredient(),Ingredients.UOVA.getIngredient(),Ingredients.GUANCIALE.getIngredient(),Ingredients.PEPE.getIngredient()));
 
         System.out.println(Colors.GREEN.getValue() + "Primi Piatti");
         primiPiatti1.print();
