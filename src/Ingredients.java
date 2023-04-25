@@ -37,4 +37,8 @@ public enum Ingredients {
     public String getIngredient() {
         return ingredient;
     }
+    @Override
+    public String toString (){
+        return getIngredient();
+    }
 }

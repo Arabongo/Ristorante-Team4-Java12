@@ -19,11 +19,11 @@ public class Main {
         System.out.println();
 
         // Primi Piatti
-        PrimiPiatti primiPiatti1 = new PrimiPiatti("Bucatini alla Carbonara", 8.99, Set.of(Ingredients.UOVA.getIngredient(),Ingredients.GUANCIALE.getIngredient(),Ingredients.PASTA.getIngredient()));
-        PrimiPiatti primiPiatti2 = new PrimiPiatti("Lasagne alla Bolognese", 9.99, Set.of(Ingredients.PASTA.getIngredient(),Ingredients.CARNE_DI_VITELLO.getIngredient(),Ingredients.POMODORI.getIngredient()));
-        PrimiPiatti primiPiatti3 = new PrimiPiatti("Spaghetti all Amatriciana (piatto del giorno)", 8.99, Set.of(Ingredients.PASTA.getIngredient(),Ingredients.GUANCIALE.getIngredient(),Ingredients.FORMAGGIO.getIngredient()));
-        PrimiPiatti primiPiatti4 = new PrimiPiatti("Risotto alla milanese", 7.99, Set.of(Ingredients.RISO.getIngredient(),Ingredients.AROMI.getIngredient(),Ingredients.PEPE.getIngredient()));
-        PrimiPiatti primiPiatti5 = new PrimiPiatti("Pasta alla gricia", 8.99, Set.of(Ingredients.PASTA.getIngredient(),Ingredients.UOVA.getIngredient(),Ingredients.GUANCIALE.getIngredient(),Ingredients.PEPE.getIngredient()));
+        PrimiPiatti primiPiatti1 = new PrimiPiatti("Bucatini alla Carbonara", 8.99, Set.of(Ingredients.UOVA,Ingredients.GUANCIALE,Ingredients.PASTA));
+        PrimiPiatti primiPiatti2 = new PrimiPiatti("Lasagne alla Bolognese", 9.99, Set.of(Ingredients.PASTA,Ingredients.CARNE_DI_VITELLO,Ingredients.POMODORI));
+        PrimiPiatti primiPiatti3 = new PrimiPiatti("Spaghetti all Amatriciana (piatto del giorno)", 8.99, Set.of(Ingredients.PASTA,Ingredients.GUANCIALE,Ingredients.FORMAGGIO));
+        PrimiPiatti primiPiatti4 = new PrimiPiatti("Risotto alla milanese", 7.99, Set.of(Ingredients.RISO,Ingredients.AROMI,Ingredients.PEPE));
+        PrimiPiatti primiPiatti5 = new PrimiPiatti("Pasta alla gricia", 8.99, Set.of(Ingredients.PASTA,Ingredients.UOVA,Ingredients.GUANCIALE,Ingredients.PEPE));
 
         System.out.println(Colors.GREEN.getValue() + "Primi Piatti");
         primiPiatti1.print();
@@ -34,12 +34,12 @@ public class Main {
         System.out.println();
 
         // Secondi Piatti
-        SecondiPiatti secondiPiatti1 = new SecondiPiatti("Filetto di maiale al forno con salvia",11.99, Set.of(Ingredients.CARNE_DI_MAIALE.getIngredient(),Ingredients.AROMI.getIngredient(),Ingredients.PATATE.getIngredient()));
-        SecondiPiatti secondiPiatti2 = new SecondiPiatti("Grigliata di carne",13.99, Set.of(Ingredients.CARNE_MISTA.getIngredient(),Ingredients.AROMI.getIngredient(),Ingredients.PEPE.getIngredient()));
-        SecondiPiatti secondiPiatti3 = new SecondiPiatti("Cotoletta alla milanese ", 7.99, Set.of(Ingredients.CARNE_DI_VITELLO.getIngredient(),Ingredients.UOVA.getIngredient()));
-        SecondiPiatti secondiPiatti4 = new SecondiPiatti("Costine d’agnello alla griglia ",10.99, Set.of(Ingredients.CARNE_DI_AGNELLO.getIngredient(),Ingredients.GUANCIALE.getIngredient(),Ingredients.VINO.getIngredient(),Ingredients.AROMI.getIngredient()));
-        SecondiPiatti secondiPiatti5 = new SecondiPiatti("Tagliata di manzo con rucola e grana ",13.99, Set.of(Ingredients.CARNE_DI_VITELLO.getIngredient(),Ingredients.FORMAGGIO.getIngredient(),Ingredients.POMODORI.getIngredient(),Ingredients.OLIO_EVO.getIngredient()));
-        SecondiPiatti secondiPiatti6 = new SecondiPiatti("Scaloppine (all’aceto / ai funghi porcini/ al vino bianco) ",9.99, Set.of(Ingredients.CARNE_DI_VITELLO.getIngredient(),Ingredients.ACETO.getIngredient(),Ingredients.FUNGHI.getIngredient(),Ingredients.VINO.getIngredient()));
+        SecondiPiatti secondiPiatti1 = new SecondiPiatti("Filetto di maiale al forno con salvia",11.99, Set.of(Ingredients.CARNE_DI_MAIALE,Ingredients.AROMI,Ingredients.PATATE));
+        SecondiPiatti secondiPiatti2 = new SecondiPiatti("Grigliata di carne",13.99, Set.of(Ingredients.CARNE_MISTA,Ingredients.AROMI,Ingredients.PEPE));
+        SecondiPiatti secondiPiatti3 = new SecondiPiatti("Cotoletta alla milanese ", 7.99, Set.of(Ingredients.CARNE_DI_VITELLO,Ingredients.UOVA));
+        SecondiPiatti secondiPiatti4 = new SecondiPiatti("Costine d’agnello alla griglia ",10.99, Set.of(Ingredients.CARNE_DI_AGNELLO,Ingredients.GUANCIALE,Ingredients.VINO,Ingredients.AROMI));
+        SecondiPiatti secondiPiatti5 = new SecondiPiatti("Tagliata di manzo con rucola e grana ",13.99, Set.of(Ingredients.CARNE_DI_VITELLO,Ingredients.FORMAGGIO,Ingredients.POMODORI,Ingredients.OLIO_EVO));
+        SecondiPiatti secondiPiatti6 = new SecondiPiatti("Scaloppine (all’aceto / ai funghi porcini/ al vino bianco) ",9.99, Set.of(Ingredients.CARNE_DI_VITELLO,Ingredients.ACETO,Ingredients.FUNGHI,Ingredients.VINO));
 
         System.out.println(Colors.PURPLE_BRIGHT.getValue() + "Secondi Piatti:");
         secondiPiatti1.print();

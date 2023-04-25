@@ -1,7 +1,7 @@
 import java.util.Set;
 
 public class SecondiPiatti extends Portata {
-    public SecondiPiatti(String name, double price, Set<String> ingredients) {
+    public SecondiPiatti(String name, double price, Set<Ingredients> ingredients) {
         super(name, price, ingredients);
     }
     @Override
