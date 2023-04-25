@@ -1,10 +1,11 @@
-public class SecondiPiatti extends Portata {
-    public SecondiPiatti(String name, double price, IngredientiSecondiPiatti ingredient) {
-        super(name, price, ingredient.getIngredient());
-    }
+import java.util.Set;
 
+public class SecondiPiatti extends Portata {
+    public SecondiPiatti(String name, double price, Set<String> ingredients) {
+        super(name, price, ingredients);
+    }
     @Override
     public void print() {
-        System.out.println(Colors.CYAN.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredient() + ")");
+        System.out.println(Colors.BLUE_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ")");
     }
 }
