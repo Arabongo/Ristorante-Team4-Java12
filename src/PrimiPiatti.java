@@ -1,4 +1,4 @@
-public class PrimiPiatti extends Piatti {
+public class PrimiPiatti extends Portata {
     public PrimiPiatti(String name, double price, IngredientiPrimiPiatti ingredient) {
         super(name, price, ingredient.getIngredient());
     }
