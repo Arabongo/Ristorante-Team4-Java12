@@ -6,9 +6,9 @@ import java.util.Set;
 public class Portata {
     private String name;
     private double price;
-    private Set <String> ingredients;
+    private Set <Ingredients> ingredients;
 
-    public Portata(String name, double price, Set <String> ingredients) {
+    public Portata(String name, double price, Set <Ingredients> ingredients) {
         this.name = name;
         this.price = price;
         this.ingredients = new HashSet<>();
@@ -34,18 +34,18 @@ public class Portata {
     public void setPrice(double price) {
         this.price = price;
     }
-    public void addIngredients(String ingredient) {
+    public void addIngredients(Ingredients ingredient) {
         ingredients.add(ingredient);
     }
-    public void removeIngredients(String ingredient) {
+    public void removeIngredients(Ingredients ingredient) {
         ingredients.remove(ingredient);
     }
 
-    public Set<String> getIngredients() {
+    public Set<Ingredients> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(Set<String> ingredients) {
+    public void setIngredients(Set<Ingredients> ingredients) {
         this.ingredients = ingredients;
     }
 }
