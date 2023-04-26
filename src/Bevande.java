@@ -1,26 +1,14 @@
-public class Bevande {
-    private String name;
-    private double price;
+import java.util.Set;
+
+public class Bevande extends Portata {
+
     private boolean alcoholic;
     private double alcoholPercentage;
 
-    public Bevande(String name, double price, boolean alcoholic, double alcoholPercentage) {
-        this.name = name;
-        this.price = price;
+    public Bevande(String name, double price, Set<Ingredients> ingredients, boolean alcoholic,double alcoholPercentage ) {
+        super(name, price, ingredients);
         this.alcoholic = alcoholic;
         this.alcoholPercentage = alcoholPercentage;
-    }
-    public String getName(){
-        return name;
-    }
-    public void setName(String name){
-        this.name = name;
-    }
-    public double getPrice(){
-        return price;
-    }
-    public void setPrice(double price){
-        this.price = price;
     }
     public boolean isAlcoholic() {
         return alcoholic;
@@ -34,8 +22,8 @@ public class Bevande {
     public void setAlcoholPercentage(double alcoholPercentage) {
         this.alcoholPercentage = alcoholPercentage;
     }
-
-    public void printBevande() {
+    @Override
+    public void print() {
         if (alcoholic) {
             System.out.println(Colors.RED.getValue()+"- "+getName()+ " $"+ getPrice()+ " "+"Percentuale alcolica: " + alcoholPercentage+ "%");
         } else {
