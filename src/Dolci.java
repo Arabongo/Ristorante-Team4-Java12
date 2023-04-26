@@ -1,11 +1,21 @@
-public class Dolci extends Portata {
+import java.util.Set;
 
-    public Dolci(String name, double price, IngredientiDolci ingredients) {
-        super(name, price, ingredients.getIngredients());
+public class Dolci extends Portata {
+    private boolean isGlutenFree;
+
+
+    public Dolci(String name, double price, Set<Ingredients> ingredients) {
+        super(name, price, ingredients);
     }
+
     @Override
     public void print(){
-        System.out.println(Colors.GREEN_BRIGHT.getValue()+ "- " + getName() +  " $" + getPrice() + " -(Ingredienti: " + getIngredient() + ")");
+        if (getIngredients().equals(Ingredients.FARINA)){
+            isGlutenFree = false;
+        }else{
+            isGlutenFree=true;
+        }
+        System.out.println(Colors.GREEN_BRIGHT.getValue()+ "- " + getName() +  " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ")" + "is Gluten Free: " + isGlutenFree);
     }
 }
 

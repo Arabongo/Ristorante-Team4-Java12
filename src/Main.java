@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-        // Antipasti
+         //Antipasti
         Antipasti antipasti1 = new Antipasti("Affettato", 7.50, IngredientiAntipasti.AFFETTATO);
         Antipasti antipasti2 = new Antipasti("Vitello Tonnato", 8.50, IngredientiAntipasti.VITELLO_TONNATO);
         Antipasti antipasti3 = new Antipasti("Olive Ascolane", 6.50, IngredientiAntipasti.OLIVE_ASCOLANE);
@@ -50,12 +50,12 @@ public class Main {
         secondiPiatti6.print();
         System.out.println();
         // Dolci
-        Dolci dolce1= new Dolci("Tiramisù al cucchiaio", 9.5,IngredientiDolci.TIRAMISU);
-        Dolci dolce2= new Dolci("Babà", 10.5,IngredientiDolci.BABA);
-        Dolci dolce3=new Dolci("Delizia al limone", 12.0,IngredientiDolci.DELIZIA_AL_LIMONE);
-        Dolci dolce4=new Dolci("Cannolo alla ricotta", 8, IngredientiDolci.CANNOLO);
-        Dolci dolce5=new Dolci("Tartufo al cioccolato", 9,IngredientiDolci.TARTUFO);
-        Dolci dolce6=new Dolci("CheeseCake", 10,IngredientiDolci.CHEESE_CAKE);
+        Dolci dolce1= new Dolci("Tiramisù al cucchiaio", 9.5,Set.of(Ingredients.ZUCCHERO,Ingredients.UOVA,Ingredients.LATTE,Ingredients.CIOCCOLATO,Ingredients.CAFFEINA));
+        Dolci dolce2= new Dolci("Babà", 10.5,Set.of(Ingredients.FARINA,Ingredients.AROMI,Ingredients.UOVA,Ingredients.RUM));
+        Dolci dolce3=new Dolci("Delizia al limone", 12.0,Set.of(Ingredients.FARINA,Ingredients.LATTE,Ingredients.UOVA,Ingredients.ZUCCHERO));
+        Dolci dolce4=new Dolci("Cannolo alla ricotta", 8, Set.of(Ingredients.FARINA,Ingredients.RICOTTA,Ingredients.CIOCCOLATO,Ingredients.ZUCCHERO));
+        Dolci dolce5=new Dolci("Tartufo al cioccolato", 9,Set.of(Ingredients.FARINA,Ingredients.ZUCCHERO,Ingredients.CIOCCOLATO,Ingredients.CAFFEINA));
+        Dolci dolce6=new Dolci("CheeseCake", 10,Set.of(Ingredients.FORMAGGIO,Ingredients.ZUCCHERO,Ingredients.PANNA));
         System.out.println(Colors.RED_BRIGHT.getValue() + "Dolci:");
         dolce1.print();
         dolce2.print();

@@ -27,7 +27,10 @@ public enum Ingredients {
     LUPPOLO("Luppolo"),
     ANIDRIDE_CARBONICA("Anidride Carbonica"),
     SUCCO_DI_FRUTTA("Succo di Frutta"),
-    MOSTO("Mosto");
+    MOSTO("Mosto"),
+    RICOTTA ("Ricotta"),
+    RUM ("Rum"),
+    PANNA ("Panna");
 
     private final String ingredient;
     Ingredients(String ingredient) {
