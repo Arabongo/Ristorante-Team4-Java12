@@ -11,7 +11,7 @@ public class Portata {
     public Portata(String name, double price, Set <Ingredients> ingredients) {
         this.name = name;
         this.price = price;
-        this.ingredients = new HashSet<>();
+        this.ingredients = ingredients;
         }
     public void print () {
         System.out.println(name + price + ingredients);
