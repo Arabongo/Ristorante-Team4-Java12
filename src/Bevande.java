@@ -25,9 +25,9 @@ public class Bevande extends Portata {
     @Override
     public void print() {
         if (alcoholic) {
-            System.out.println(Colors.RED.getValue()+"- "+getName()+ " $"+ getPrice()+ " "+"Percentuale alcolica: " + alcoholPercentage+ "%");
+            System.out.println(Colors.RED.getValue()+"- "+getName()+ " $"+ getPrice()+ " "+"Percentuale alcolica: " + alcoholPercentage+ "%" + " -(Ingredienti: " + getIngredients() + ")");
         } else {
-            System.out.println(Colors.RED.getValue()+"- "+getName()+" $"+ getPrice());
+            System.out.println(Colors.RED.getValue()+"- "+getName()+" $"+ getPrice() + " -(Ingredienti: " + getIngredients() + ")");
         }
     }
 }
