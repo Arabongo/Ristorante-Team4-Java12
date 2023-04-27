@@ -6,10 +6,10 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) {
          //Antipasti
-        Antipasti antipasti1 = new Antipasti("Affettato", 7.50, Set.of(Ingredients.CARNE_MISTA));
-        Antipasti antipasti2 = new Antipasti("Vitello Tonnato", 8.50, Set.of(Ingredients.CARNE_DI_VITELLO, Ingredients.SALE, Ingredients.OLIO_EVO));
-        Antipasti antipasti3 = new Antipasti("Olive Ascolane", 6.50, Set.of(Ingredients.CARNE_DI_VITELLO, Ingredients.FARINA, Ingredients.FORMAGGIO));
-        Antipasti antipasti4 = new Antipasti("Cornetti Salati", 5.50, Set.of(Ingredients.CARNE_MISTA, Ingredients.FARINA, Ingredients.OLIO_EVO));
+        Antipasti antipasti1 = new Antipasti("Affettato", 7.50, Set.of(Ingredients.CARNE_MISTA), true, 2);
+        Antipasti antipasti2 = new Antipasti("Vitello Tonnato", 8.50, Set.of(Ingredients.CARNE_DI_VITELLO, Ingredients.SALE, Ingredients.OLIO_EVO), false, 4);
+        Antipasti antipasti3 = new Antipasti("Olive Ascolane", 6.50, Set.of(Ingredients.CARNE_DI_VITELLO, Ingredients.FARINA, Ingredients.FORMAGGIO), true, 1);
+        Antipasti antipasti4 = new Antipasti("Cornetti Salati", 5.50, Set.of(Ingredients.CARNE_MISTA, Ingredients.FARINA, Ingredients.OLIO_EVO), false, 1);
 
         System.out.println(Colors.YELLOW.getValue() + "Antipasti:");
         antipasti1.print();
