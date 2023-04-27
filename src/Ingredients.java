@@ -30,6 +30,8 @@ public enum Ingredients {
     MOSTO("Mosto"),
     RICOTTA ("Ricotta"),
     RUM ("Rum"),
+    PEPRONCINO("Peperoncino"),
+    LIMONE("Limone"),
     PANNA ("Panna");
 
     private final String ingredient;

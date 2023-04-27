@@ -1,6 +1,5 @@
 
 
-import java.util.ArrayList;
 import java.util.Set;
 
 public class Main {
@@ -34,12 +33,12 @@ public class Main {
         System.out.println();
 
         // Secondi Piatti
-        SecondiPiatti secondiPiatti1 = new SecondiPiatti("Filetto di maiale al forno con salvia",11.99, Set.of(Ingredients.CARNE_DI_MAIALE,Ingredients.AROMI,Ingredients.PATATE));
-        SecondiPiatti secondiPiatti2 = new SecondiPiatti("Grigliata di carne",13.99, Set.of(Ingredients.CARNE_MISTA,Ingredients.AROMI,Ingredients.PEPE));
-        SecondiPiatti secondiPiatti3 = new SecondiPiatti("Cotoletta alla milanese ", 7.99, Set.of(Ingredients.CARNE_DI_VITELLO,Ingredients.UOVA));
-        SecondiPiatti secondiPiatti4 = new SecondiPiatti("Costine d’agnello alla griglia ",10.99, Set.of(Ingredients.CARNE_DI_AGNELLO,Ingredients.GUANCIALE,Ingredients.VINO,Ingredients.AROMI));
-        SecondiPiatti secondiPiatti5 = new SecondiPiatti("Tagliata di manzo con rucola e grana ",13.99, Set.of(Ingredients.CARNE_DI_VITELLO,Ingredients.FORMAGGIO,Ingredients.POMODORI,Ingredients.OLIO_EVO));
-        SecondiPiatti secondiPiatti6 = new SecondiPiatti("Scaloppine (all’aceto / ai funghi porcini/ al vino bianco) ",9.99, Set.of(Ingredients.CARNE_DI_VITELLO,Ingredients.ACETO,Ingredients.FUNGHI,Ingredients.VINO));
+        SecondiPiatti secondiPiatti1 = new SecondiPiatti("Filetto di maiale al forno con salvia",11.99, Set.of(Ingredients.CARNE_DI_MAIALE,Ingredients.AROMI,Ingredients.PATATE), false);
+        SecondiPiatti secondiPiatti2 = new SecondiPiatti("Grigliata di carne",13.99, Set.of(Ingredients.CARNE_MISTA,Ingredients.AROMI,Ingredients.PEPE), true);
+        SecondiPiatti secondiPiatti3 = new SecondiPiatti("Cotoletta alla milanese ", 7.99, Set.of(Ingredients.CARNE_DI_VITELLO,Ingredients.UOVA, Ingredients.LIMONE), false);
+        SecondiPiatti secondiPiatti4 = new SecondiPiatti("Costine d’agnello alla griglia ",10.99, Set.of(Ingredients.CARNE_DI_AGNELLO,Ingredients.GUANCIALE,Ingredients.VINO,Ingredients.PEPRONCINO), true);
+        SecondiPiatti secondiPiatti5 = new SecondiPiatti("Tagliata di manzo con rucola e grana ",13.99, Set.of(Ingredients.CARNE_DI_VITELLO,Ingredients.FORMAGGIO,Ingredients.POMODORI,Ingredients.OLIO_EVO, Ingredients.PEPRONCINO), true);
+        SecondiPiatti secondiPiatti6 = new SecondiPiatti("Scaloppine (all’aceto / ai funghi porcini/ al vino bianco) ",9.99, Set.of(Ingredients.CARNE_DI_VITELLO,Ingredients.ACETO,Ingredients.FUNGHI,Ingredients.VINO), false);
 
         System.out.println(Colors.PURPLE_BRIGHT.getValue() + "Secondi Piatti:");
         secondiPiatti1.print();
