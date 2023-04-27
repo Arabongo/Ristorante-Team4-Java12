@@ -17,8 +17,6 @@ public class Portata {
         System.out.println(name + price + ingredients);
     }
 
-    //Fare un override per le proprie classi per il metodo print
-
     public String getName() {
         return name;
     }

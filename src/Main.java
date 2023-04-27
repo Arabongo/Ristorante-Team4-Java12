@@ -1,5 +1,6 @@
 
-
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 public class Main {
@@ -17,12 +18,18 @@ public class Main {
         antipasti4.print();
         System.out.println();
 
+        List<Antipasti> antipastiList  = new ArrayList<>();
+        antipastiList.add(antipasti1);
+        antipastiList.add(antipasti2);
+        antipastiList.add(antipasti3);
+        antipastiList.add(antipasti4);
+
         // Primi Piatti
-        PrimiPiatti primiPiatti1 = new PrimiPiatti("Bucatini alla Carbonara", 8.99, Set.of(Ingredients.UOVA,Ingredients.GUANCIALE,Ingredients.PASTA));
-        PrimiPiatti primiPiatti2 = new PrimiPiatti("Lasagne alla Bolognese", 9.99, Set.of(Ingredients.PASTA,Ingredients.CARNE_DI_VITELLO,Ingredients.POMODORI));
-        PrimiPiatti primiPiatti3 = new PrimiPiatti("Spaghetti all Amatriciana (piatto del giorno)", 8.99, Set.of(Ingredients.PASTA,Ingredients.GUANCIALE,Ingredients.FORMAGGIO));
-        PrimiPiatti primiPiatti4 = new PrimiPiatti("Risotto alla milanese", 7.99, Set.of(Ingredients.RISO,Ingredients.AROMI,Ingredients.PEPE));
-        PrimiPiatti primiPiatti5 = new PrimiPiatti("Pasta alla gricia", 8.99, Set.of(Ingredients.PASTA,Ingredients.UOVA,Ingredients.GUANCIALE,Ingredients.PEPE));
+        PrimiPiatti primiPiatti1 = new PrimiPiatti(" alla Carbonara", 8.99, Set.of(Ingredients.UOVA,Ingredients.GUANCIALE,Ingredients.PASTA), true, "Bucatini");
+        PrimiPiatti primiPiatti2 = new PrimiPiatti(" alla Bolognese", 9.99, Set.of(Ingredients.PASTA,Ingredients.CARNE_DI_VITELLO,Ingredients.POMODORI), false, "Lasagne");
+        PrimiPiatti primiPiatti3 = new PrimiPiatti(" all'Amatriciana", 8.99, Set.of(Ingredients.PASTA,Ingredients.GUANCIALE,Ingredients.FORMAGGIO), false, "Spaghettoni");
+        PrimiPiatti primiPiatti4 = new PrimiPiatti(" alla milanese", 7.99, Set.of(Ingredients.RISO,Ingredients.AROMI,Ingredients.PEPE), false, "Risotto");
+        PrimiPiatti primiPiatti5 = new PrimiPiatti(" alla gricia", 8.99, Set.of(Ingredients.PASTA,Ingredients.UOVA,Ingredients.GUANCIALE,Ingredients.PEPE), false, "Calamarata");
 
         System.out.println(Colors.GREEN.getValue() + "Primi Piatti");
         primiPiatti1.print();
@@ -31,6 +38,13 @@ public class Main {
         primiPiatti4.print();
         primiPiatti5.print();
         System.out.println();
+
+        List<PrimiPiatti> primiPiattiList  = new ArrayList<>();
+        primiPiattiList.add(primiPiatti1);
+        primiPiattiList.add(primiPiatti2);
+        primiPiattiList.add(primiPiatti3);
+        primiPiattiList.add(primiPiatti4);
+        primiPiattiList.add(primiPiatti5);
 
         // Secondi Piatti
         SecondiPiatti secondiPiatti1 = new SecondiPiatti("Filetto di maiale al forno con salvia",11.99, Set.of(Ingredients.CARNE_DI_MAIALE,Ingredients.AROMI,Ingredients.PATATE), false);
@@ -48,6 +62,15 @@ public class Main {
         secondiPiatti5.print();
         secondiPiatti6.print();
         System.out.println();
+
+        List<SecondiPiatti> secondiPiattiList  = new ArrayList<>();
+        secondiPiattiList.add(secondiPiatti1);
+        secondiPiattiList.add(secondiPiatti2);
+        secondiPiattiList.add(secondiPiatti3);
+        secondiPiattiList.add(secondiPiatti4);
+        secondiPiattiList.add(secondiPiatti5);
+        secondiPiattiList.add(secondiPiatti6);
+
         // Dolci
         Dolci dolce1= new Dolci("Tiramisù al cucchiaio", 9.5,Set.of(Ingredients.ZUCCHERO,Ingredients.UOVA,Ingredients.LATTE,Ingredients.CIOCCOLATO,Ingredients.CAFFEINA));
         Dolci dolce2= new Dolci("Babà", 10.5,Set.of(Ingredients.FARINA,Ingredients.AROMI,Ingredients.UOVA,Ingredients.RUM));
@@ -63,6 +86,15 @@ public class Main {
         dolce5.print();
         dolce6.print();
         System.out.println();
+
+        List<Dolci> dolciList = new ArrayList<>();
+        dolciList.add(dolce1);
+        dolciList.add(dolce2);
+        dolciList.add(dolce3);
+        dolciList.add(dolce4);
+        dolciList.add(dolce5);
+        dolciList.add(dolce6);
+
         // Bevande
         Bevande bevande1 = new Bevande("Gradisca 0.33l", 3.5, Set.of(Ingredients.ACQUA, Ingredients.LUPPOLO, Ingredients.ALCOL), true,4.5);
         Bevande bevande2 = new Bevande("Gradisca 0.5l", 3.5, Set.of(Ingredients.ACQUA, Ingredients.LUPPOLO, Ingredients.ALCOL), true,4.5);
@@ -106,6 +138,28 @@ public class Main {
         bevande17.print();
         System.out.println();
 
+        List<Bevande> bevandeList = new ArrayList<>();
+        bevandeList.add(bevande1);
+        bevandeList.add(bevande2);
+        bevandeList.add(bevande3);
+        bevandeList.add(bevande4);
+        bevandeList.add(bevande5);
+        bevandeList.add(bevande6);
+        bevandeList.add(bevande7);
+        bevandeList.add(bevande8);
+        bevandeList.add(bevande9);
+        bevandeList.add(bevande10);
+        bevandeList.add(bevande11);
+        bevandeList.add(bevande12);
+        bevandeList.add(bevande13);
+        bevandeList.add(bevande13);
+        bevandeList.add(bevande14);
+        bevandeList.add(bevande15);
+        bevandeList.add(bevande16);
+        bevandeList.add(bevande17);
+
+        Menu menu = new Menu(antipastiList,primiPiattiList,secondiPiattiList,dolciList,bevandeList);
+        Ristorante ristorante = new Ristorante(menu);
 
     }
 }
