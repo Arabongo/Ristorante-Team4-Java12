@@ -1,4 +1,6 @@
 public enum Ingredients {
+
+    //TODO enum alla fine del nome
     FORMAGGIO("Formaggio"),
     CARNE_MISTA("Carne Mista"),
     CARNE_DI_VITELLO("Carne di Vitello"),

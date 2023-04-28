@@ -2,6 +2,8 @@ import java.lang.constant.Constable;
 import java.util.Set;
 
 public class Antipasti extends Portata {
+
+    //TODO usiamo sempre gli oggetti
     private int portions;
     private boolean localProduct;
     public Antipasti(String name, double price, Set<Ingredients> ingredient, boolean localProduct, int portions) {
@@ -20,6 +22,8 @@ public class Antipasti extends Portata {
         }
         System.out.println();
     }
+
+    //TODO mettiamo il setter
     public int getPortions() {
         return portions;
     }

@@ -1,11 +1,11 @@
+import javax.sound.sampled.Port;
 import java.util.List;
 
 public class Menu {
-    private List<Antipasti> antiPastiList;
-    private List<PrimiPiatti> primiPiattiList;
-    private List<SecondiPiatti> secondiPiattiList;
-    private List<Dolci> dolciList;
-    private List<Bevande> bevandeList;
+
+    //TODO di sicuro qui mancano le info, avete mai pensato da dove siamo partiti: avevamo 3 tipi di menù
+    //TODO inseriamo un po di funzionalità, prezzo medio, piatti del giorno,
+    private List<Portata> portataList;
 
     public Menu(List<Antipasti> antipastiList, List<PrimiPiatti> primiPiattiList, List<SecondiPiatti> secondiPiattiList, List<Dolci> dolciList, List<Bevande> bevandeList) {
         this.antiPastiList = antipastiList;
@@ -53,5 +53,13 @@ public class Menu {
 
     public void setBevandeList(List<Bevande> bevandeList) {
         this.bevandeList = bevandeList;
+    }
+
+
+    public void addPortata(Portata portata){
+        portataList.add(portata);
+    }
+    public void removePortata(Portata portata){
+        portataList.remove(portata);
     }
 }

@@ -43,6 +43,7 @@ public class Portata {
         return ingredients;
     }
 
+    //TODO rivedere se serve!
     public void setIngredients(Set<Ingredients> ingredients) {
         this.ingredients = ingredients;
     }

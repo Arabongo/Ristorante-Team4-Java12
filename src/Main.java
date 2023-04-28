@@ -6,7 +6,7 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) {
          //Antipasti
-        Antipasti antipasti1 = new Antipasti("Affettato", 7.50, Set.of(Ingredients.CARNE_MISTA), true, 2);
+        Portata antipasti1 = new Antipasti("Affettato", 7.50, Set.of(Ingredients.CARNE_MISTA), true, 2);
         Antipasti antipasti2 = new Antipasti("Vitello Tonnato", 8.50, Set.of(Ingredients.CARNE_DI_VITELLO, Ingredients.SALE, Ingredients.OLIO_EVO), false, 4);
         Antipasti antipasti3 = new Antipasti("Olive Ascolane", 6.50, Set.of(Ingredients.CARNE_DI_VITELLO, Ingredients.FARINA, Ingredients.FORMAGGIO), true, 1);
         Antipasti antipasti4 = new Antipasti("Cornetti Salati", 5.50, Set.of(Ingredients.CARNE_MISTA, Ingredients.FARINA, Ingredients.OLIO_EVO), false, 1);
@@ -18,11 +18,10 @@ public class Main {
         antipasti4.print();
         System.out.println();
 
-        List<Antipasti> antipastiList  = new ArrayList<>();
-        antipastiList.add(antipasti1);
-        antipastiList.add(antipasti2);
-        antipastiList.add(antipasti3);
-        antipastiList.add(antipasti4);
+        //TODO rivedere il polimorfismo caso pratico
+        Menu menu = new Menu();
+
+        menu.addPortata(antipasti1);
 
         // Primi Piatti
         PrimiPiatti primiPiatti1 = new PrimiPiatti(" alla Carbonara", 8.99, Set.of(Ingredients.UOVA,Ingredients.GUANCIALE,Ingredients.PASTA), true, "Bucatini");
