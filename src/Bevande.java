@@ -3,9 +3,10 @@ import java.util.Set;
 public class Bevande extends Portata {
 
     private boolean alcoholic;
-    private double alcoholPercentage;
+    //modify double into Double as per reference
+    private Double alcoholPercentage;
 
-    public Bevande(String name, double price, Set<Ingredients> ingredients, boolean alcoholic,double alcoholPercentage ) {
+    public Bevande(String name, Double price, Set<IngredientsEnum> ingredients, boolean alcoholic, Double alcoholPercentage ) {
         super(name, price, ingredients);
         this.alcoholic = alcoholic;
         this.alcoholPercentage = alcoholPercentage;
@@ -16,18 +17,18 @@ public class Bevande extends Portata {
     public void setAlcoholic(boolean alcoholic) {
         this.alcoholic = alcoholic;
     }
-    public double getAlcoholPercentage() {
+    public Double getAlcoholPercentage() {
         return alcoholPercentage;
     }
-    public void setAlcoholPercentage(double alcoholPercentage) {
+    public void setAlcoholPercentage(Double alcoholPercentage) {
         this.alcoholPercentage = alcoholPercentage;
     }
     @Override
     public void print() {
         if (alcoholic) {
-            System.out.println(Colors.RED.getValue()+"- "+getName()+ " $"+ getPrice()+ " "+"Percentuale alcolica: " + alcoholPercentage+ "%" + " -(Ingredienti: " + getIngredients() + ")");
+            System.out.println(ColorsEnum.RED.getValue()+"- "+getName()+ " $"+ getPrice()+ " "+"Percentuale alcolica: " + alcoholPercentage+ "%" + " -(Ingredienti: " + getIngredients() + ")");
         } else {
-            System.out.println(Colors.RED.getValue()+"- "+getName()+" $"+ getPrice() + " -(Ingredienti: " + getIngredients() + ")");
+            System.out.println(ColorsEnum.RED.getValue()+"- "+getName()+" $"+ getPrice() + " -(Ingredienti: " + getIngredients() + ")");
         }
     }
 }

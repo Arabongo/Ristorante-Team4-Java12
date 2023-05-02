@@ -1,4 +1,4 @@
-public enum Colors {
+public enum ColorsEnum {
 
     //TODO si devono chiamare con enum alla fine del nome ColorsEnum
 
@@ -15,7 +15,7 @@ public enum Colors {
     PURPLE_BRIGHT ("\033[0;95m","Colore Viola brillante");
     private String value;
     private String description;
-    Colors(String value, String description){
+    ColorsEnum(String value, String description){
         this.value=value;
         this. description=description;
     }

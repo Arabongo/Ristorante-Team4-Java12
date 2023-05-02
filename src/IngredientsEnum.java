@@ -1,4 +1,4 @@
-public enum Ingredients {
+public enum IngredientsEnum {
 
     //TODO enum alla fine del nome
     FORMAGGIO("Formaggio"),
@@ -37,7 +37,7 @@ public enum Ingredients {
     PANNA ("Panna");
 
     private final String ingredient;
-    Ingredients(String ingredient) {
+    IngredientsEnum(String ingredient) {
         this.ingredient = ingredient;
     }
 

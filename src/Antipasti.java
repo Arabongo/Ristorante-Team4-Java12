@@ -1,12 +1,12 @@
-import java.lang.constant.Constable;
 import java.util.Set;
 
 public class Antipasti extends Portata {
 
     //TODO usiamo sempre gli oggetti
-    private int portions;
+    //modified int into Integer
+    private Integer portions;
     private boolean localProduct;
-    public Antipasti(String name, double price, Set<Ingredients> ingredient, boolean localProduct, int portions) {
+    public Antipasti(String name, Double price, Set<IngredientsEnum> ingredient, boolean localProduct, Integer portions) {
         super(name, price, ingredient);
         this.localProduct = localProduct;
         this.portions = portions;
@@ -14,7 +14,7 @@ public class Antipasti extends Portata {
 
     @Override
     public void print() {
-        System.out.print(Colors.BLUE_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ") ");
+        System.out.print(ColorsEnum.BLUE_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ") ");
         if (getLocalProduct() == true) {
             System.out.print("Prodotto locale a Km zero; ");
         } if (portions > 1) {
@@ -23,10 +23,19 @@ public class Antipasti extends Portata {
         System.out.println();
     }
 
-    //TODO mettiamo il setter
-    public int getPortions() {
+    //TODO mettiamo il setter//Fatto!
+    public Integer getPortions() {
         return portions;
     }
+
+    public void setPortions(Integer portions) {
+        this.portions = portions;
+    }
+
+    public void setLocalProduct(boolean localProduct) {
+        this.localProduct = localProduct;
+    }
+
     public boolean getLocalProduct() {
         return localProduct;
     }

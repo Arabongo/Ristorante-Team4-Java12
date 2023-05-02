@@ -1,14 +1,11 @@
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 public class Portata {
     private String name;
-    private double price;
-    private Set <Ingredients> ingredients;
+    private Double price;
+    private Set <IngredientsEnum> ingredients;
 
-    public Portata(String name, double price, Set <Ingredients> ingredients) {
+    public Portata(String name, Double price, Set <IngredientsEnum> ingredients) {
         this.name = name;
         this.price = price;
         this.ingredients = ingredients;
@@ -25,26 +22,26 @@ public class Portata {
         this.name = name;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
-    public void addIngredients(Ingredients ingredient) {
+    public void addIngredients(IngredientsEnum ingredient) {
         ingredients.add(ingredient);
     }
-    public void removeIngredients(Ingredients ingredient) {
+    public void removeIngredients(IngredientsEnum ingredient) {
         ingredients.remove(ingredient);
     }
 
-    public Set<Ingredients> getIngredients() {
+    public Set<IngredientsEnum> getIngredients() {
         return ingredients;
     }
 
     //TODO rivedere se serve!
-    public void setIngredients(Set<Ingredients> ingredients) {
+    public void setIngredients(Set<IngredientsEnum> ingredients) {
         this.ingredients = ingredients;
     }
 }
