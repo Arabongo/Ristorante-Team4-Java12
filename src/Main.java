@@ -5,8 +5,9 @@ import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
+        Menu menu = new Menu(new ArrayList<>());
          //Antipasti
-        Portata antipasti1 = new Antipasti("Affettato", 7.50, Set.of(IngredientsEnum.CARNE_MISTA), true, 2);
+        Antipasti antipasti1 = new Antipasti("Affettato", 7.50, Set.of(IngredientsEnum.CARNE_MISTA), true, 2);
         Antipasti antipasti2 = new Antipasti("Vitello Tonnato", 8.50, Set.of(IngredientsEnum.CARNE_DI_VITELLO, IngredientsEnum.SALE, IngredientsEnum.OLIO_EVO), false, 4);
         Antipasti antipasti3 = new Antipasti("Olive Ascolane", 6.50, Set.of(IngredientsEnum.CARNE_DI_VITELLO, IngredientsEnum.FARINA, IngredientsEnum.FORMAGGIO), true, 1);
         Antipasti antipasti4 = new Antipasti("Cornetti Salati", 5.50, Set.of(IngredientsEnum.CARNE_MISTA, IngredientsEnum.FARINA, IngredientsEnum.OLIO_EVO), false, 1);
@@ -17,9 +18,6 @@ public class Main {
         antipasti3.print();
         antipasti4.print();
         System.out.println();
-
-        //TODO rivedere il polimorfismo caso pratico
-        Menu menu = new Menu();
 
         menu.addPortata(antipasti1);
 
@@ -38,12 +36,7 @@ public class Main {
         primiPiatti5.print();
         System.out.println();
 
-        List<PrimiPiatti> primiPiattiList  = new ArrayList<>();
-        primiPiattiList.add(primiPiatti1);
-        primiPiattiList.add(primiPiatti2);
-        primiPiattiList.add(primiPiatti3);
-        primiPiattiList.add(primiPiatti4);
-        primiPiattiList.add(primiPiatti5);
+        menu.addPortata(primiPiatti1);
 
         // Secondi Piatti
         SecondiPiatti secondiPiatti1 = new SecondiPiatti("Filetto di maiale al forno con salvia",11.99, Set.of(IngredientsEnum.CARNE_DI_MAIALE, IngredientsEnum.AROMI, IngredientsEnum.PATATE), false);
@@ -62,13 +55,7 @@ public class Main {
         secondiPiatti6.print();
         System.out.println();
 
-        List<SecondiPiatti> secondiPiattiList  = new ArrayList<>();
-        secondiPiattiList.add(secondiPiatti1);
-        secondiPiattiList.add(secondiPiatti2);
-        secondiPiattiList.add(secondiPiatti3);
-        secondiPiattiList.add(secondiPiatti4);
-        secondiPiattiList.add(secondiPiatti5);
-        secondiPiattiList.add(secondiPiatti6);
+        menu.addPortata(secondiPiatti1);
 
         // Dolci
         Dolci dolce1= new Dolci("Tiramisù al cucchiaio", 9.5,Set.of(IngredientsEnum.ZUCCHERO, IngredientsEnum.UOVA, IngredientsEnum.LATTE, IngredientsEnum.CIOCCOLATO, IngredientsEnum.CAFFEINA));
@@ -86,13 +73,7 @@ public class Main {
         dolce6.print();
         System.out.println();
 
-        List<Dolci> dolciList = new ArrayList<>();
-        dolciList.add(dolce1);
-        dolciList.add(dolce2);
-        dolciList.add(dolce3);
-        dolciList.add(dolce4);
-        dolciList.add(dolce5);
-        dolciList.add(dolce6);
+        menu.addPortata(dolce1);
 
         // Bevande
         Bevande bevande1 = new Bevande("Gradisca 0.33l", 3.5, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL), true,4.5);
@@ -112,7 +93,6 @@ public class Main {
         Bevande bevande15 = new Bevande("Chardonnat", 13.0, Set.of(IngredientsEnum.ALCOL, IngredientsEnum.ZUCCHERO, IngredientsEnum.AROMI, IngredientsEnum.MOSTO, IngredientsEnum.VINO), true, 11.5);
         Bevande bevande16 = new Bevande("Merlot", 10.0, Set.of(IngredientsEnum.ALCOL, IngredientsEnum.ZUCCHERO, IngredientsEnum.AROMI, IngredientsEnum.MOSTO, IngredientsEnum.VINO), true, 13.5);
         Bevande bevande17 = new Bevande("Pinot Noir", 15.0, Set.of(IngredientsEnum.ALCOL, IngredientsEnum.ZUCCHERO, IngredientsEnum.AROMI, IngredientsEnum.MOSTO, IngredientsEnum.VINO), true, 11.0);
-
 
         System.out.println(ColorsEnum.BLUE_BRIGHT.getValue()+"Bevande : ");
         System.out.println(ColorsEnum.BLUE_BRIGHT.getValue()+"BIRRE : ");
@@ -137,27 +117,8 @@ public class Main {
         bevande17.print();
         System.out.println();
 
-        List<Bevande> bevandeList = new ArrayList<>();
-        bevandeList.add(bevande1);
-        bevandeList.add(bevande2);
-        bevandeList.add(bevande3);
-        bevandeList.add(bevande4);
-        bevandeList.add(bevande5);
-        bevandeList.add(bevande6);
-        bevandeList.add(bevande7);
-        bevandeList.add(bevande8);
-        bevandeList.add(bevande9);
-        bevandeList.add(bevande10);
-        bevandeList.add(bevande11);
-        bevandeList.add(bevande12);
-        bevandeList.add(bevande13);
-        bevandeList.add(bevande13);
-        bevandeList.add(bevande14);
-        bevandeList.add(bevande15);
-        bevandeList.add(bevande16);
-        bevandeList.add(bevande17);
+        menu.addPortata(bevande1);
 
-        Menu menu = new Menu(antipastiList,primiPiattiList,secondiPiattiList,dolciList,bevandeList);
         Ristorante ristorante = new Ristorante("WIP", "WIP", 9.00, 1.00, 3.50, menu);
 
     }
