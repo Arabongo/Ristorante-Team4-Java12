@@ -9,6 +9,13 @@ public class Menu {
     public Menu (List<Portata> portataList) {
     this.portataList = portataList;
     }
+
+    public void printPortataList(Menu menu) {
+        for (Portata portata : menu.getPortataList()) {
+            portata.print();
+        }
+    }
+
     public void addPortata(Portata portata){
         portataList.add(portata);
     }

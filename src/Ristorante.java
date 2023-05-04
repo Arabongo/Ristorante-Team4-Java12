@@ -61,4 +61,8 @@ public class Ristorante {
     public void setDeliveryPrice(Double deliveryPrice) {
         this.deliveryPrice = deliveryPrice;
     }
+
+    public void printMenu(Menu menu){
+        getMenu().printPortataList(menu);
+    }
 }

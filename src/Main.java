@@ -7,19 +7,20 @@ public class Main {
     public static void main(String[] args) {
         Menu menu = new Menu(new ArrayList<>());
          //Antipasti
-        Antipasti antipasti1 = new Antipasti("Affettato", 7.50, Set.of(IngredientsEnum.CARNE_MISTA), true, 2);
-        Antipasti antipasti2 = new Antipasti("Vitello Tonnato", 8.50, Set.of(IngredientsEnum.CARNE_DI_VITELLO, IngredientsEnum.SALE, IngredientsEnum.OLIO_EVO), false, 4);
-        Antipasti antipasti3 = new Antipasti("Olive Ascolane", 6.50, Set.of(IngredientsEnum.CARNE_DI_VITELLO, IngredientsEnum.FARINA, IngredientsEnum.FORMAGGIO), true, 1);
-        Antipasti antipasti4 = new Antipasti("Cornetti Salati", 5.50, Set.of(IngredientsEnum.CARNE_MISTA, IngredientsEnum.FARINA, IngredientsEnum.OLIO_EVO), false, 1);
+        menu.addPortata(new Antipasti(true));
+        menu.addPortata(new Antipasti("Affettato", 7.50, Set.of(IngredientsEnum.CARNE_MISTA), true, 2));
+        menu.addPortata(new Antipasti("Vitello Tonnato", 8.50, Set.of(IngredientsEnum.CARNE_DI_VITELLO, IngredientsEnum.SALE, IngredientsEnum.OLIO_EVO), false, 4));
+        menu.addPortata(new Antipasti("Olive Ascolane", 6.50, Set.of(IngredientsEnum.CARNE_DI_VITELLO, IngredientsEnum.FARINA, IngredientsEnum.FORMAGGIO), true, 1));
+        menu.addPortata(new Antipasti("Cornetti Salati", 5.50, Set.of(IngredientsEnum.CARNE_MISTA, IngredientsEnum.FARINA, IngredientsEnum.OLIO_EVO), false, 1));
 
         System.out.println(ColorsEnum.YELLOW.getValue() + "Antipasti:");
-        antipasti1.print();
-        antipasti2.print();
-        antipasti3.print();
-        antipasti4.print();
+//        antipasti1.print();
+//        antipasti2.print();
+//        antipasti3.print();
+//        antipasti4.print();
         System.out.println();
-
-        menu.addPortata(antipasti1);
+//
+//        menu.addPortata(antipasti1);
 
         // Primi Piatti
         PrimiPiatti primiPiatti1 = new PrimiPiatti(" alla Carbonara", 8.99, Set.of(IngredientsEnum.UOVA, IngredientsEnum.GUANCIALE, IngredientsEnum.PASTA), true, "Bucatini");
@@ -120,6 +121,7 @@ public class Main {
         menu.addPortata(bevande1);
 
         Ristorante ristorante = new Ristorante("WIP", "WIP", 9.00, 1.00, 3.50, menu);
+        ristorante.getMenu().printPortataList(menu);
 
     }
 }

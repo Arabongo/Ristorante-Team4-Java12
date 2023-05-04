@@ -11,14 +11,17 @@ public class Antipasti extends Portata {
         this.localProduct = localProduct;
         this.portions = portions;
     }
-
     @Override
     public void print() {
-        System.out.print(ColorsEnum.BLUE_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ") ");
-        if (getLocalProduct() == true) {
-            System.out.print("Prodotto locale a Km zero; ");
-        } if (portions > 1) {
-            System.out.print("Piatto per " + getPortions() + " persone;");
+        if (isSectionStart() == true) {
+            System.out.println(ColorsEnum.YELLOW.getValue() + "Antipasti:");
+        } else {
+                System.out.print(ColorsEnum.BLUE_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ") ");
+                if (getLocalProduct() == true) {
+                System.out.print("Prodotto locale a Km zero; ");
+                } if (portions > 1) {
+                System.out.print("Piatto per " + getPortions() + " persone;");
+                }
         }
         System.out.println();
     }
@@ -38,5 +41,9 @@ public class Antipasti extends Portata {
 
     public boolean getLocalProduct() {
         return localProduct;
+    }
+
+    public Antipasti(boolean sectionStart) {
+        super(sectionStart);
     }
 }
