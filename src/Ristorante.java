@@ -23,7 +23,7 @@ public class Ristorante {
                 address + '\n' +
                 "Opening hours: " + openingHours + " AM" +
                 "\nClosing hours: " + closingHours + " AM" +
-                "\nDelivery price: " + deliveryPrice + " $\n";
+                "\nDelivery price: " + deliveryPrice + " $";
     }
 
     public Menu getMenu() {
@@ -74,6 +74,7 @@ public class Ristorante {
     }
 
     public void printMenu(Menu menu){
-        getMenu().printPortataList(menu);
+        System.out.println("Medium price: " + menu.generateMediumPrice(menu) + "$\n");
+        getMenu().setupPortataList(menu);
     }
 }
