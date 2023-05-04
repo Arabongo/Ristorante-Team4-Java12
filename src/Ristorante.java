@@ -15,6 +15,17 @@ public class Ristorante {
         this.deliveryPrice = deliveryPrice;
         this.menu = menu;
     }
+
+    @Override
+    public String toString() {
+        return "Ristorante " +
+                name + '\n' +
+                address + '\n' +
+                "Opening hours: " + openingHours + " AM" +
+                "\nClosing hours: " + closingHours + " AM" +
+                "\nDelivery price: " + deliveryPrice + " $\n";
+    }
+
     public Menu getMenu() {
         return menu;
     }

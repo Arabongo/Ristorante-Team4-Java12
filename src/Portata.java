@@ -6,22 +6,23 @@ public abstract class Portata {
     private String name;
     private Double price;
     private Set<IngredientsEnum> ingredients;
-    public Portata(String name, Double price, Set<IngredientsEnum> ingredients) {
+    private boolean canBeDishOfTheDay;
+    public Portata(String name, Double price, Set<IngredientsEnum> ingredients,boolean canBeDishOfTheDay) {
         this.name = name;
         this.price = price;
         this.ingredients = ingredients;
-        }
+        this.canBeDishOfTheDay = canBeDishOfTheDay;
+    }
 
     public Portata(boolean sectionStart) {
         this.sectionStart = sectionStart;
     }
 
+    public boolean isCanBeDishOfTheDay() {
+        return canBeDishOfTheDay;
+    }
     public boolean isSectionStart() {
         return sectionStart;
-    }
-
-    public void setSectionStart(boolean sectionStart) {
-        this.sectionStart = sectionStart;
     }
     public String getName() {
         return name;

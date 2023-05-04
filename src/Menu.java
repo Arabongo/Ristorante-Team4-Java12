@@ -11,8 +11,17 @@ public class Menu {
     }
 
     public void printPortataList(Menu menu) {
+        int dishOfTheDay;
+        do {
+            dishOfTheDay = new Random().nextInt(menu.getPortataList().size()); //con il + 1 rischia di generare 45, dando un Index Error
+        } while (menu.getPortataList().get(dishOfTheDay).isSectionStart() == true || menu.getPortataList().get(dishOfTheDay).isCanBeDishOfTheDay() == false);
         for (Portata portata : menu.getPortataList()) {
+            if (dishOfTheDay == menu.getPortataList().indexOf(portata)) {
+            System.out.print(ColorsEnum.YELLOW.getValue() + "(Piatto del giorno!) ");
             portata.print();
+            } else {
+                portata.print();
+            }
         }
     }
 

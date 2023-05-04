@@ -6,8 +6,8 @@ public class Antipasti extends Portata {
     //modified int into Integer
     private Integer portions;
     private boolean localProduct;
-    public Antipasti(String name, Double price, Set<IngredientsEnum> ingredient, boolean localProduct, Integer portions) {
-        super(name, price, ingredient);
+    public Antipasti(String name, Double price, Set<IngredientsEnum> ingredient, boolean localProduct, Integer portions, boolean canBeDishOfTheDay) {
+        super(name, price, ingredient, canBeDishOfTheDay);
         this.localProduct = localProduct;
         this.portions = portions;
     }
