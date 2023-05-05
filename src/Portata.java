@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Set;
 
 public abstract class Portata {
@@ -7,11 +6,16 @@ public abstract class Portata {
     private Double price;
     private Set<IngredientsEnum> ingredients;
     private boolean canBeDishOfTheDay;
-    public Portata(String name, Double price, Set<IngredientsEnum> ingredients,boolean canBeDishOfTheDay) {
+
+    private TipoPortataEnum tipoPiattoEnum;
+    public Portata(String name, Double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay, TipoPortataEnum tipoPiattoEnum) {
         this.name = name;
         this.price = price;
         this.ingredients = ingredients;
         this.canBeDishOfTheDay = canBeDishOfTheDay;
+        this.tipoPiattoEnum = tipoPiattoEnum;
+        //TODO qui dobbiamo inserire il tipo di piatto: TipoPiattoEnum, sistemiamo!!!!
+
     }
 
     public Portata(boolean sectionStart) {
@@ -47,7 +51,7 @@ public abstract class Portata {
         this.ingredients = ingredients;
     }
 
+    //TODO deve stampare le info dei suoi field, poi ogni metodo figlio aggiungerà personalizzazioni
     public abstract void print();
-    //TODO rivedere se serve!
 }
 

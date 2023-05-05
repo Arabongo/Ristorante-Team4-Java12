@@ -1,11 +1,11 @@
 public class Ristorante {
     private String name;
     private String address;
+
+    //TODO usare un oggetto time, timestamp ad esempio
     private Double openingHours;
     private Double closingHours;
     private Double deliveryPrice;
-    //TODO inserire tutte le info del ristorante
-    //TODO dividere in pacchetti l'applicazione
     private Menu menu;
     public Ristorante(String name, String address, Double openingHours, Double closingHours, Double deliveryPrice, Menu menu) {
         this.name = name;
@@ -16,6 +16,7 @@ public class Ristorante {
         this.menu = menu;
     }
 
+    //TODO diventa un metodo di stampa
     @Override
     public String toString() {
         return "Ristorante " +
@@ -73,8 +74,8 @@ public class Ristorante {
         this.deliveryPrice = deliveryPrice;
     }
 
-    public void printMenu(Menu menu){
+    public void printMenu(){
         System.out.println("Medium price: " + menu.generateMediumPrice(menu) + "$\n");
-        getMenu().setupPortataList(menu);
+        this.menu.setupPortataList();
     }
 }

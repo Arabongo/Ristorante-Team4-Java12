@@ -2,10 +2,7 @@ import java.util.Set;
 
 public class Dolci extends Portata {
 
-    //TODO sistemare
-
     private boolean isGlutenFree;
-
 
     public Dolci(String name, double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay) {
         super(name, price, ingredients, canBeDishOfTheDay);

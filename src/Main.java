@@ -4,8 +4,14 @@ import java.util.List;
 import java.util.Set;
 
 public class Main {
+
+    private static Set<IngredientsEnum> listaComune;
+
     public static void main(String[] args) {
-        Menu menu = new Menu(new ArrayList<>());
+
+
+        Set<IngredientsEnum>listaComune = Set.of(IngredientsEnum.ACQUA, IngredientsEnum.ZUCCHERO, IngredientsEnum.AROMI);
+        Menu menu = new Menu();
          //Antipasti
         Antipasti sectionTitleAntipasti1 = new Antipasti(true);
         Antipasti antipasti1 = new Antipasti("Affettato", 7.50, Set.of(IngredientsEnum.CARNE_MISTA), true, 2, true);
@@ -81,9 +87,10 @@ public class Main {
         Bevande bevande8 = new Bevande("Acqua Gas 1/2l", 1.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.ANIDRIDE_CARBONICA), false, 0.0, false);
         Bevande bevande9 = new Bevande("Coca Cola 1/2l", 2.5,Set.of(IngredientsEnum.ACQUA, IngredientsEnum.CAFFEINA, IngredientsEnum.ZUCCHERO),false, 0.0, false);
         Bevande bevande10 = new Bevande("Chinotto 0.33l", 3.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.ZUCCHERO, IngredientsEnum.AROMI), false, 0.0, false);
-        Bevande bevande11 = new Bevande("Te Pesca 1/2l", 2.5, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.ZUCCHERO, IngredientsEnum.AROMI),false, 0.0, false);
-        Bevande bevande12 = new Bevande("Te Limone 1/2l", 2.5, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.ZUCCHERO, IngredientsEnum.AROMI), false, 0.0, false);
-        Bevande bevande13 = new Bevande("Succhi di frutta 0.33l", 3.5, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.ZUCCHERO, IngredientsEnum.AROMI),false, 0.0, false);
+        Bevande bevande11 = new Bevande("Te Pesca 1/2l", 2.5, listaComune,false, 0.0, false);
+        Bevande bevande12 = new Bevande("Te Limone 1/2l", 2.5, listaComune, false, 0.0, false);
+
+        Bevande bevande13 = new Bevande("Succhi di frutta 0.33l", 3.5, listaComune,false, 0.0, false);
         menu.addPortata(sectionTitleBevande2);
         menu.addPortata(bevande7);
         menu.addPortata(bevande8);
@@ -106,6 +113,8 @@ public class Main {
 
         Ristorante ristorante = new Ristorante("La Taverna di Pulcinella", "Via Libertà 47, Napoli", 9.00, 1.00, 3.50, menu);
         System.out.println(ristorante);
+        //TODO
+        ristorante.prinInfo();
         ristorante.printMenu(menu);
 
     }

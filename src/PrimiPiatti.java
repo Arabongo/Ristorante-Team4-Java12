@@ -19,7 +19,4 @@ public class PrimiPiatti extends Portata {
         System.out.println();
     }
 
-    public PrimiPiatti(boolean sectionStart) {
-        super(sectionStart);
-    }
 }

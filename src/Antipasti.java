@@ -2,31 +2,50 @@ import java.util.Set;
 
 public class Antipasti extends Portata {
 
-    //TODO usiamo sempre gli oggetti
     //modified int into Integer
     private Integer portions;
     private boolean localProduct;
-    public Antipasti(String name, Double price, Set<IngredientsEnum> ingredient, boolean localProduct, Integer portions, boolean canBeDishOfTheDay) {
-        super(name, price, ingredient, canBeDishOfTheDay);
+
+
+    /**
+     * @param name
+     * @param price
+     * @param ingredient
+     * @param localProduct
+     * @param portions
+     * @param canBeDishOfTheDay
+     */
+    public Antipasti(String name, Double price, Set<IngredientsEnum> ingredient,
+                     boolean localProduct, Integer portions, boolean canBeDishOfTheDay) {
+        super(name, price, ingredient, canBeDishOfTheDay, TipoPortataEnum.ANTIPASTO);
         this.localProduct = localProduct;
         this.portions = portions;
     }
+
+    public Antipasti(boolean sectionStart) {
+        super(sectionStart);
+    }
+
     @Override
     public void print() {
-        if (isSectionStart() == true) {
+        //TODO si fanno così le condizioni  ! : per fare la negazione
+        if (isSectionStart()) {
             System.out.println(ColorsEnum.YELLOW.getValue() + "Antipasti:");
         } else {
-                System.out.print(ColorsEnum.BLUE_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ") ");
-                if (getLocalProduct() == true) {
+            System.out.print(ColorsEnum.BLUE_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ") ");
+            if (getLocalProduct() == true) {
                 System.out.print("Prodotto locale a Km zero; ");
-                } if (portions > 1) {
+            }
+            if (portions > 1) {
                 System.out.print("Piatto per " + getPortions() + " persone;");
-                }
+            }
         }
         System.out.println();
     }
 
-    //TODO mettiamo il setter//Fatto!
+    /**
+     * @return il numero di porzioni degli antipasta
+     */
     public Integer getPortions() {
         return portions;
     }
@@ -43,7 +62,5 @@ public class Antipasti extends Portata {
         return localProduct;
     }
 
-    public Antipasti(boolean sectionStart) {
-        super(sectionStart);
-    }
+
 }
