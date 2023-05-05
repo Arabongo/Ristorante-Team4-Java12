@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class Menu {
     private List<Portata> portataList;
@@ -11,45 +10,25 @@ public class Menu {
         this.portataList = new ArrayList<>();
     }
 
-    public void setupPortataList() {
-
-        System.out.println(ColorsEnum.ANSI_RED_BACKGROUND.getValue() +
-                ColorsEnum.EMOJY_FIRE.getValue() + ColorsEnum.ANSI_BOLD.getValue() + ColorsEnum.ANSI_BLACK.getValue() + getRestaurantName() +
-                TextStyleEnum.EMOJY_FIRE.getValue() + TextStyleEnum.ANSI_RESET.getValue() + "\n");
-        System.out.println("Chef: " + getChefName() + "\n");
-        System.out.println(getDescription() + "\n");
-        System.out.println("\n PRIMI \n");
-        portataList.stream().filter(primo -> primo.getTipoPortata() == TipoPortataEnum.PRIMO).forEach(primo -> primo.printInfo());
-        System.out.println("\n SECONDI \n");
-        portataList.stream().filter(secondo -> secondo.getTipoPortata() == TipoPortataEnum.SECONDO).forEach(secondo -> secondo.printInfo());
-        System.out.println("\n DESSERT \n");
-        portataList.stream().filter(dessert -> dessert.getTipoPortata() == TipoPortataEnum.DESSERT).forEach(dessert -> dessert.printInfo());
-        System.out.println("\n BEVANDE \n");
-        portataList.stream().filter(bevanda -> bevanda.getTipoPortata() == TipoPortataEnum.BEVANDA).forEach(bevanda -> bevanda.printInfo());
-        System.out.println("\n BUON APPETITO!!!");
-
-
-        int dishOfTheDay;
-        do {
-            dishOfTheDay = new Random().nextInt(menu.getPortataList().size()); //con il + 1 rischia di generare 45, dando un Index Error
-        } while (this.getPortataList().get(dishOfTheDay).isSectionStart() == true ||
-                this.getPortataList().get(dishOfTheDay).isCanBeDishOfTheDay() == false);
-        for (Portata portata : menu.getPortataList()) {
-            if (dishOfTheDay == menu.getPortataList().indexOf(portata)) {
-                System.out.print(ColorsEnum.YELLOW.getValue() + "(Piatto del giorno!) ");
-                portata.print();
-            } else {
-                portata.print();
-            }
-        }
+    public void printInfoMenu() {
+        System.out.println(ColorsEnum.YELLOW.getValue() + "\nAntipasti:");
+        portataList.stream().filter( portata -> portata.getTipoPiattoEnum() == TipoPortataEnum.ANTIPASTO).forEach(primo -> primo.print());
+        System.out.println(ColorsEnum.GREEN.getValue() + "\nPrimi Piatti:");
+        portataList.stream().filter(portata -> portata.getTipoPiattoEnum() == TipoPortataEnum.PRIMI_PIATTI).forEach(secondo -> secondo.print());
+        System.out.println(ColorsEnum.PURPLE_BRIGHT.getValue() + "\nSecondi Piatti:");
+        portataList.stream().filter(portata -> portata.getTipoPiattoEnum() == TipoPortataEnum.SECONDI_PIATTI).forEach(dessert -> dessert.print());
+        System.out.println(ColorsEnum.RED_BRIGHT.getValue() + "\nDolci:");
+        portataList.stream().filter(portata -> portata.getTipoPiattoEnum() == TipoPortataEnum.DOLCI).forEach(bevanda -> bevanda.print());
+        System.out.println(ColorsEnum.BLUE_BRIGHT.getValue() + "\n Becvande:");
+        portataList.stream().filter(portata -> portata.getTipoPiattoEnum() == TipoPortataEnum.BEVANDE).forEach(bevanda -> bevanda.print());
     }
 
     //TODO sistemare
-    public Double generateMediumPrice(Menu menu) {
+    public Double generateMediumPrice() {
         Double mediumPrice = 0.0;
         Integer numberOfDish = 0;
-        for (Portata portata : menu.getPortataList()) {
-            if (portata.getPrice() != null && portata.isCanBeDishOfTheDay() == true) {
+        for (Portata portata : this.getPortataList()) {
+            if (portata.isCanBeDishOfTheDay() == true) {
                 numberOfDish++;
                 mediumPrice += portata.getPrice();
             }

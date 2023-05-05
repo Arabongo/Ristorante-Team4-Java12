@@ -1,12 +1,10 @@
 import java.util.Set;
 
 public abstract class Portata {
-    private boolean sectionStart;
     private String name;
     private Double price;
     private Set<IngredientsEnum> ingredients;
     private boolean canBeDishOfTheDay;
-
     private TipoPortataEnum tipoPiattoEnum;
     public Portata(String name, Double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay, TipoPortataEnum tipoPiattoEnum) {
         this.name = name;
@@ -14,19 +12,9 @@ public abstract class Portata {
         this.ingredients = ingredients;
         this.canBeDishOfTheDay = canBeDishOfTheDay;
         this.tipoPiattoEnum = tipoPiattoEnum;
-        //TODO qui dobbiamo inserire il tipo di piatto: TipoPiattoEnum, sistemiamo!!!!
-
     }
-
-    public Portata(boolean sectionStart) {
-        this.sectionStart = sectionStart;
-    }
-
     public boolean isCanBeDishOfTheDay() {
         return canBeDishOfTheDay;
-    }
-    public boolean isSectionStart() {
-        return sectionStart;
     }
     public String getName() {
         return name;
@@ -44,6 +32,9 @@ public abstract class Portata {
         this.price = price;
     }
 
+    public TipoPortataEnum getTipoPiattoEnum() {
+        return tipoPiattoEnum;
+    }
     public Set<IngredientsEnum> getIngredients() {
         return ingredients;
     }

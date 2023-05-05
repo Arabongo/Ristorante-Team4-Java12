@@ -1,4 +1,9 @@
 public enum TipoPortataEnum {
 
-    ANTIPASTO;
+    ANTIPASTO,
+    PRIMI_PIATTI,
+    SECONDI_PIATTI,
+    DOLCI,
+    BEVANDE;
+
 }

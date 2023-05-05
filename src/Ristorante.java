@@ -16,15 +16,15 @@ public class Ristorante {
         this.menu = menu;
     }
 
-    //TODO diventa un metodo di stampa
-    @Override
-    public String toString() {
-        return "Ristorante " +
+    public void printInfoRistorante() {
+        System.out.println("Ristorante " +
                 name + '\n' +
                 address + '\n' +
                 "Opening hours: " + openingHours + " AM" +
                 "\nClosing hours: " + closingHours + " AM" +
-                "\nDelivery price: " + deliveryPrice + " $";
+                "\nDelivery price: " + deliveryPrice + " $");
+        System.out.println("Medium price: " + menu.generateMediumPrice() + "$\n");
+        menu.printInfoMenu();
     }
 
     public Menu getMenu() {
@@ -74,8 +74,4 @@ public class Ristorante {
         this.deliveryPrice = deliveryPrice;
     }
 
-    public void printMenu(){
-        System.out.println("Medium price: " + menu.generateMediumPrice(menu) + "$\n");
-        this.menu.setupPortataList();
-    }
 }
