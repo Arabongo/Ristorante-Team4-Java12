@@ -5,8 +5,8 @@ public class Bevande extends Portata {
     private boolean alcoholic;
     private Double alcoholPercentage;
 
-    public Bevande(String name, Double price, Set<IngredientsEnum> ingredients, boolean alcoholic, Double alcoholPercentage, boolean canBeDishOfTheDay) {
-        super(name, price, ingredients, canBeDishOfTheDay, TipoPortataEnum.BEVANDE);
+    public Bevande(String name, Double price, Set<IngredientsEnum> ingredients, boolean alcoholic, Double alcoholPercentage, boolean canBeDishOfTheDay, TipoMenuEnum tipoMenuEnum) {
+        super(name, price, ingredients, canBeDishOfTheDay, TipoPortataEnum.BEVANDE, tipoMenuEnum);
         this.alcoholic = alcoholic;
         this.alcoholPercentage = alcoholPercentage;
     }

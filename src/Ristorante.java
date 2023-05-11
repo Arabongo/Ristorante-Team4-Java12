@@ -21,7 +21,7 @@ public class Ristorante {
         System.out.println("Ristorante " +
                 name + '\n' +
                 address + '\n' +
-                "Opening hours: " + openingHours + " AM" +
+                "Opening hours: " + openingHours + " PM" +
                 "\nClosing hours: " + closingHours + " AM" +
                 "\nDelivery price: " + deliveryPrice + " $");
         System.out.println("Medium price: " + menu.generateMediumPrice() + "$\n");

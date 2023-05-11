@@ -4,8 +4,8 @@ public class Dolci extends Portata {
 
     private boolean isGlutenFree;
 
-    public Dolci(String name, double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay) {
-        super(name, price, ingredients, canBeDishOfTheDay, TipoPortataEnum.DOLCI);
+    public Dolci(String name, double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay, TipoMenuEnum tipoMenuEnum) {
+        super(name, price, ingredients, canBeDishOfTheDay, TipoPortataEnum.DOLCI,tipoMenuEnum);
     }
 
     @Override

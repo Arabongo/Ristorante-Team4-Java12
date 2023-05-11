@@ -6,6 +6,12 @@ public class Antipasti extends Portata {
     private Integer portions;
     private boolean localProduct;
 
+    public Antipasti(String name, Double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay,Integer portions ,boolean localProduct, TipoMenuEnum tipoMenuEnum) {
+        super(name, price, ingredients, canBeDishOfTheDay, TipoPortataEnum.ANTIPASTO, tipoMenuEnum);
+        this.localProduct = localProduct;
+        this.portions = portions;
+    }
+
 
     /**
      * @param name
@@ -15,12 +21,10 @@ public class Antipasti extends Portata {
      * @param portions
      * @param canBeDishOfTheDay
      */
-    public Antipasti(String name, Double price, Set<IngredientsEnum> ingredient,
-                     boolean localProduct, Integer portions, boolean canBeDishOfTheDay) {
-        super(name, price, ingredient, canBeDishOfTheDay, TipoPortataEnum.ANTIPASTO);
-        this.localProduct = localProduct;
-        this.portions = portions;
-    }
+
+
+
+
     @Override
     public void print() {
         System.out.print(ColorsEnum.BLUE_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ") ");

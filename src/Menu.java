@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Menu {
     private List<Portata> portataList;
 
@@ -25,15 +26,29 @@ public class Menu {
 
     //TODO sistemare
     public Double generateMediumPrice() {
-        Double mediumPrice = 0.0;
-        Integer numberOfDish = 0;
+        Double mediumPriceAntipasto = 0.0;
+        Double mediumPricePrimoPiatto = 0.0;
+        Double mediumPriceSecondoPiatto = 0.0;
+        Double mediumPriceDolci = 0.0;
+        Integer numberOfDishAntipasti = 0;
+        Integer numberOfDishPrimiPiatti = 0;
+        Integer numberOfDishSecondoPiatto = 0;
+        Integer numberOfDishDolci = 0;
         for (Portata portata : this.getPortataList()) {
-            if (portata.isCanBeDishOfTheDay() == true) {
-                numberOfDish++;
-                mediumPrice += portata.getPrice();
+            switch(portata.getTipoPiattoEnum()){
+                case ANTIPASTO -> mediumPriceAntipasto += portata.getPrice();
+                case PRIMI_PIATTI -> mediumPricePrimoPiatto += portata.getPrice();
+                case SECONDI_PIATTI -> mediumPriceSecondoPiatto += portata.getPrice();
+                case DOLCI -> mediumPriceDolci += portata.getPrice();
+            }
+            switch(portata.getTipoPiattoEnum()){
+                case ANTIPASTO -> numberOfDishAntipasti++;
+                case PRIMI_PIATTI -> numberOfDishPrimiPiatti++;
+                case SECONDI_PIATTI -> numberOfDishSecondoPiatto++;
+                case DOLCI -> numberOfDishDolci++;
             }
         }
-        return Math.floor(mediumPrice / numberOfDish);
+        return Math.floor(mediumPriceAntipasto/numberOfDishAntipasti + mediumPricePrimoPiatto/numberOfDishPrimiPiatti + mediumPriceSecondoPiatto/numberOfDishSecondoPiatto + mediumPriceDolci/numberOfDishDolci);
     }
 
     public void addPortata(Portata portata) {
@@ -47,5 +62,6 @@ public class Menu {
     public List<Portata> getPortataList() {
         return portataList;
     }
+
 }
 

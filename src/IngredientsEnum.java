@@ -34,6 +34,10 @@ public enum IngredientsEnum {
     RUM ("Rum"),
     PEPRONCINO("Peperoncino"),
     LIMONE("Limone"),
+    POLPO("Polpo"),
+    COCCIO("Scorfano"),
+    MOZZARELLA("Mozzarella"),
+    PESCATO_DEL_GIORNO("Misto pesce del giorno"),
     PANNA ("Panna");
 
     private final String ingredient;

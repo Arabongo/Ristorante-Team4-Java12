@@ -4,8 +4,8 @@ public class SecondiPiatti extends Portata {
 
     private boolean isSpicy;
 
-    public SecondiPiatti(String name, double price, Set<IngredientsEnum> ingredients, boolean isSpicy, boolean canBeDishOfTheDay) {
-        super(name, price, ingredients, canBeDishOfTheDay,TipoPortataEnum.SECONDI_PIATTI);
+    public SecondiPiatti(String name, double price, Set<IngredientsEnum> ingredients, boolean isSpicy, boolean canBeDishOfTheDay, TipoMenuEnum tipoMenuEnum) {
+        super(name, price, ingredients, canBeDishOfTheDay,TipoPortataEnum.SECONDI_PIATTI,tipoMenuEnum);
         this.isSpicy = isSpicy;
     }
 
