@@ -1,13 +1,14 @@
+import java.sql.Timestamp;
+
 public class Ristorante {
     private String name;
     private String address;
-
-    //TODO usare un oggetto time, timestamp ad esempio
-    private Double openingHours;
-    private Double closingHours;
+    private Timestamp openingHours;
+    private Timestamp closingHours;
     private Double deliveryPrice;
     private Menu menu;
-    public Ristorante(String name, String address, Double openingHours, Double closingHours, Double deliveryPrice, Menu menu) {
+
+    public Ristorante(String name, String address, Timestamp openingHours, Timestamp closingHours, Double deliveryPrice, Menu menu) {
         this.name = name;
         this.address = address;
         this.openingHours = openingHours;
@@ -50,19 +51,19 @@ public class Ristorante {
         this.address = address;
     }
 
-    public Double getOpeningHours() {
+    public Timestamp getOpeningHours() {
         return openingHours;
     }
 
-    public void setOpeningHours(Double openingHours) {
+    public void setOpeningHours(Timestamp openingHours) {
         this.openingHours = openingHours;
     }
 
-    public Double getClosingHours() {
+    public Timestamp getClosingHours() {
         return closingHours;
     }
 
-    public void setClosingHours(Double closingHours) {
+    public void setClosingHours(Timestamp closingHours) {
         this.closingHours = closingHours;
     }
 
@@ -73,5 +74,7 @@ public class Ristorante {
     public void setDeliveryPrice(Double deliveryPrice) {
         this.deliveryPrice = deliveryPrice;
     }
+
+
 
 }
