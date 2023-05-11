@@ -18,12 +18,12 @@ public class Ristorante {
     }
 
     public void printInfoRistorante() {
-        System.out.println("Ristorante " +
+        System.out.println(ColorsEnum.PURPLE_BRIGHT.getValue()+ "Ristorante " +
                 name + '\n' +
-                address + '\n' +
-                "Opening hours: " + openingHours + " PM" +
+                ColorsEnum.CYAN.getValue() + address + '\n' +
+                "Opening hours: " + openingHours + " AM" +
                 "\nClosing hours: " + closingHours + " AM" +
-                "\nDelivery price: " + deliveryPrice + " $");
+                "\nDelivery price: " + deliveryPrice + "$");
         System.out.println("Medium price: " + menu.generateMediumPrice() + "$\n");
         menu.printInfoMenu();
     }

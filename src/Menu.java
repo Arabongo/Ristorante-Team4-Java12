@@ -16,7 +16,7 @@ public class Menu {
         portataList.stream().filter( portata -> portata.getTipoPiattoEnum() == TipoPortataEnum.ANTIPASTO).forEach(primo -> primo.print());
         System.out.println(ColorsEnum.GREEN.getValue() + "\nPrimi Piatti:");
         portataList.stream().filter(portata -> portata.getTipoPiattoEnum() == TipoPortataEnum.PRIMI_PIATTI).forEach(secondo -> secondo.print());
-        System.out.println(ColorsEnum.PURPLE_BRIGHT.getValue() + "\nSecondi Piatti:");
+        System.out.println(ColorsEnum.CYAN.getValue() + "\nSecondi Piatti:");
         portataList.stream().filter(portata -> portata.getTipoPiattoEnum() == TipoPortataEnum.SECONDI_PIATTI).forEach(dessert -> dessert.print());
         System.out.println(ColorsEnum.RED_BRIGHT.getValue() + "\nDolci:");
         portataList.stream().filter(portata -> portata.getTipoPiattoEnum() == TipoPortataEnum.DOLCI).forEach(bevanda -> bevanda.print());
