@@ -1,4 +1,5 @@
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -95,7 +96,11 @@ public class Main {
         menu.addPortata(bevande15);
         menu.addPortata(bevande16);
         menu.addPortata(bevande17);
-        Ristorante ristorante = new Ristorante("La Taverna di Pulcinella", "Via Libertà 47, Napoli", 9.00, 1.00, 3.50, menu);
+
+        Timestamp openingHours = Timestamp.valueOf("2023-05-11 09:00:00");
+        Timestamp closingHours = Timestamp.valueOf("2023-06-11 01:00:00");
+
+        Ristorante ristorante = new Ristorante("La Taverna di Pulcinella", "Via Libertà 47, Napoli", openingHours, closingHours, 3.50, menu);
         ristorante.printInfoRistorante();
     }
 }
