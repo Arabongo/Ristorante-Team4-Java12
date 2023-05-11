@@ -6,7 +6,10 @@ public abstract class Portata {
     private Set<IngredientsEnum> ingredients;
     private boolean canBeDishOfTheDay;
     private TipoPortataEnum tipoPiattoEnum;
-    public Portata(String name, Double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay, TipoPortataEnum tipoPiattoEnum) {
+
+    private TipoMenuEnum tipoMenuEnum;
+    public Portata(String name, Double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay, TipoPortataEnum tipoPiattoEnum, TipoMenuEnum tipoMenuEnum) {
+        this.tipoMenuEnum = tipoMenuEnum;
         this.name = name;
         this.price = price;
         this.ingredients = ingredients;
