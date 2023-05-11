@@ -10,24 +10,32 @@ public class Bevande extends Portata {
         this.alcoholic = alcoholic;
         this.alcoholPercentage = alcoholPercentage;
     }
+
     public boolean isAlcoholic() {
         return alcoholic;
     }
+
     public void setAlcoholic(boolean alcoholic) {
         this.alcoholic = alcoholic;
     }
+
     public Double getAlcoholPercentage() {
         return alcoholPercentage;
     }
+
     public void setAlcoholPercentage(Double alcoholPercentage) {
         this.alcoholPercentage = alcoholPercentage;
     }
+
     @Override
     public void print() {
-        if (alcoholic) {
-            System.out.println(ColorsEnum.RED.getValue() + "- " + getName() + " $" + getPrice() + " " + "Percentuale alcolica: " + alcoholPercentage + "%" + " -(Ingredienti: " + getIngredients() + ")");
-        } else {
-            System.out.println(ColorsEnum.RED.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ")");
+        {
+            if (alcoholic) {
+                System.out.println(ColorsEnum.RED.getValue() + "- " + getName() + " $" + getPrice() + " " + "Percentuale alcolica: " + alcoholPercentage + "%" + " -(Ingredienti: " + getIngredients() + ")");
+            } else {
+                System.out.println(ColorsEnum.RED.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ")");
+            }
         }
     }
 }
+

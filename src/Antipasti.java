@@ -23,14 +23,16 @@ public class Antipasti extends Portata {
     }
     @Override
     public void print() {
-            System.out.println(ColorsEnum.BLUE_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ") ");
-            if (getLocalProduct()) {
-                System.out.print("Prodotto locale a Km zero; ");
-            }
-            if (portions > 1) {
-                System.out.print("Piatto per " + getPortions() + " persone;");
-            }
+        System.out.print(ColorsEnum.BLUE_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ") ");
+        if (getLocalProduct()) {
+            System.out.print("Prodotto locale a Km zero; ");
+        }
+        if (portions > 1) {
+            System.out.print("Piatto per " + getPortions() + " persone;");
+        }
+        System.out.println();
     }
+
 
     /**
      * @return il numero di porzioni degli antipasta

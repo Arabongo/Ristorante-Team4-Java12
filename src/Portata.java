@@ -43,6 +43,7 @@ public abstract class Portata {
     }
 
     //TODO deve stampare le info dei suoi field, poi ogni metodo figlio aggiungerà personalizzazioni
-    public abstract void print();
+    public void print(){
+    }
 }
 

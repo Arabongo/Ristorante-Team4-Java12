@@ -10,8 +10,9 @@ public class Dolci extends Portata {
 
     @Override
     public void print() {
-            isGlutenFree = !this.getIngredients().contains(IngredientsEnum.FARINA);
-            System.out.println(ColorsEnum.GREEN_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ")" + " is Gluten Free: " + isGlutenFree);
+
+        isGlutenFree = !this.getIngredients().contains(IngredientsEnum.FARINA);
+        System.out.println(ColorsEnum.GREEN_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ")" + " is Gluten Free: " + isGlutenFree);
     }
 }
 
