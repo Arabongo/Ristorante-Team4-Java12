@@ -6,14 +6,12 @@ public abstract class Portata {
     private Set<IngredientsEnum> ingredients;
     private boolean canBeDishOfTheDay;
     private TipoPortataEnum tipoPiattoEnum;
-    private TipoMenuEnum tipoMenuEnum;
-    public Portata(String name, Double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay, TipoPortataEnum tipoPiattoEnum, TipoMenuEnum tipoMenuEnum) {
+    public Portata(String name, Double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay, TipoPortataEnum tipoPiattoEnum) {
         this.name = name;
         this.price = price;
         this.ingredients = ingredients;
         this.canBeDishOfTheDay = canBeDishOfTheDay;
         this.tipoPiattoEnum = tipoPiattoEnum;
-        this.tipoMenuEnum=tipoMenuEnum;
     }
     public boolean isCanBeDishOfTheDay() {
         return canBeDishOfTheDay;
@@ -43,17 +41,13 @@ public abstract class Portata {
     public void setIngredients(Set<IngredientsEnum> ingredients) {
         this.ingredients = ingredients;
     }
-
-    public TipoMenuEnum getTipoMenuEnum() {
-        return tipoMenuEnum;
-    }
-
-    public void setTipoMenuEnum(TipoMenuEnum tipoMenuEnum) {
-        this.tipoMenuEnum = tipoMenuEnum;
-    }
-
-    //TODO deve stampare le info dei suoi field, poi ogni metodo figlio aggiungerà personalizzazioni
     public void print(){
+        if(!canBeDishOfTheDay) {
+            System.out.println("Portata " + name + " $" + price +  " " + tipoPiattoEnum.toString().toLowerCase() + " -(Ingredienti: " + ingredients + ")");
+        }else {
+            System.out.println("Portata " + name + " $" + price  + " Piatto del Giorno " + tipoPiattoEnum.toString().toLowerCase() + " -(Ingredienti: " + ingredients + ")");
+        }
     }
 }
+
 
