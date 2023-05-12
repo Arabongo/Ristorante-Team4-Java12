@@ -111,5 +111,11 @@ public class Main {
 
         Ristorante ristorante = new Ristorante("La Taverna di Pulcinella", "Via Libertà 47, Napoli", openingHours, closingHours, 3.50, menu);
         ristorante.printInfoRistorante();
+
+        ristorante.addPrenotazione("Franco Paglia", 4, "2023-05-15", "20:00");
+        ristorante.addPrenotazione("Riccardo Neri", 2, "2023-05-16", "13:30");
+        ristorante.printPrenotazioni();
+        ristorante.removePrenotazione(1);
+        ristorante.printPrenotazioni();
     }
 }

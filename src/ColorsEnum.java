@@ -1,7 +1,4 @@
 public enum ColorsEnum {
-
-    //TODO si devono chiamare con enum alla fine del nome ColorsEnum
-
     RESET ("\033[0m", "Resetta il colore di default"),
     // Regular Colors
     RED ("\033[0;31m", "Colore Rosso naturale"),
