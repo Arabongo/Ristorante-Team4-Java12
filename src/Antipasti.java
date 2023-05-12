@@ -1,3 +1,8 @@
+import enumerati.ColorsEnum;
+import enumerati.IngredientsEnum;
+import enumerati.TipoEnum;
+import enumerati.TipoPortataEnum;
+
 import java.util.Set;
 
 public class Antipasti extends Portata {
@@ -6,24 +11,21 @@ public class Antipasti extends Portata {
     private Integer portions;
     private boolean localProduct;
 
-    public Antipasti(String name, Double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay,Integer portions ,boolean localProduct, TipoMenuEnum tipoMenuEnum) {
+    /**
+     *
+     * @param name
+     * @param price
+     * @param ingredients
+     * @param canBeDishOfTheDay
+     * @param portions
+     * @param localProduct
+     * @param tipoMenuEnum
+     */
+    public Antipasti(String name, Double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay, Integer portions , boolean localProduct, TipoEnum tipoMenuEnum) {
         super(name, price, ingredients, canBeDishOfTheDay, TipoPortataEnum.ANTIPASTO, tipoMenuEnum);
         this.localProduct = localProduct;
         this.portions = portions;
     }
-
-
-    /**
-     * @param name
-     * @param price
-     * @param ingredient
-     * @param localProduct
-     * @param portions
-     * @param canBeDishOfTheDay
-     */
-
-
-
 
     @Override
     public void print() {

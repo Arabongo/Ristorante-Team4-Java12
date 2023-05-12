@@ -1,3 +1,7 @@
+import enumerati.IngredientsEnum;
+import enumerati.TipoEnum;
+import enumerati.TipoPortataEnum;
+
 import java.util.Set;
 
 public abstract class Portata {
@@ -7,8 +11,8 @@ public abstract class Portata {
     private boolean canBeDishOfTheDay;
     private TipoPortataEnum tipoPiattoEnum;
 
-    private TipoMenuEnum tipoMenuEnum;
-    public Portata(String name, Double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay, TipoPortataEnum tipoPiattoEnum, TipoMenuEnum tipoMenuEnum) {
+    private TipoEnum tipoMenuEnum;
+    public Portata(String name, Double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay, TipoPortataEnum tipoPiattoEnum, TipoEnum tipoMenuEnum) {
         this.tipoMenuEnum = tipoMenuEnum;
         this.name = name;
         this.price = price;

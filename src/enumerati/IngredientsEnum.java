@@ -1,3 +1,5 @@
+package enumerati;
+
 public enum IngredientsEnum {
 
     //TODO enum alla fine del nome

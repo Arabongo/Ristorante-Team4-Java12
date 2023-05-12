@@ -5,6 +5,7 @@ public class Prenotazione {
     private String ora;
     private Integer indicePrenotazione;
 
+    //TODO passare i tipi giusti
     public Prenotazione(String nome, Integer Persone, String data, String ora, Integer indicePrenotazione) {
         this.nome = nome;
         this.Persone = Persone;
@@ -53,6 +54,7 @@ public class Prenotazione {
         this.indicePrenotazione = indicePrenotazione;
     }
 
+    //TODO metodo di stampa prenotazione
     @Override
     public String toString() {
         return "Prenotazione #" + indicePrenotazione + " [" +

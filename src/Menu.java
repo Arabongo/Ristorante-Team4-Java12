@@ -1,8 +1,13 @@
+import enumerati.ColorsEnum;
+import enumerati.TipoPortataEnum;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class Menu {
+
+    //TODO un nome e un tipo
     private List<Portata> portataList;
 
     public Menu() {
@@ -11,7 +16,7 @@ public class Menu {
 
     public void printInfoMenu() {
         System.out.println(ColorsEnum.YELLOW.getValue() + "\nAntipasti:");
-        portataList.stream().filter( portata -> portata.getTipoPiattoEnum() == TipoPortataEnum.ANTIPASTO).forEach(primo -> primo.print());
+        portataList.stream().filter(portata -> portata.getTipoPiattoEnum() == TipoPortataEnum.ANTIPASTO).forEach(primo -> primo.print());
         System.out.println(ColorsEnum.GREEN.getValue() + "\nPrimi Piatti:");
         portataList.stream().filter(portata -> portata.getTipoPiattoEnum() == TipoPortataEnum.PRIMI_PIATTI).forEach(secondo -> secondo.print());
         System.out.println(ColorsEnum.CYAN.getValue() + "\nSecondi Piatti:");
@@ -33,20 +38,20 @@ public class Menu {
         Integer numberOfDishSecondoPiatto = 0;
         Integer numberOfDishDolci = 0;
         for (Portata portata : this.getPortataList()) {
-            switch(portata.getTipoPiattoEnum()){
+            switch (portata.getTipoPiattoEnum()) {
                 case ANTIPASTO -> mediumPriceAntipasto += portata.getPrice();
                 case PRIMI_PIATTI -> mediumPricePrimoPiatto += portata.getPrice();
                 case SECONDI_PIATTI -> mediumPriceSecondoPiatto += portata.getPrice();
                 case DOLCI -> mediumPriceDolci += portata.getPrice();
             }
-            switch(portata.getTipoPiattoEnum()){
+            switch (portata.getTipoPiattoEnum()) {
                 case ANTIPASTO -> numberOfDishAntipasti++;
                 case PRIMI_PIATTI -> numberOfDishPrimiPiatti++;
                 case SECONDI_PIATTI -> numberOfDishSecondoPiatto++;
                 case DOLCI -> numberOfDishDolci++;
             }
         }
-        return Math.floor(mediumPriceAntipasto/numberOfDishAntipasti + mediumPricePrimoPiatto/numberOfDishPrimiPiatti + mediumPriceSecondoPiatto/numberOfDishSecondoPiatto + mediumPriceDolci/numberOfDishDolci);
+        return Math.floor(mediumPriceAntipasto / numberOfDishAntipasti + mediumPricePrimoPiatto / numberOfDishPrimiPiatti + mediumPriceSecondoPiatto / numberOfDishSecondoPiatto + mediumPriceDolci / numberOfDishDolci);
     }
 
     public void addPortata(Portata portata) {

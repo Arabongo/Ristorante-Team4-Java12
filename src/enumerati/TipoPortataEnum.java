@@ -1,3 +1,5 @@
+package enumerati;
+
 public enum TipoPortataEnum {
 
     ANTIPASTO,

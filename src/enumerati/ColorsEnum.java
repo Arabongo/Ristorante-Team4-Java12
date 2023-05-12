@@ -1,3 +1,5 @@
+package enumerati;
+
 public enum ColorsEnum {
     RESET ("\033[0m", "Resetta il colore di default"),
     // Regular Colors
