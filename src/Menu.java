@@ -5,8 +5,6 @@ import java.util.List;
 public class Menu {
     private List<Portata> portataList;
 
-    //TODO passare tutte le info per stampare un menù : nome chef tipo ecc ecc
-
     public Menu() {
         this.portataList = new ArrayList<>();
     }
