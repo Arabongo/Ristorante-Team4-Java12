@@ -29,7 +29,7 @@ public class Ristorante {
                 "Opening hours: " + openingHours + " AM" +
                 "\nClosing hours: " + closingHours + " AM" +
                 "\nDelivery price: " + deliveryPrice + "$");
-        System.out.println("Medium price: " + menu.generateMediumPrice() + "$\n");
+        System.out.println("Medium price: " + menu.generateMediumPrice() + "$\n" + "drinks not included");
         menu.printInfoMenu();
         System.out.println();
     }
