@@ -1,16 +1,18 @@
+import java.sql.Time;
+import java.sql.Timestamp;
+
 public class Prenotazione {
     private String nome;
     private Integer Persone;
-    private String data;
-    private String ora;
+    private Timestamp data;
+    private Timestamp ora;
     private Integer indicePrenotazione;
 
     //TODO passare i tipi giusti
-    public Prenotazione(String nome, Integer Persone, String data, String ora, Integer indicePrenotazione) {
+    public Prenotazione(String nome, Integer Persone, Timestamp data, Integer indicePrenotazione) {
         this.nome = nome;
         this.Persone = Persone;
         this.data = data;
-        this.ora = ora;
         this.indicePrenotazione = indicePrenotazione;
     }
 
@@ -30,20 +32,12 @@ public class Prenotazione {
         this.Persone = persone;
     }
 
-    public String getData() {
+    public Timestamp getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(Timestamp data) {
         this.data = data;
-    }
-
-    public String getOra() {
-        return ora;
-    }
-
-    public void setOra(String ora) {
-        this.ora = ora;
     }
 
     public Integer getIndicePrenotazione() {
@@ -54,12 +48,10 @@ public class Prenotazione {
         this.indicePrenotazione = indicePrenotazione;
     }
 
-    //TODO metodo di stampa prenotazione
-    @Override
-    public String toString() {
-        return "Prenotazione #" + indicePrenotazione + " [" +
+    public void PrintPrenotazione() {
+       System.out.println("Prenotazione #" + indicePrenotazione + " [" +
                 "Nome: " + nome  +
                 ", Numero Persone: " + Persone +
-                ", Data: " + data + " alle ore " + ora + "]";
+                ", Data: " + data.toLocalDateTime().toLocalDate() + " alle ore " + data.toLocalDateTime().toLocalTime() + "]");
     }
 }

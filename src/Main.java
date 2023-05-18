@@ -114,8 +114,8 @@ public class Main {
         ristorante.printInfoRistorante();
 
         //TODO passiamo già tutto in formato timestamp
-        ristorante.addPrenotazione("Franco Paglia", 4, "2023-05-15", "20:00");
-        ristorante.addPrenotazione("Riccardo Neri", 2, "2023-05-16", "13:30");
+        ristorante.addPrenotazione("Franco Paglia", 4, Timestamp.valueOf("2023-05-15 20:00:00"));
+        ristorante.addPrenotazione("Riccardo Neri", 2, Timestamp.valueOf("2023-05-16 13:30:00"));
         ristorante.printPrenotazioni();
         ristorante.removePrenotazione(1);
         ristorante.printPrenotazioni();

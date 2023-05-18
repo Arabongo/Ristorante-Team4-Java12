@@ -86,17 +86,17 @@ public class Ristorante {
         System.out.println();
     }
 
-    public void addPrenotazione(String nome, Integer Persone, String data, String ora) {
+    public void addPrenotazione(String nome, Integer Persone, Timestamp data) {
         prenotazioniGiornaliere++;
-        Prenotazione nuovaPrenotazione = new Prenotazione(nome, Persone, data, ora, prenotazioniGiornaliere);
+        Prenotazione nuovaPrenotazione = new Prenotazione(nome, Persone, data, prenotazioniGiornaliere);
+        System.out.println(ColorsEnum.RESET.getValue() + "Prenotazione effettuata #" + prenotazioniGiornaliere);
         listaPrenotazioni.add(nuovaPrenotazione);
     }
 
     public void printPrenotazioni() {
         System.out.println(ColorsEnum.RESET.getValue() + "\nLista prenotazioni: \n");
         for (Prenotazione prenotazione : listaPrenotazioni) {
-            System.out.println(ColorsEnum.RESET.getValue() + "Prenotazione effettuata #" + prenotazioniGiornaliere);
-            System.out.println(prenotazione);
+            prenotazione.PrintPrenotazione();
         }
         System.out.println();
     }
