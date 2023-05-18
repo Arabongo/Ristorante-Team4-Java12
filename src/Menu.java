@@ -28,8 +28,13 @@ public class Menu {
         portataList.stream().filter(portata -> portata.getTipoPiattoEnum() == TipoPortataEnum.SECONDI_PIATTI).forEach(dessert -> dessert.print());
         System.out.println(ColorsEnum.RED_BRIGHT.getValue() + "\nDolci:");
         portataList.stream().filter(portata -> portata.getTipoPiattoEnum() == TipoPortataEnum.DOLCI).forEach(bevanda -> bevanda.print());
-        System.out.println(ColorsEnum.BLUE_BRIGHT.getValue() + "\n Becvande:");
-        portataList.stream().filter(portata -> portata.getTipoPiattoEnum() == TipoPortataEnum.BEVANDE).forEach(bevanda -> bevanda.print());
+        System.out.println(ColorsEnum.BLUE_BRIGHT.getValue() + "\nBecvande:");
+        System.out.println(ColorsEnum.GREEN_BRIGHT.getValue() + "Birre:");
+        portataList.stream().filter(portata -> portata.getTipoMenuEnum() == TipoMenuEnum.BIRRE).forEach(bevanda -> bevanda.print());
+        System.out.println(ColorsEnum.GREEN_BRIGHT.getValue() + "\nSoft Drink:");
+        portataList.stream().filter(portata -> portata.getTipoMenuEnum() == TipoMenuEnum.SOFT_DRINK).forEach(bevanda -> bevanda.print());
+        System.out.println(ColorsEnum.GREEN_BRIGHT.getValue() + "\nVini:");
+        portataList.stream().filter(portata -> portata.getTipoMenuEnum() == TipoMenuEnum.CARTA_VINI).forEach(bevanda -> bevanda.print());
     }
 
     //TODO sistemare

@@ -11,6 +11,8 @@ public abstract class Portata {
     private boolean canBeDishOfTheDay;
     private TipoPortataEnum tipoPiattoEnum;
 
+
+
     private TipoMenuEnum tipoMenuEnum;
     public Portata(String name, Double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay, TipoPortataEnum tipoPiattoEnum, TipoMenuEnum tipoMenuEnum) {
         this.tipoMenuEnum = tipoMenuEnum;
@@ -47,6 +49,13 @@ public abstract class Portata {
     }
     public void setIngredients(Set<IngredientsEnum> ingredients) {
         this.ingredients = ingredients;
+    }
+    public TipoMenuEnum getTipoMenuEnum() {
+        return tipoMenuEnum;
+    }
+
+    public void setTipoMenuEnum(TipoMenuEnum tipoMenuEnum) {
+        this.tipoMenuEnum = tipoMenuEnum;
     }
     public void print(){
         if(!canBeDishOfTheDay) {
