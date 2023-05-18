@@ -1,14 +1,14 @@
-import enumerati.TipoEnum;
+import enumerati.TipoMenuEnum;
 
 public class Cliente {
     private String nome;
     private String cognome;
     private int numeroDiTelefono;
     private String eMail;
-    private TipoEnum preferenzaMenu;
+    private TipoMenuEnum preferenzaMenu;
 
 
-    public Cliente(String nome, String cognome, int numeroDiTelefono, String eMail, TipoEnum preferenzaMenu) {
+    public Cliente(String nome, String cognome, int numeroDiTelefono, String eMail, TipoMenuEnum preferenzaMenu) {
         this.nome = nome;
         this.cognome = cognome;
         this.numeroDiTelefono = numeroDiTelefono;
@@ -48,11 +48,11 @@ public class Cliente {
         this.eMail = eMail;
     }
 
-    public TipoEnum getPreferenzaMenu() {
+    public TipoMenuEnum getPreferenzaMenu() {
         return preferenzaMenu;
     }
 
-    public void setPreferenzaMenu(TipoEnum preferenzaMenu) {
+    public void setPreferenzaMenu(TipoMenuEnum preferenzaMenu) {
         this.preferenzaMenu = preferenzaMenu;
     }
 }

@@ -1,6 +1,6 @@
 import enumerati.ColorsEnum;
 import enumerati.IngredientsEnum;
-import enumerati.TipoEnum;
+import enumerati.TipoMenuEnum;
 import enumerati.TipoPortataEnum;
 
 import java.util.Set;
@@ -9,7 +9,7 @@ public class SecondiPiatti extends Portata {
 
     private boolean isSpicy;
 
-    public SecondiPiatti(String name, double price, Set<IngredientsEnum> ingredients, boolean isSpicy, boolean canBeDishOfTheDay, TipoEnum tipoMenuEnum) {
+    public SecondiPiatti(String name, double price, Set<IngredientsEnum> ingredients, boolean isSpicy, boolean canBeDishOfTheDay, TipoMenuEnum tipoMenuEnum) {
         super(name, price, ingredients, canBeDishOfTheDay, TipoPortataEnum.SECONDI_PIATTI,tipoMenuEnum);
         this.isSpicy = isSpicy;
     }

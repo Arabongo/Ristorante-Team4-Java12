@@ -1,4 +1,5 @@
 import enumerati.ColorsEnum;
+import enumerati.TipoMenuEnum;
 import enumerati.TipoPortataEnum;
 
 import java.util.ArrayList;
@@ -10,11 +11,15 @@ public class Menu {
     //TODO un nome e un tipo
     private List<Portata> portataList;
 
-    public Menu() {
+    private TipoMenuEnum tipoMenu;
+
+    public Menu(TipoMenuEnum tipoMenu) {
+        this.tipoMenu = tipoMenu;
         this.portataList = new ArrayList<>();
     }
 
     public void printInfoMenu() {
+        System.out.println(ColorsEnum.RED_BRIGHT.getValue() +"\n"+tipoMenu.getTipoMenu());
         System.out.println(ColorsEnum.YELLOW.getValue() + "\nAntipasti:");
         portataList.stream().filter(portata -> portata.getTipoPiattoEnum() == TipoPortataEnum.ANTIPASTO).forEach(primo -> primo.print());
         System.out.println(ColorsEnum.GREEN.getValue() + "\nPrimi Piatti:");
@@ -66,5 +71,12 @@ public class Menu {
         return portataList;
     }
 
+    public TipoMenuEnum getTipoMenu() {
+        return tipoMenu;
+    }
+
+    public void setTipoMenu(TipoMenuEnum tipoMenu) {
+        this.tipoMenu = tipoMenu;
+    }
 }
 
