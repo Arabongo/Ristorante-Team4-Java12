@@ -7,8 +7,6 @@ import java.util.List;
 
 
 public class Menu {
-
-    //TODO un nome e un tipo
     private List<Portata> portataList;
 
     private TipoMenuEnum tipoMenu;

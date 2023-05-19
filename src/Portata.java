@@ -2,6 +2,8 @@ import enumerati.IngredientsEnum;
 import enumerati.TipoMenuEnum;
 import enumerati.TipoPortataEnum;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 public abstract class Portata {
@@ -10,7 +12,6 @@ public abstract class Portata {
     private Set<IngredientsEnum> ingredients;
     private boolean canBeDishOfTheDay;
     private TipoPortataEnum tipoPiattoEnum;
-
     private TipoMenuEnum tipoMenuEnum;
     /**
      * Crea una nuova portata con relativi nome, prezzo e ingredienti

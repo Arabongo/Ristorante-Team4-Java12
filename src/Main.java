@@ -106,15 +106,17 @@ public class Main {
         menuC.addPortata(bevande16);
         menuC.addPortata(bevande17);
 
-        Timestamp openingHours = Timestamp.valueOf("2023-05-11 09:00:00");
-        Timestamp closingHours = Timestamp.valueOf("2023-06-11 01:00:00");
-
-        Ristorante ristorante = new Ristorante("La Taverna di Pulcinella", "Via Libertà 47, Napoli", openingHours, closingHours, 3.50, menuC);
+        Ristorante ristorante = new Ristorante("La Taverna di Pulcinella", "Via Libertà 47, Napoli", Timestamp.valueOf("2023-05-11 09:00:00"), Timestamp.valueOf("2023-06-11 01:00:00"), 3.50, menuC, 20);
         ristorante.printInfoRistorante();
 
-        //TODO passiamo già tutto in formato timestamp
-        ristorante.addPrenotazione("Franco Paglia", 4, Timestamp.valueOf("2023-05-15 20:00:00"));
-        ristorante.addPrenotazione("Riccardo Neri", 2, Timestamp.valueOf("2023-05-16 13:30:00"));
+        Tavolo tavolo1 = new Tavolo(1, 4);
+        Tavolo tavolo2 = new Tavolo(2, 3);
+
+        Cliente cliente1 = new Cliente("Franco Paglia", 123456789, "FrancoPaglia@gmail.com", TipoMenuEnum.VEGETARIANO);
+        Cliente cliente2 = new Cliente("Riccardo Neri", 987654321, "RiccardoNeri@gmail.com", TipoMenuEnum.CARNE);
+
+        ristorante.addPrenotazione(cliente1, 4, Timestamp.valueOf("2023-05-15 20:00:00"), tavolo1);
+        ristorante.addPrenotazione(cliente2, 2, Timestamp.valueOf("2023-05-16 13:30:00"), tavolo2);
         ristorante.printPrenotazioni();
         ristorante.removePrenotazione(1);
         ristorante.printPrenotazioni();

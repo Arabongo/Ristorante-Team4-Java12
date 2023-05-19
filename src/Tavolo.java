@@ -1,18 +1,17 @@
-import javax.sound.sampled.Port;
 import java.util.ArrayList;
 
 public class Tavolo {
-    private int numeroCoperti;
+    private int numeroCopertiMassimi;
     private int numeroTavolo;
     private ArrayList<Portata> listaOrdinazioni;
     private ArrayList<Cliente> listaClientiAlTavolo;
     private double conto;
-    public Tavolo(int numeroTavolo, int numeroCoperti){
+    public Tavolo(int numeroTavolo, int numeroCopertiMassimi){
         this.numeroTavolo=numeroTavolo;
-        this.numeroCoperti=numeroCoperti;
-        this.listaOrdinazioni=new ArrayList<>();
-        this.conto=0.0;
-        this.listaClientiAlTavolo=new ArrayList<>();
+        this.numeroCopertiMassimi = numeroCopertiMassimi;
+//        this.listaOrdinazioni=new ArrayList<>();
+//        this.conto=0.0;
+//        this.listaClientiAlTavolo=new ArrayList<>();
     }
 
     public ArrayList<Cliente> getListaClientiAlTavolo() {
@@ -25,12 +24,12 @@ public class Tavolo {
         listaClientiAlTavolo.remove(cliente);
     }
 
-    public int getNumeroCoperti() {
-        return numeroCoperti;
+    public int getNumeroCopertiMassimi() {
+        return numeroCopertiMassimi;
     }
 
-    public void setNumeroCoperti(int numeroCoperti) {
-        this.numeroCoperti = numeroCoperti;
+    public void setNumeroCopertiMassimi(int numeroCopertiMassimi) {
+        this.numeroCopertiMassimi = numeroCopertiMassimi;
     }
 
     public int getNumeroTavolo() {
