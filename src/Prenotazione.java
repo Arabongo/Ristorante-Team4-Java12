@@ -79,7 +79,7 @@ public class Prenotazione {
      */
 
     //TODO rifattorizzare nome PrintPrenotazione
-    public void PrintPrenotazione() {
+    public void printPrenotazione() {
        System.out.println("Prenotazione #" + indicePrenotazione +
                 "Nome: " + nome  +
                 ", Numero Persone: " + numeroPersone +

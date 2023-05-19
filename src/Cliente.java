@@ -2,12 +2,12 @@ import enumerati.TipoMenuEnum;
 
 public class Cliente {
     private String nome;
-    private int numeroDiTelefono;
+    private Integer numeroDiTelefono;
     private String eMail;
     private TipoMenuEnum preferenzaMenu;
 
 
-    public Cliente(String nome, int numeroDiTelefono, String eMail, TipoMenuEnum preferenzaMenu) {
+    public Cliente(String nome, Integer numeroDiTelefono, String eMail, TipoMenuEnum preferenzaMenu) {
         this.nome = nome;
         this.numeroDiTelefono = numeroDiTelefono;
         this.eMail = eMail;
@@ -24,7 +24,7 @@ public class Cliente {
         return numeroDiTelefono;
     }
 
-    public void setNumeroDiTelefono(int numeroDiTelefono) {
+    public void setNumeroDiTelefono(Integer numeroDiTelefono) {
         this.numeroDiTelefono = numeroDiTelefono;
     }
 

@@ -160,7 +160,7 @@ public class Ristorante {
     public void printPrenotazioni() {
         System.out.println(ColorsEnum.RESET.getValue() + "\nLista prenotazioni: \n");
         for (Prenotazione prenotazione : listaPrenotazioni) {
-            prenotazione.PrintPrenotazione();
+            prenotazione.printPrenotazione();
         }
         System.out.println();
     }

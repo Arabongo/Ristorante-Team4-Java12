@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 
 public class Tavolo {
-    private int numeroCopertiMassimi;
-    private int numeroTavolo;
+    private Integer numeroCopertiMassimi;
+    private Integer numeroTavolo;
     private ArrayList<Portata> listaOrdinazioni;
     private ArrayList<Cliente> listaClientiAlTavolo;
     private double conto;
-    public Tavolo(int numeroTavolo, int numeroCopertiMassimi){
+    public Tavolo(Integer numeroTavolo, Integer numeroCopertiMassimi){
         this.numeroTavolo=numeroTavolo;
         this.numeroCopertiMassimi = numeroCopertiMassimi;
 //        this.listaOrdinazioni=new ArrayList<>();
@@ -24,19 +24,19 @@ public class Tavolo {
         listaClientiAlTavolo.remove(cliente);
     }
 
-    public int getNumeroCopertiMassimi() {
+    public Integer getNumeroCopertiMassimi() {
         return numeroCopertiMassimi;
     }
 
-    public void setNumeroCopertiMassimi(int numeroCopertiMassimi) {
+    public void setNumeroCopertiMassimi(Integer numeroCopertiMassimi) {
         this.numeroCopertiMassimi = numeroCopertiMassimi;
     }
 
-    public int getNumeroTavolo() {
+    public Integer getNumeroTavolo() {
         return numeroTavolo;
     }
 
-    public void setNumeroTavolo(int numeroTavolo) {
+    public void setNumeroTavolo(Integer numeroTavolo) {
         this.numeroTavolo = numeroTavolo;
     }
 
