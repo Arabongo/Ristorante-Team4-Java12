@@ -5,10 +5,15 @@ public class Prenotazione {
     private String nome;
     private Integer Persone;
     private Timestamp data;
-    private Timestamp ora;
     private Integer indicePrenotazione;
 
-    //TODO passare i tipi giusti
+    /**
+     * Crea una prenotazione da aggiungere alla lista.
+     * @param nome il nome del cliente
+     * @param Persone il numero di persone al tavolo
+     * @param  data indica giorno e ora della prenotazione
+     * @param indicePrenotazione è l'indice con cui identificare la prenotazione
+     */
     public Prenotazione(String nome, Integer Persone, Timestamp data, Integer indicePrenotazione) {
         this.nome = nome;
         this.Persone = Persone;
@@ -48,6 +53,9 @@ public class Prenotazione {
         this.indicePrenotazione = indicePrenotazione;
     }
 
+    /**
+     * Metodo di stampa per le prenotazioni.
+     */
     public void PrintPrenotazione() {
        System.out.println("Prenotazione #" + indicePrenotazione + " [" +
                 "Nome: " + nome  +

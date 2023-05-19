@@ -10,6 +10,11 @@ public class Bevande extends Portata {
     private boolean alcoholic;
     private Double alcoholPercentage;
 
+    /**
+     * Eredita il costruttore della classe Portata, aggiungendo se contiene alchol e in che quantità.
+     * @param alcoholic indica se la bevanda è alcolica o meno
+     * @param alcoholPercentage indica l'eventuale quantità di alchol nella bevanda.
+     */
     public Bevande(String name, Double price, Set<IngredientsEnum> ingredients, boolean alcoholic, Double alcoholPercentage, boolean canBeDishOfTheDay, TipoMenuEnum tipoMenuEnum) {
         super(name, price, ingredients, canBeDishOfTheDay, TipoPortataEnum.BEVANDE, tipoMenuEnum);
         this.alcoholic = alcoholic;
@@ -32,6 +37,9 @@ public class Bevande extends Portata {
         this.alcoholPercentage = alcoholPercentage;
     }
 
+    /**
+     * Metodo di stampa di Bevande.
+     */
     @Override
     public void print() {
         String ingredienti = getIngredients().toString();

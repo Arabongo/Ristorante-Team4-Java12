@@ -9,6 +9,10 @@ public class SecondiPiatti extends Portata {
 
     private boolean isSpicy;
 
+    /**
+     * Eredita il costruttore dalla Classe Portata.
+     * @param isSpicy indica se il piatto è piccante o meno.
+     */
     public SecondiPiatti(String name, double price, Set<IngredientsEnum> ingredients, boolean isSpicy, boolean canBeDishOfTheDay, TipoMenuEnum tipoMenuEnum) {
         super(name, price, ingredients, canBeDishOfTheDay, TipoPortataEnum.SECONDI_PIATTI,tipoMenuEnum);
         this.isSpicy = isSpicy;
@@ -20,6 +24,9 @@ public class SecondiPiatti extends Portata {
     public void setSpicy(boolean spicy) {
         isSpicy = spicy;
     }
+    /**
+     * Metodo di stampa di SecondiPiatti.
+     */
     @Override
     public void print() {
         String ingredienti = getIngredients().toString();

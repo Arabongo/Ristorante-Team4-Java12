@@ -12,6 +12,15 @@ public abstract class Portata {
     private TipoPortataEnum tipoPiattoEnum;
 
     private TipoMenuEnum tipoMenuEnum;
+    /**
+     * Crea una nuova portata con relativi nome, prezzo e ingredienti
+     * @param name  nome della portata
+     * @param price  prezzo della portata
+     * @param ingredients ingredienti che compongono la portata
+     * @param canBeDishOfTheDay indica se il piatto può essere piatto del giorno
+     * @param tipoPiattoEnum indica la parte di menù a cui appartiene tra Antipasti, Primi, Secondi, Dolci e Bevande
+     * @param tipoMenuEnum indica il menù d'appartenenza
+     */
     public Portata(String name, Double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay, TipoPortataEnum tipoPiattoEnum, TipoMenuEnum tipoMenuEnum) {
         this.tipoMenuEnum = tipoMenuEnum;
         this.name = name;
@@ -55,6 +64,10 @@ public abstract class Portata {
     public void setTipoMenuEnum(TipoMenuEnum tipoMenuEnum) {
         this.tipoMenuEnum = tipoMenuEnum;
     }
+
+    /**
+     * Stampa una portata generica.
+     */
     public void print(){
         if(!canBeDishOfTheDay) {
             System.out.println("Portata " + name + " $" + price +  " " + tipoPiattoEnum.toString().toLowerCase() + " -(Ingredienti: " + ingredients + ")");

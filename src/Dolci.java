@@ -8,11 +8,24 @@ import java.util.Set;
 public class Dolci extends Portata {
 
     private boolean isGlutenFree;
-
+    /**
+     * Costruttore ereditato dalla Classe Portata.
+     */
     public Dolci(String name, double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay, TipoMenuEnum tipoMenuEnum) {
         super(name, price, ingredients, canBeDishOfTheDay, TipoPortataEnum.DOLCI,tipoMenuEnum);
     }
 
+    public boolean isGlutenFree() {
+        return isGlutenFree;
+    }
+
+    public void setGlutenFree(boolean glutenFree) {
+        isGlutenFree = glutenFree;
+    }
+
+    /**
+     * Metodo di stampa di Dolci.
+     */
     @Override
     public void print() {
         String ingredienti = getIngredients().toString();

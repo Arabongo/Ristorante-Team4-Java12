@@ -13,11 +13,18 @@ public class Menu {
 
     private TipoMenuEnum tipoMenu;
 
+    /**
+     * Crea una nuova lista Menu in cui inserire le portate.
+     * @param tipoMenu indica la tipologia del menù in questione.
+     */
     public Menu(TipoMenuEnum tipoMenu) {
         this.tipoMenu = tipoMenu;
         this.portataList = new ArrayList<>();
     }
-
+    /**
+     * Stampa l'intero menù, dividendolo nelle relativi sezioni attraverso gli stream,
+     * utilizzando il parametro di ogni portata TipoPortataEnum per filtrare le portate.
+     */
     public void printInfoMenu() {
         System.out.println(ColorsEnum.RED_BRIGHT.getValue() +"\n"+tipoMenu.getTipoMenu().toUpperCase());
         System.out.println(ColorsEnum.YELLOW.getValue() + "\nAntipasti:");
@@ -37,6 +44,10 @@ public class Menu {
         portataList.stream().filter(portata -> portata.getTipoMenuEnum() == TipoMenuEnum.CARTA_VINI).forEach(bevanda -> bevanda.print());
     }
 
+    /**
+     * Prende in considerazione il prezzo medio di tutte le sezioni delle portate, generando
+     * il prezzo medio relativo a un menù.
+     */
     //TODO sistemare
     public Double generateMediumPrice() {
         Double mediumPriceAntipasto = 0.0;

@@ -7,12 +7,8 @@ import java.util.Set;
 
 public class Main {
 
-    private static Set<IngredientsEnum> listaComune;
-
     public static void main(String[] args) {
 
-
-        Set<IngredientsEnum>listaComune = Set.of(IngredientsEnum.ACQUA, IngredientsEnum.ZUCCHERO, IngredientsEnum.AROMI);
         Menu menuC = new Menu(TipoMenuEnum.CARNE);
         Menu menuV = new Menu(TipoMenuEnum.VEGETARIANO);
         Menu menuP = new Menu(TipoMenuEnum.PESCE);
@@ -90,9 +86,9 @@ public class Main {
         Bevande bevande8 = new Bevande("Acqua Gas 1/2l", 1.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.ANIDRIDE_CARBONICA), false, 0.0, false, TipoMenuEnum.SOFT_DRINK);
         Bevande bevande9 = new Bevande("Coca Cola 1/2l", 2.5,Set.of(IngredientsEnum.ACQUA, IngredientsEnum.CAFFEINA, IngredientsEnum.ZUCCHERO),false, 0.0, false, TipoMenuEnum.SOFT_DRINK);
         Bevande bevande10 = new Bevande("Chinotto 0.33l", 3.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.ZUCCHERO, IngredientsEnum.AROMI), false, 0.0, false, TipoMenuEnum.SOFT_DRINK);
-        Bevande bevande11 = new Bevande("Te Pesca 1/2l", 2.5, listaComune,false, 0.0, false, TipoMenuEnum.SOFT_DRINK);
-        Bevande bevande12 = new Bevande("Te Limone 1/2l", 2.5, listaComune, false, 0.0, false, TipoMenuEnum.SOFT_DRINK);
-        Bevande bevande13 = new Bevande("Succhi di frutta 0.33l", 3.5, listaComune,false, 0.0, false, TipoMenuEnum.SOFT_DRINK);
+        Bevande bevande11 = new Bevande("Te Pesca 1/2l", 2.5, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.ZUCCHERO, IngredientsEnum.AROMI),false, 0.0, false, TipoMenuEnum.SOFT_DRINK);
+        Bevande bevande12 = new Bevande("Te Limone 1/2l", 2.5, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.ZUCCHERO, IngredientsEnum.AROMI), false, 0.0, false, TipoMenuEnum.SOFT_DRINK);
+        Bevande bevande13 = new Bevande("Succhi di frutta 0.33l", 3.5, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.ZUCCHERO, IngredientsEnum.AROMI),false, 0.0, false, TipoMenuEnum.SOFT_DRINK);
         menuC.addPortata(bevande7);
         menuC.addPortata(bevande8);
         menuC.addPortata(bevande9);

@@ -7,19 +7,13 @@ import java.util.Set;
 
 public class Antipasti extends Portata {
 
-    //modified int into Integer
     private Integer portions;
     private boolean localProduct;
 
     /**
-     *
-     * @param name
-     * @param price
-     * @param ingredients
-     * @param canBeDishOfTheDay
-     * @param portions
-     * @param localProduct
-     * @param tipoMenuEnum
+     * Eredita il costruttore della classe Portata, aggiungendo quantità e provenienza.
+     * @param portions numero di porzioni per piatto
+     * @param localProduct indica se è un prodotto locale o meno
      */
     public Antipasti(String name, Double price, Set<IngredientsEnum> ingredients, boolean canBeDishOfTheDay, Integer portions , boolean localProduct, TipoMenuEnum tipoMenuEnum) {
         super(name, price, ingredients, canBeDishOfTheDay, TipoPortataEnum.ANTIPASTO, tipoMenuEnum);
@@ -27,6 +21,9 @@ public class Antipasti extends Portata {
         this.portions = portions;
     }
 
+    /**
+     * Metodo di stampa di Antipasti.
+     */
     @Override
     public void print() {
         String ingredienti = getIngredients().toString();
