@@ -15,6 +15,8 @@ public class PrimiPiatti extends Portata {
 
     @Override
     public void print() {
-        System.out.println(ColorsEnum.BLUE_BRIGHT.getValue() + "- " + pastaType + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ")");
+        String ingredienti = getIngredients().toString();
+        ingredienti = ingredienti.substring(1, ingredienti.length() - 1);
+        System.out.println(ColorsEnum.BLUE_BRIGHT.getValue() + "- " + pastaType + getName() + " $" + getPrice() + " - (Ingredienti: " + ingredienti + ")");
     }
 }

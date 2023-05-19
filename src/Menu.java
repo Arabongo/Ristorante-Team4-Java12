@@ -19,7 +19,7 @@ public class Menu {
     }
 
     public void printInfoMenu() {
-        System.out.println(ColorsEnum.RED_BRIGHT.getValue() +"\n"+tipoMenu.getTipoMenu());
+        System.out.println(ColorsEnum.RED_BRIGHT.getValue() +"\n"+tipoMenu.getTipoMenu().toUpperCase());
         System.out.println(ColorsEnum.YELLOW.getValue() + "\nAntipasti:");
         portataList.stream().filter(portata -> portata.getTipoPiattoEnum() == TipoPortataEnum.ANTIPASTO).forEach(primo -> primo.print());
         System.out.println(ColorsEnum.GREEN.getValue() + "\nPrimi Piatti:");

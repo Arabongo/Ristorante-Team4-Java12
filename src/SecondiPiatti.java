@@ -22,10 +22,12 @@ public class SecondiPiatti extends Portata {
     }
     @Override
     public void print() {
+        String ingredienti = getIngredients().toString();
+        ingredienti = ingredienti.substring(1, ingredienti.length() - 1);
             if (!isSpicy) {
-                System.out.println(ColorsEnum.PURPLE_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ")");
+                System.out.println(ColorsEnum.PURPLE_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " - (Ingredienti: " + ingredienti + ")");
             } else {
-                System.out.println(ColorsEnum.PURPLE_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ")" + ColorsEnum.RED_BRIGHT.getValue() + " Piccante");
+                System.out.println(ColorsEnum.PURPLE_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " - (Ingredienti: " + ingredienti + ")" + ColorsEnum.RED_BRIGHT.getValue() + " Piccante");
             }
     }
 }

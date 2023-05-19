@@ -1,9 +1,9 @@
 package enumerati;
 
 public enum TipoMenuEnum {
-    CARNE("Menu a base di carne"),
-    PESCE("Menu a base di pesce"),
-    VEGETARIANO("Menu vegetariano"),
+    CARNE("Menù a base di carne"),
+    PESCE("Menù a base di pesce"),
+    VEGETARIANO("Menù vegetariano"),
 
     //TODO tipologie portate
 

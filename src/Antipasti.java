@@ -29,7 +29,9 @@ public class Antipasti extends Portata {
 
     @Override
     public void print() {
-        System.out.print(ColorsEnum.BLUE_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " -(Ingredienti: " + getIngredients() + ") ");
+        String ingredienti = getIngredients().toString();
+        ingredienti = ingredienti.substring(1, ingredienti.length() - 1);
+        System.out.print(ColorsEnum.BLUE_BRIGHT.getValue() + "- " + getName() + " $" + getPrice() + " - (Ingredienti: " + ingredienti + ") ");
         if (getLocalProduct()) {
             System.out.print("Prodotto locale a Km zero; ");
         }
