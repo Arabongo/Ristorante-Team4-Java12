@@ -15,8 +15,6 @@ public class Ristorante {
     private Menu menu;
     private static Integer prenotazioniGiornaliere = 0;
     private Integer postiMassimi;
-
-    //TODO bisogna introdurre cliente e tavoli e dare la possibilità a un cliente vegano di prenotare e visualizzare un menu vegano
     private List<Prenotazione> listaPrenotazioni;
 
     private Map<Cliente, Tavolo> prenotationMap;
@@ -155,7 +153,7 @@ public class Ristorante {
         }
     }
 
-
+//TODO se la lista è vuota non deve stampare nulla
     /**
      * Stampa tutte le Prenotazioni presenti nella lista.
      */

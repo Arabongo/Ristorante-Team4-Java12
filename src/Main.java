@@ -106,7 +106,7 @@ public class Main {
         menuC.addPortata(bevande16);
         menuC.addPortata(bevande17);
 
-        Ristorante ristorante = new Ristorante("La Taverna di Pulcinella", "Via Libertà 47, Napoli", Timestamp.valueOf("2023-05-11 09:00:00"), Timestamp.valueOf("2023-06-11 01:00:00"), 3.50, menuC, 20);
+        Ristorante ristorante = new Ristorante("La Taverna di Pulcinella", "Via Libertà 47, Napoli", Timestamp.valueOf("2023-05-11 09:00:00"), Timestamp.valueOf("2023-06-11 01:00:00"), 3.50, menuC, 1);
         ristorante.printInfoRistorante();
 
         Tavolo tavolo1 = new Tavolo(1, 4);
@@ -118,7 +118,7 @@ public class Main {
         ristorante.addPrenotazione(cliente1, 4, Timestamp.valueOf("2023-05-15 20:00:00"), tavolo1);
         ristorante.addPrenotazione(cliente2, 2, Timestamp.valueOf("2023-05-16 13:30:00"), tavolo2);
         ristorante.printPrenotazioni();
-        ristorante.removePrenotazione(1);
-        ristorante.printPrenotazioni();
+//        ristorante.removePrenotazione(1);
+//        ristorante.printPrenotazioni();
     }
 }
