@@ -19,11 +19,21 @@ public class Main {
         Antipasti antipasti3 = new Antipasti("Olive Ascolane", 6.50, Set.of(IngredientsEnum.CARNE_DI_VITELLO, IngredientsEnum.FARINA, IngredientsEnum.FORMAGGIO), true, 1, true, TipoMenuEnum.VEGETARIANO);
         Antipasti antipasti4 = new Antipasti("Cornetti Salati", 5.50, Set.of(IngredientsEnum.CARNE_MISTA, IngredientsEnum.FARINA, IngredientsEnum.OLIO_EVO), true, 1, false, TipoMenuEnum.CARNE);
         Antipasti antipasti5= new Antipasti("Insalata di Polpo", 10.0, Set.of(IngredientsEnum.LIMONE, IngredientsEnum.PATATE,IngredientsEnum.PEPE,IngredientsEnum.POLPO),true,1,true, TipoMenuEnum.PESCE);
+
         menuC.addPortata(antipasti1);
         menuC.addPortata(antipasti2);
         menuC.addPortata(antipasti3);
         menuC.addPortata(antipasti4);
         menuC.addPortata(antipasti5);
+
+        AntipastiDAO antipastiDAO = new AntipastiDAO();
+
+        antipastiDAO.insertAntipasti(antipasti1);
+        antipastiDAO.insertAntipasti(antipasti2);
+        antipastiDAO.insertAntipasti(antipasti3);
+        antipastiDAO.insertAntipasti(antipasti4);
+        antipastiDAO.insertAntipasti(antipasti5);
+
         // Primi Piatti
         PrimiPiatti primiPiatti1 = new PrimiPiatti(" alla Carbonara", 8.99, Set.of(IngredientsEnum.UOVA, IngredientsEnum.GUANCIALE, IngredientsEnum.PASTA), "Bucatini", true, TipoMenuEnum.CARNE);
         PrimiPiatti primiPiatti2 = new PrimiPiatti(" alla Bolognese", 9.99, Set.of(IngredientsEnum.PASTA, IngredientsEnum.CARNE_DI_VITELLO, IngredientsEnum.POMODORI), "Lasagne", true, TipoMenuEnum.CARNE);
