@@ -2,12 +2,13 @@
 import enumerati.IngredientsEnum;
 import enumerati.TipoMenuEnum;
 
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.Set;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
         Menu menuC = new Menu(TipoMenuEnum.CARNE);
         Menu menuV = new Menu(TipoMenuEnum.VEGETARIANO);
@@ -118,6 +119,9 @@ public class Main {
         ristorante.addPrenotazione(cliente1, 4, Timestamp.valueOf("2023-05-15 20:00:00"), tavolo1);
         ristorante.addPrenotazione(cliente2, 2, Timestamp.valueOf("2023-05-16 13:30:00"), tavolo2);
         ristorante.printPrenotazioni();
+
+        RistoranteDAO ristoranteDAO = new RistoranteDAO();
+        ristoranteDAO.insertRistorante(ristorante);
 //        ristorante.removePrenotazione(1);
 //        ristorante.printPrenotazioni();
     }
