@@ -131,7 +131,7 @@ public class Main {
         ristorante.printPrenotazioni();
 
         RistoranteDAO ristoranteDAO = new RistoranteDAO();
-        ristoranteDAO.insertRistorante(ristorante);
+        ristoranteDAO.createRistorante(ristorante);
 //        ristorante.removePrenotazione(1);
 //        ristorante.printPrenotazioni();
     }
