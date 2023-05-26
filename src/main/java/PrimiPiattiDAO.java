@@ -1,31 +1,17 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class PrimiPiattiDAO {
-    private List<PrimiPiatti> primiPiattiList;
+    public void insertPrimiPiatti (PrimiPiatti primiPiatti) throws SQLException {
+        String quary = "INSERT INTO PRIMIPIATTI(NAME, PRICE, INGREDIENTI, DISH_OF_THE_DAY)" +
+                "VALUES (?, ?, ?, ?)";
+        PreparedStatement statement = ConnectionProvider.getInstance().prepareStatement(quary);
+        statement.setString(1, primiPiatti.getName());
+        statement.setDouble(2, primiPiatti.getPrice());
+        statement.setString(3, primiPiatti.getIngredients().toString());
+        statement.setBoolean(4, primiPiatti.isCanBeDishOfTheDay());
 
-    public PrimiPiattiDAO() {
-        primiPiattiList = new ArrayList<>();
-    }
-
-    public void addPrimiPiatti(PrimiPiatti primiPiatti) {
-        primiPiattiList.add(primiPiatti);
-    }
-
-    public void removePrimiPiatti(PrimiPiatti primiPiatti) {
-        primiPiattiList.remove(primiPiatti);
-    }
-
-    public List<PrimiPiatti> getAllPrimiPiatti() {
-        return primiPiattiList;
-    }
-
-    public PrimiPiatti getPrimiPiattiByName(String name) {
-        for (PrimiPiatti primiPiatti : primiPiattiList) {
-            if (primiPiatti.getName().equals(name)) {
-                return primiPiatti;
-            }
-        }
-        return null;
+        statement.executeUpdate();
+        statement.close();
     }
 }

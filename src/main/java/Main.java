@@ -48,6 +48,14 @@ public class Main {
         menuC.addPortata(primiPiatti5);
         menuC.addPortata(primiPiatti6);
 
+        PrimiPiattiDAO primiPiattiDAO = new PrimiPiattiDAO();
+
+        primiPiattiDAO.insertPrimiPiatti(primiPiatti1);
+        primiPiattiDAO.insertPrimiPiatti(primiPiatti2);
+        primiPiattiDAO.insertPrimiPiatti(primiPiatti3);
+        primiPiattiDAO.insertPrimiPiatti(primiPiatti4);
+        primiPiattiDAO.insertPrimiPiatti(primiPiatti5);
+
         // Secondi Piatti
         SecondiPiatti secondiPiatti1 = new SecondiPiatti("Filetto di maiale al forno con salvia",11.99, Set.of(IngredientsEnum.CARNE_DI_MAIALE, IngredientsEnum.AROMI, IngredientsEnum.PATATE), false, true, TipoMenuEnum.CARNE);
         SecondiPiatti secondiPiatti2 = new SecondiPiatti("Grigliata di carne",13.99, Set.of(IngredientsEnum.CARNE_MISTA, IngredientsEnum.AROMI, IngredientsEnum.PEPE), true, true, TipoMenuEnum.CARNE);
