@@ -79,6 +79,7 @@ public class Main {
         menuC.addPortata(dolci4);
         menuC.addPortata(dolci5);
         menuC.addPortata(dolci6);
+
         //Bevande - Birre
         Bevande bevande1 = new Bevande("Gradisca 0.33l", 3.5, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL), true,4.5, false, TipoMenuEnum.BIRRE);
         Bevande bevande2 = new Bevande("Gradisca 0.5l", 3.5, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL), true,4.5, false, TipoMenuEnum.BIRRE);
@@ -92,6 +93,7 @@ public class Main {
         menuC.addPortata(bevande4);
         menuC.addPortata(bevande5);
         menuC.addPortata(bevande6);
+
         //Bevande - Soft Drink
         Bevande bevande7 = new Bevande("Acqua Nat 1/2l", 1.0, Set.of(IngredientsEnum.ACQUA),false, 0.0, false, TipoMenuEnum.SOFT_DRINK);
         Bevande bevande8 = new Bevande("Acqua Gas 1/2l", 1.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.ANIDRIDE_CARBONICA), false, 0.0, false, TipoMenuEnum.SOFT_DRINK);
@@ -107,6 +109,7 @@ public class Main {
         menuC.addPortata(bevande11);
         menuC.addPortata(bevande12);
         menuC.addPortata(bevande13);
+
         //Bevande - Vini
         Bevande bevande14 = new Bevande("Rosè frizzante", 10.0,  Set.of(IngredientsEnum.ALCOL, IngredientsEnum.ZUCCHERO, IngredientsEnum.AROMI, IngredientsEnum.MOSTO, IngredientsEnum.VINO), true, 12.0, false, TipoMenuEnum.CARTA_VINI);
         Bevande bevande15 = new Bevande("Chardonnat", 13.0, Set.of(IngredientsEnum.ALCOL, IngredientsEnum.ZUCCHERO, IngredientsEnum.AROMI, IngredientsEnum.MOSTO, IngredientsEnum.VINO), true, 11.5, false, TipoMenuEnum.CARTA_VINI);
@@ -116,6 +119,25 @@ public class Main {
         menuC.addPortata(bevande15);
         menuC.addPortata(bevande16);
         menuC.addPortata(bevande17);
+
+        BevandeDAO bevandeDAO = new BevandeDAO();
+        bevandeDAO.insertBevande(bevande1);
+        bevandeDAO.insertBevande(bevande2);
+        bevandeDAO.insertBevande(bevande3);
+        bevandeDAO.insertBevande(bevande4);
+        bevandeDAO.insertBevande(bevande5);
+        bevandeDAO.insertBevande(bevande6);
+        bevandeDAO.insertBevande(bevande7);
+        bevandeDAO.insertBevande(bevande8);
+        bevandeDAO.insertBevande(bevande9);
+        bevandeDAO.insertBevande(bevande10);
+        bevandeDAO.insertBevande(bevande11);
+        bevandeDAO.insertBevande(bevande12);
+        bevandeDAO.insertBevande(bevande13);
+        bevandeDAO.insertBevande(bevande14);
+        bevandeDAO.insertBevande(bevande15);
+        bevandeDAO.insertBevande(bevande16);
+        bevandeDAO.insertBevande(bevande17);
 
         Ristorante ristorante = new Ristorante("La Taverna di Pulcinella", "Via Libertà 47, Napoli", Timestamp.valueOf("2023-05-11 09:00:00"), Timestamp.valueOf("2023-06-11 01:00:00"), 3.50, menuC, 1);
         ristorante.printInfoRistorante();
