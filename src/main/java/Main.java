@@ -50,11 +50,11 @@ public class Main {
 
         PrimiPiattiDAO primiPiattiDAO = new PrimiPiattiDAO();
 
-        primiPiattiDAO.insertPrimiPiatti(primiPiatti1);
-        primiPiattiDAO.insertPrimiPiatti(primiPiatti2);
-        primiPiattiDAO.insertPrimiPiatti(primiPiatti3);
-        primiPiattiDAO.insertPrimiPiatti(primiPiatti4);
-        primiPiattiDAO.insertPrimiPiatti(primiPiatti5);
+        primiPiattiDAO.createPrimiPiatti(primiPiatti1);
+        primiPiattiDAO.createPrimiPiatti(primiPiatti2);
+        primiPiattiDAO.createPrimiPiatti(primiPiatti3);
+        primiPiattiDAO.createPrimiPiatti(primiPiatti4);
+        primiPiattiDAO.createPrimiPiatti(primiPiatti5);
 
         // Secondi Piatti
         SecondiPiatti secondiPiatti1 = new SecondiPiatti("Filetto di maiale al forno con salvia",11.99, Set.of(IngredientsEnum.CARNE_DI_MAIALE, IngredientsEnum.AROMI, IngredientsEnum.PATATE), false, true, TipoMenuEnum.CARNE);

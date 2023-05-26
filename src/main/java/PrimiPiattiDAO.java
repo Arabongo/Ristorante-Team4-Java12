@@ -2,7 +2,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class PrimiPiattiDAO {
-    public void insertPrimiPiatti (PrimiPiatti primiPiatti) throws SQLException {
+    public void createPrimiPiatti (PrimiPiatti primiPiatti) throws SQLException {
         String quary = "INSERT INTO PRIMIPIATTI(NAME, PRICE, INGREDIENTI, DISH_OF_THE_DAY)" +
                 "VALUES (?, ?, ?, ?)";
         PreparedStatement statement = ConnectionProvider.getInstance().prepareStatement(quary);
