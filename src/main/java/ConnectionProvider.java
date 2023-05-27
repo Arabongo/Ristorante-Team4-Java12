@@ -5,11 +5,11 @@ import java.sql.SQLException;
 public class ConnectionProvider {
     private static Connection connection;
 
-    private static String URL = "jdbc:mysql://localhost:3306/Ristorante";
+    private static String URL = "jdbc:mysql://localhost:3306/mydatabase";
 
     private static String USERNAME = "root";
 
-    private static String PASSWORD = "1234567890";
+    private static String PASSWORD = "vaniglia123";
 
     // Costruttore privato per impedire l'istanziazione diretta
     private ConnectionProvider() {

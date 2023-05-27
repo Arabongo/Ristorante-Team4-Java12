@@ -74,6 +74,17 @@ public class Main {
         menuC.addPortata(secondiPiatti7);
         menuC.addPortata(secondiPiatti8);
 
+        SecondiPiattiDAO  secondiPiattiDAO = new SecondiPiattiDAO();
+
+        secondiPiattiDAO.createSecondiPiatti(secondiPiatti1);
+        secondiPiattiDAO.createSecondiPiatti(secondiPiatti2);
+        secondiPiattiDAO.createSecondiPiatti(secondiPiatti3);
+        secondiPiattiDAO.createSecondiPiatti(secondiPiatti4);
+        secondiPiattiDAO.createSecondiPiatti(secondiPiatti5);
+        secondiPiattiDAO.createSecondiPiatti(secondiPiatti6);
+        secondiPiattiDAO.createSecondiPiatti(secondiPiatti7);
+        secondiPiattiDAO.createSecondiPiatti(secondiPiatti8);
+
         //Dolci
         Dolci dolci1 = new Dolci("Tiramisù al cucchiaio", 9.5,Set.of(IngredientsEnum.ZUCCHERO, IngredientsEnum.UOVA, IngredientsEnum.LATTE, IngredientsEnum.CIOCCOLATO, IngredientsEnum.CAFFEINA), true, TipoMenuEnum.DOLCI);
         Dolci dolci2 = new Dolci("Babà", 10.5,Set.of(IngredientsEnum.FARINA, IngredientsEnum.AROMI, IngredientsEnum.UOVA, IngredientsEnum.RUM), true, TipoMenuEnum.DOLCI);
