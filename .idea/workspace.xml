@@ -5,39 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="197804d5-912f-429e-9c9c-5006f8832d2b" name="Changes" comment="Minor refactoring, modified print methods in order to remove square brackets from print [].">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DolciDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ConnectionProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConnectionProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PrimiPiattiDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PrimiPiattiDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Ristorante-Team4-Java12-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Ristorante-Team4-Java12-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Antipasti.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antipasti.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AntipastiDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AntipastiDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Bevande.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Bevande.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/BevandeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/BevandeDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Cliente.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ConnectionProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ConnectionProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Dolci.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Dolci.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Menu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Menu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MenuDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MenuDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Portata.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Portata.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Prenotazione.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Prenotazione.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PrimiPiatti.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PrimiPiatti.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/PrimiPiattiDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PrimiPiattiDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Ristorante.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Ristorante.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RistoranteDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RistoranteDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SecondiPiatti.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SecondiPiatti.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Tavolo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Tavolo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/enumerati/ColorsEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/enumerati/ColorsEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/enumerati/IngredientsEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/enumerati/IngredientsEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/enumerati/TipoMenuEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/enumerati/TipoMenuEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/enumerati/TipoPortataEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/enumerati/TipoPortataEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -74,6 +74,17 @@ public class Main {
         menuC.addPortata(secondiPiatti7);
         menuC.addPortata(secondiPiatti8);
 
+        SecondiPiattiDAO  secondiPiattiDAO = new SecondiPiattiDAO();
+
+        secondiPiattiDAO.createSecondiPiatti(secondiPiatti1);
+        secondiPiattiDAO.createSecondiPiatti(secondiPiatti2);
+        secondiPiattiDAO.createSecondiPiatti(secondiPiatti3);
+        secondiPiattiDAO.createSecondiPiatti(secondiPiatti4);
+        secondiPiattiDAO.createSecondiPiatti(secondiPiatti5);
+        secondiPiattiDAO.createSecondiPiatti(secondiPiatti6);
+        secondiPiattiDAO.createSecondiPiatti(secondiPiatti7);
+        secondiPiattiDAO.createSecondiPiatti(secondiPiatti8);
+
         //Dolci
         Dolci dolci1 = new Dolci("Tiramisù al cucchiaio", 9.5,Set.of(IngredientsEnum.ZUCCHERO, IngredientsEnum.UOVA, IngredientsEnum.LATTE, IngredientsEnum.CIOCCOLATO, IngredientsEnum.CAFFEINA), true, TipoMenuEnum.DOLCI);
         Dolci dolci2 = new Dolci("Babà", 10.5,Set.of(IngredientsEnum.FARINA, IngredientsEnum.AROMI, IngredientsEnum.UOVA, IngredientsEnum.RUM), true, TipoMenuEnum.DOLCI);
@@ -87,6 +98,14 @@ public class Main {
         menuC.addPortata(dolci4);
         menuC.addPortata(dolci5);
         menuC.addPortata(dolci6);
+
+        DolciDAO dolciDAO = new DolciDAO();
+        dolciDAO.createDolci(dolci1);
+        dolciDAO.createDolci(dolci2);
+        dolciDAO.createDolci(dolci3);
+        dolciDAO.createDolci(dolci4);
+        dolciDAO.createDolci(dolci5);
+        dolciDAO.createDolci(dolci6);
 
         //Bevande - Birre
         Bevande bevande1 = new Bevande("Gradisca 0.33l", 3.5, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL), true,4.5, false, TipoMenuEnum.BIRRE);
