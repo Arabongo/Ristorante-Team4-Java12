@@ -105,7 +105,7 @@ public class Main {
         Bevande bevande3 = new Bevande("Gradisca 1l", 10.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL), true,4.5, false, TipoMenuEnum.BIRRE);
         Bevande bevande4 = new Bevande("Midona", 5.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL),true, 5.5, false, TipoMenuEnum.BIRRE);
         Bevande bevande5 = new Bevande("Volpina", 4.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL ), true, 5.0, false, TipoMenuEnum.BIRRE);
-        Bevande bevande6 = new Bevande("Volpina", 6.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL), true, 5.0, false, TipoMenuEnum.BIRRE);
+        Bevande bevande6 = new Bevande("Volpina 0.5l", 6.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL), true, 5.0, false, TipoMenuEnum.BIRRE);
         menuC.addPortata(bevande1);
         menuC.addPortata(bevande2);
         menuC.addPortata(bevande3);
