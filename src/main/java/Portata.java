@@ -66,6 +66,7 @@ public abstract class Portata {
         this.tipoMenuEnum = tipoMenuEnum;
     }
 
+
     /**
      * Stampa una portata generica.
      */
