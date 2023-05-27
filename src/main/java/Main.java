@@ -74,17 +74,6 @@ public class Main {
         menuC.addPortata(secondiPiatti7);
         menuC.addPortata(secondiPiatti8);
 
-        SecondiPiattiDAO  secondiPiattiDAO = new SecondiPiattiDAO();
-
-        secondiPiattiDAO.createSecondiPiatti(secondiPiatti1);
-        secondiPiattiDAO.createSecondiPiatti(secondiPiatti2);
-        secondiPiattiDAO.createSecondiPiatti(secondiPiatti3);
-        secondiPiattiDAO.createSecondiPiatti(secondiPiatti4);
-        secondiPiattiDAO.createSecondiPiatti(secondiPiatti5);
-        secondiPiattiDAO.createSecondiPiatti(secondiPiatti6);
-        secondiPiattiDAO.createSecondiPiatti(secondiPiatti7);
-        secondiPiattiDAO.createSecondiPiatti(secondiPiatti8);
-
         //Dolci
         Dolci dolci1 = new Dolci("Tiramisù al cucchiaio", 9.5,Set.of(IngredientsEnum.ZUCCHERO, IngredientsEnum.UOVA, IngredientsEnum.LATTE, IngredientsEnum.CIOCCOLATO, IngredientsEnum.CAFFEINA), true, TipoMenuEnum.DOLCI);
         Dolci dolci2 = new Dolci("Babà", 10.5,Set.of(IngredientsEnum.FARINA, IngredientsEnum.AROMI, IngredientsEnum.UOVA, IngredientsEnum.RUM), true, TipoMenuEnum.DOLCI);
@@ -99,21 +88,12 @@ public class Main {
         menuC.addPortata(dolci5);
         menuC.addPortata(dolci6);
 
-
-        DolciDAO dolciDAO = new DolciDAO();
-        dolciDAO.createDolci(dolci1);
-        dolciDAO.createDolci(dolci2);
-        dolciDAO.createDolci(dolci3);
-        dolciDAO.createDolci(dolci4);
-        dolciDAO.createDolci(dolci5);
-        dolciDAO.createDolci(dolci6);
-
         //Bevande - Birre
         Bevande bevande1 = new Bevande("Gradisca 0.33l", 3.5, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL), true,4.5, false, TipoMenuEnum.BIRRE);
         Bevande bevande2 = new Bevande("Gradisca 0.5l", 3.5, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL), true,4.5, false, TipoMenuEnum.BIRRE);
         Bevande bevande3 = new Bevande("Gradisca 1l", 10.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL), true,4.5, false, TipoMenuEnum.BIRRE);
         Bevande bevande4 = new Bevande("Midona", 5.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL),true, 5.5, false, TipoMenuEnum.BIRRE);
-        Bevande bevande5 = new Bevande("Volpina", 4.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL ), true, 5.0, false, TipoMenuEnum.BIRRE);
+        Bevande bevande5 = new Bevande("Volpina 0.33l", 4.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL ), true, 5.0, false, TipoMenuEnum.BIRRE);
         Bevande bevande6 = new Bevande("Volpina 0.5l", 6.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL), true, 5.0, false, TipoMenuEnum.BIRRE);
         menuC.addPortata(bevande1);
         menuC.addPortata(bevande2);
@@ -167,8 +147,8 @@ public class Main {
         bevandeDAO.insertBevande(bevande16);
         bevandeDAO.insertBevande(bevande17);
 
-//        Ristorante ristorante = new Ristorante("La Taverna di Pulcinella", "Via Libertà 47, Napoli", Timestamp.valueOf("2023-05-11 09:00:00"), Timestamp.valueOf("2023-06-11 01:00:00"), 3.50, menuC, 1);
-//        ristorante.printInfoRistorante();
+        Ristorante ristorante = new Ristorante("La Taverna di Pulcinella", "Via Libertà 47, Napoli", Timestamp.valueOf("2023-05-11 09:00:00"), Timestamp.valueOf("2023-06-11 01:00:00"), 3.50, menuC, 1);
+        ristorante.printInfoRistorante();
 
         Tavolo tavolo1 = new Tavolo(1, 4);
         Tavolo tavolo2 = new Tavolo(2, 3);
@@ -176,12 +156,15 @@ public class Main {
         Cliente cliente1 = new Cliente("Franco Paglia", 123456789, "FrancoPaglia@gmail.com", TipoMenuEnum.VEGETARIANO);
         Cliente cliente2 = new Cliente("Riccardo Neri", 987654321, "RiccardoNeri@gmail.com", TipoMenuEnum.CARNE);
 
-//        ristorante.addPrenotazione(cliente1, 4, Timestamp.valueOf("2023-05-15 20:00:00"), tavolo1);
-//        ristorante.addPrenotazione(cliente2, 2, Timestamp.valueOf("2023-05-16 13:30:00"), tavolo2);
-//        ristorante.printPrenotazioni();
+        MenuDAO menuDAO = new MenuDAO();
+        menuDAO.createMenu(menuC);
 
-//        RistoranteDAO ristoranteDAO = new RistoranteDAO();
-//        ristoranteDAO.createRistorante(ristorante);
+        ristorante.addPrenotazione(cliente1, 4, Timestamp.valueOf("2023-05-15 20:00:00"), tavolo1);
+        ristorante.addPrenotazione(cliente2, 2, Timestamp.valueOf("2023-05-16 13:30:00"), tavolo2);
+        ristorante.printPrenotazioni();
+
+        RistoranteDAO ristoranteDAO = new RistoranteDAO();
+        ristoranteDAO.createRistorante(ristorante);
 //        ristorante.removePrenotazione(1);
 //        ristorante.printPrenotazioni();
     }
