@@ -99,12 +99,20 @@ public class Main {
         menuC.addPortata(dolci5);
         menuC.addPortata(dolci6);
 
+        DolciDAO dolciDAO = new DolciDAO();
+        dolciDAO.createDolci(dolci1);
+        dolciDAO.createDolci(dolci2);
+        dolciDAO.createDolci(dolci3);
+        dolciDAO.createDolci(dolci4);
+        dolciDAO.createDolci(dolci5);
+        dolciDAO.createDolci(dolci6);
+
         //Bevande - Birre
         Bevande bevande1 = new Bevande("Gradisca 0.33l", 3.5, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL), true,4.5, false, TipoMenuEnum.BIRRE);
         Bevande bevande2 = new Bevande("Gradisca 0.5l", 3.5, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL), true,4.5, false, TipoMenuEnum.BIRRE);
         Bevande bevande3 = new Bevande("Gradisca 1l", 10.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL), true,4.5, false, TipoMenuEnum.BIRRE);
         Bevande bevande4 = new Bevande("Midona", 5.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL),true, 5.5, false, TipoMenuEnum.BIRRE);
-        Bevande bevande5 = new Bevande("Volpina", 4.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL ), true, 5.0, false, TipoMenuEnum.BIRRE);
+        Bevande bevande5 = new Bevande("Volpina 0.33l", 4.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL ), true, 5.0, false, TipoMenuEnum.BIRRE);
         Bevande bevande6 = new Bevande("Volpina 0.5l", 6.0, Set.of(IngredientsEnum.ACQUA, IngredientsEnum.LUPPOLO, IngredientsEnum.ALCOL), true, 5.0, false, TipoMenuEnum.BIRRE);
         menuC.addPortata(bevande1);
         menuC.addPortata(bevande2);
@@ -166,6 +174,9 @@ public class Main {
 
         Cliente cliente1 = new Cliente("Franco Paglia", 123456789, "FrancoPaglia@gmail.com", TipoMenuEnum.VEGETARIANO);
         Cliente cliente2 = new Cliente("Riccardo Neri", 987654321, "RiccardoNeri@gmail.com", TipoMenuEnum.CARNE);
+
+        MenuDAO menuDAO = new MenuDAO();
+        menuDAO.createMenu(menuC);
 
         ristorante.addPrenotazione(cliente1, 4, Timestamp.valueOf("2023-05-15 20:00:00"), tavolo1);
         ristorante.addPrenotazione(cliente2, 2, Timestamp.valueOf("2023-05-16 13:30:00"), tavolo2);

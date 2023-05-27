@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="197804d5-912f-429e-9c9c-5006f8832d2b" name="Changes" comment="Minor refactoring, modified print methods in order to remove square brackets from print [].">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BevandeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BevandeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectionProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConnectionProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ConnectionProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ConnectionProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MenuDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MenuDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Portata.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Portata.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PrimiPiattiDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PrimiPiattiDAO.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +44,11 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="2PeLOuMMyeCneQKtuNc1N3vNY3S" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -49,7 +61,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Documenti/Projects/Java Projects/Ristorante-Team4-Java12&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Andrea/Desktop/Ristorante-Team4-Java12&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
