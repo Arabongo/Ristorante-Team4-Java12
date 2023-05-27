@@ -5,11 +5,11 @@ import java.sql.SQLException;
 public class ConnectionProvider {
     private static Connection connection;
 
-    private static String URL = "jdbc:mysql://localhost:3306/mydatabase";
+    private static String URL = "jdbc:mysql://localhost:3306/ristorante la taverna di pulcinella";
 
     private static String USERNAME = "root";
 
-    private static String PASSWORD = "vaniglia123";
+    private static String PASSWORD = "root";
 
     // Costruttore privato per impedire l'istanziazione diretta
     private ConnectionProvider() {
