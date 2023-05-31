@@ -5,7 +5,7 @@ import java.sql.SQLException;
 public class SecondiPiattiDAO {
 
     public void createSecondiPiatti (SecondiPiatti secondiPiatti) throws SQLException {
-        String quary = "INSERT INTO SECONDI_PIATTI(NAME, PRICE, INGREDIENTS, IS_SPICY)" +
+        String quary = "INSERT INTO SECONDI_PIATTI(NAME, PRICE, INGREDIENTI, IS_SPICY)" +
                 "VALUES (?, ?, ?, ?)";
         PreparedStatement statement = ConnectionProvider.getInstance().prepareStatement(quary);
         statement.setString(1, secondiPiatti.getName());
