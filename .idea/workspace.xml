@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="197804d5-912f-429e-9c9c-5006f8832d2b" name="Changes" comment="Minor refactoring, modified print methods in order to remove square brackets from print [].">
+    <list default="true" id="197804d5-912f-429e-9c9c-5006f8832d2b" name="Changes" comment="modified and edited primipiattiDAO">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ConnectionProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConnectionProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PrimiPiattiDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PrimiPiattiDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Ristorante-Team4-Java12-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Ristorante-Team4-Java12-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/BevandeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/BevandeDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ConnectionProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ConnectionProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PrimiPiattiDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PrimiPiattiDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684485300470</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="modified and edited primipiattiDAO">
+      <created>1685491134379</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685491134379</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,6 +129,7 @@
     <MESSAGE value="Changed openingHours and closingHours from Double to Timestamp." />
     <MESSAGE value="Changed some Colours for the print." />
     <MESSAGE value="Minor refactoring, modified print methods in order to remove square brackets from print []." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor refactoring, modified print methods in order to remove square brackets from print []." />
+    <MESSAGE value="modified and edited primipiattiDAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified and edited primipiattiDAO" />
   </component>
 </project>
