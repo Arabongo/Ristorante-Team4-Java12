@@ -5,7 +5,7 @@ import java.sql.SQLException;
 public class SecondiPiattiDAO {
 
     public void createSecondiPiatti (SecondiPiatti secondiPiatti) throws SQLException {
-        String quary = "INSERT INTO SECONDI_PIATTI(NAME, PRICE, INGREDIENTI, IS_SPICY)" +
+        String quary = "INSERT INTO SECONDIPIATTI(NAME, PRICE, INGREDIENTI, IS_SPICY)" +
                 "VALUES (?, ?, ?, ?)";
         PreparedStatement statement = ConnectionProvider.getInstance().prepareStatement(quary);
         statement.setString(1, secondiPiatti.getName());
@@ -17,7 +17,7 @@ public class SecondiPiattiDAO {
         statement.close();
     }
     public SecondiPiatti retrieveSecondiPiatti(SecondiPiatti secondoPiatto) throws SQLException {
-        String query = "SELECT NAME, PRICE, INGREDIENTI, IS_SPICY FROM SECONDI_PIATTI WHERE NAME = ?";
+        String query = "SELECT NAME, PRICE, INGREDIENTI, IS_SPICY FROM SECONDIPIATTI WHERE NAME = ?";
         PreparedStatement statement = ConnectionProvider.getInstance().prepareStatement(query);
         statement.setString(1, secondoPiatto.getName());
         ResultSet resultSet = statement.executeQuery();
@@ -31,7 +31,7 @@ public class SecondiPiattiDAO {
         return null;
     }
     public void updateSecondiPiatti (SecondiPiatti secondoPiatto) throws SQLException {
-        String query = "UPDATE SECONDI_PIATTI SET PRICE = ?, INGREDIENTI = ?, IS_SPICY = ? WHERE NAME = ?";
+        String query = "UPDATE SECONDIPIATTI SET PRICE = ?, INGREDIENTI = ?, IS_SPICY = ? WHERE NAME = ?";
         PreparedStatement statement = ConnectionProvider.getInstance().prepareStatement(query);
         statement.setDouble(1, secondoPiatto.getPrice());
         statement.setString(2, secondoPiatto.getIngredients().toString());
@@ -42,7 +42,7 @@ public class SecondiPiattiDAO {
         statement.close();
     }
     public void deleteSecondiPiatti(String name) throws SQLException {
-        String query = "DELETE FROM SECONDI_PIATTI WHERE NAME = ?";
+        String query = "DELETE FROM SECONDIPIATTI WHERE NAME = ?";
         PreparedStatement statement = ConnectionProvider.getInstance().prepareStatement(query);
         statement.setString(1, name);
 
