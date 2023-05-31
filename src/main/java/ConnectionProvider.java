@@ -9,7 +9,7 @@ public class ConnectionProvider {
 
     private static String USERNAME = "root";
 
-    private static String PASSWORD = "hylvanuvola";
+    private static String PASSWORD = "Vaniglia123";
 
     // Costruttore privato per impedire l'istanziazione diretta
     private ConnectionProvider() {

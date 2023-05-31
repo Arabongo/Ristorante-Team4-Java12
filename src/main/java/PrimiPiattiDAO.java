@@ -53,7 +53,7 @@ public class PrimiPiattiDAO {
         statement.close();
     }
 
-    public void deleteAntipasti(String name) throws SQLException {
+    public void deletePrimiPiatti(String name) throws SQLException {
         String query = "DELETE FROM PRIMIPIATTI WHERE " + NAME + " = ?";
         PreparedStatement statement = ConnectionProvider.getInstance().prepareStatement(query);
         statement.setString(1, name);
